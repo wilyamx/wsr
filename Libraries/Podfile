@@ -1,0 +1,36 @@
+ENV['SWIFT_VERSION'] = '4.2'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.3'
+
+target 'Libraries' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Libraries
+  pod 'IQKeyboardManagerSwift', '~> 6.5.0'
+  pod 'Localize-Swift', '~> 2.0.0'
+  pod 'Moya', '~> 12.0.1'
+  pod 'Moya-ObjectMapper', '~> 2.8'
+  pod 'RealmSwift', '~> 3.18.0'
+  pod 'SwiftyBeaver', '~> 1.6'
+
+  target 'LibrariesTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LibrariesUITests' do
+    # Pods for testing
+  end
+
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.3'
+        end
+    end
+end
