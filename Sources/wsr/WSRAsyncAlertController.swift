@@ -1,6 +1,6 @@
 //
 //  WSRAsyncAlertController.swift
-//  UISnakeGame
+//  WSR
 //
 //  Created by William Rena on 7/28/24.
 //  Copyright © 2024 Personal. All rights reserved.
