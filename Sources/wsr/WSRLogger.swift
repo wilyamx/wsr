@@ -273,4 +273,4 @@ public struct WSRLogger {
 }
 
 // global variable
-let wsrLogger = WSRLogger()
+public let wsrLogger = WSRLogger()
