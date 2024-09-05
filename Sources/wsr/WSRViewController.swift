@@ -8,6 +8,6 @@
 
 import UIKit
 
-public class WSRViewController: UIViewController {
+open class WSRViewController: UIViewController {
     
 }
