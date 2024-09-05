@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Sequence where Element: Hashable {
+public extension Sequence where Element: Hashable {
     var toArray: [Element] { Array(self) }
 }

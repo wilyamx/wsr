@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     @discardableResult
     func addSubviews(_ views: [UIView]) -> UIView {
         views.forEach { addSubview($0) }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     /// Font size: 33, weight: Regular
     static var largeTitle: UIFont {
         .systemFont(ofSize: 33)

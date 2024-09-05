@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     func getAttributedString(with font: UIFont,
                              color: UIColor? = .darkText,
                              attributes: [NSAttributedString.Key: Any]? = nil) -> NSMutableAttributedString {

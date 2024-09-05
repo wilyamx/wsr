@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     static func getTopViewController(base: UIViewController? = rootViewController) -> UIViewController? {
 
         if let nav = base as? UINavigationController {
