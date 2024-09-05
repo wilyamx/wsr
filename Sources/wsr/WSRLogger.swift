@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WSRDebugInfoKey: String {
+public enum WSRDebugInfoKey: String {
     case info = "[INFO]>>"
     case fileloader = "[FILE-LOADER]>>"
     case error = "[ERROR]>>"
@@ -113,7 +113,7 @@ public struct WSRLogger {
     /**
         [INFO]>> [MessagingChatsView.body:27] - selected-item index: 3
      */
-    func log(category: WSRDebugInfoKey,
+    public func log(category: WSRDebugInfoKey,
              message: String,
              _ file: String = #file,
              _ function: String = #function,
@@ -121,42 +121,42 @@ public struct WSRLogger {
         self.messageFormat(category: category, message: message, file, function, line)
     }
     
-    func realm(message: String,
+    public func realm(message: String,
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.realmDb, message: message, file, function, line)
     }
     
-    func cache(message: String,
+    public func cache(message: String,
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.cache, message: message, file, function, line)
     }
     
-    func info(message: String,
+    public func info(message: String,
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.info, message: message, file, function, line)
     }
     
-    func api(message: String,
+    public func api(message: String,
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.api, message: message, file, function, line)
     }
     
-    func error(message: String,
+    public func error(message: String,
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.error, message: message, file, function, line)
     }
     
-    func api(request: URLRequest, httpResponse: HTTPURLResponse, data: Data) {
+    public func api(request: URLRequest, httpResponse: HTTPURLResponse, data: Data) {
         guard filteredLogKeys.isEmpty ||
                 (filteredLogKeys.count > 0 && filteredLogKeys.contains(WSRDebugInfoKey.api)) else {
             return
@@ -166,7 +166,7 @@ public struct WSRLogger {
         self.response(request: request, httpResponse: httpResponse, data: data)
     }
     
-    func realmDB() {
+    public func realmDB() {
         guard filteredLogKeys.isEmpty ||
                 (filteredLogKeys.count > 0 && filteredLogKeys.contains(WSRDebugInfoKey.realmDb)) else {
             return
@@ -178,7 +178,7 @@ public struct WSRLogger {
 #endif
     }
     
-    func map(message: String,
+    public func map(message: String,
               _ file: String = #file,
               _ function: String = #function,
               _ line: Int = #line) {
@@ -186,7 +186,7 @@ public struct WSRLogger {
                            message: message, file, function, line)
     }
     
-    func view(_ file: String = #file,
+    public func view(_ file: String = #file,
               _ function: String = #function,
               _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.view,
