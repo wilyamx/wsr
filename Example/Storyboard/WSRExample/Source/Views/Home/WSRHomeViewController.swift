@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import wsr
 
 class WSRHomeViewController {
     private lazy var verticalStackView: UIStackView = {
