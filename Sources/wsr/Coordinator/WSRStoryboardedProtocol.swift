@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol WSRStoryboarded {
+public protocol WSRStoryboarded {
     static func instantiate() -> Self
 }
 

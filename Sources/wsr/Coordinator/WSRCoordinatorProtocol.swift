@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol WSRCoordinatorProtocol {
+public protocol WSRCoordinatorProtocol {
     var childCoordinators: [WSRCoordinatorProtocol] { get set }
     var navigationController: UINavigationController? { get set }
     
