@@ -24,9 +24,9 @@ open class WSRViewController: UIViewController {
     
     // MARK: - Setups
 
-    func setupNavigation() {}
-    func setupLayout() {}
-    func setupConstraints() {}
-    func setupBindings() {}
-    func setupActions() {}
+    open func setupNavigation() {}
+    open func setupLayout() {}
+    open func setupConstraints() {}
+    open func setupBindings() {}
+    open func setupActions() {}
 }
