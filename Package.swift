@@ -8,19 +8,17 @@ let package = Package(
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "wsr",
-            targets: ["wsr"]),
+        .library(name: "wsr", targets: ["wsr"]),
     ],
     dependencies: [
-        
+        .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "wsr",
-            dependencies: [],
+            dependencies: ["SuperEasyLayout"],
             path: "Sources",
             resources: [
                 .process("Resources/WSRColors.xcassets")
