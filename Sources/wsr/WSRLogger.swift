@@ -25,7 +25,7 @@ enum WSRDebugInfoKey: String {
     case response = "[RESPONSE]>>"
 }
 
-struct WSRLogger {
+public struct WSRLogger {
     
     private let nullString = "(null)"
     private let separatorString = "*******************************"
