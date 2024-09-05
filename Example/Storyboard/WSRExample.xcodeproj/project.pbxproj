@@ -18,6 +18,9 @@
 		A2C93E1B2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E1A2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift */; };
 		A2CBE1472C89575000C677E0 /* wsr in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1462C89575000C677E0 /* wsr */; };
 		A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1492C89592E00C677E0 /* SuperEasyLayout */; };
+		A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */; };
+		A2CBE1562C89752B00C677E0 /* WSRHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1552C89752B00C677E0 /* WSRHomeViewModel.swift */; };
+		A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		A2C93E142C8829E00091A1D1 /* WSRExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSRExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93E182C8829E00091A1D1 /* WSRExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRExampleUITests.swift; sourceTree = "<group>"; };
 		A2C93E1A2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRHomeViewController.swift; sourceTree = "<group>"; };
+		A2CBE1552C89752B00C677E0 /* WSRHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRHomeViewModel.swift; sourceTree = "<group>"; };
+		A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRHomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		A2C93DF62C8829DE0091A1D1 /* WSRExample */ = {
 			isa = PBXGroup;
 			children = (
+				A2CBE14B2C89734500C677E0 /* Source */,
 				A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */,
 				A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */,
 				A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */,
@@ -129,6 +136,72 @@
 				A2C93E1A2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift */,
 			);
 			path = WSRExampleUITests;
+			sourceTree = "<group>";
+		};
+		A2CBE14B2C89734500C677E0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A2CBE1512C89744700C677E0 /* Common */,
+				A2CBE14D2C89739800C677E0 /* Components */,
+				A2CBE14C2C89738900C677E0 /* Errors */,
+				A2CBE14E2C8973A200C677E0 /* Extensions */,
+				A2CBE1502C89741B00C677E0 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A2CBE14C2C89738900C677E0 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A2CBE14D2C89739800C677E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A2CBE14E2C8973A200C677E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A2CBE14F2C8973D300C677E0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A2CBE1522C8974B500C677E0 /* Subviews */,
+				A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */,
+				A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */,
+				A2CBE1552C89752B00C677E0 /* WSRHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A2CBE1502C89741B00C677E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2CBE14F2C8973D300C677E0 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2CBE1512C89744700C677E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A2CBE1522C8974B500C677E0 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CBE1562C89752B00C677E0 /* WSRHomeViewModel.swift in Sources */,
 				A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */,
+				A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */,
 				A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */,
+				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
