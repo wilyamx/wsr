@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "supereasylayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/doil6317/SuperEasyLayout.git",
+      "state" : {
+        "revision" : "0d2a9111aa62e6f2b2a3bb70e526e5cf00e9f8f6",
+        "version" : "0.3.0"
+      }
+    },
+    {
+      "identity" : "wsr",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wilyamx/wsr.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "80504dd2a702b66e8e395f8ba23503e16975b26b"
+      }
+    }
+  ],
+  "version" : 2
+}

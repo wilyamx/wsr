@@ -16,6 +16,8 @@
 		A2C93E0F2C8829E00091A1D1 /* WSRExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E0E2C8829E00091A1D1 /* WSRExampleTests.swift */; };
 		A2C93E192C8829E00091A1D1 /* WSRExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E182C8829E00091A1D1 /* WSRExampleUITests.swift */; };
 		A2C93E1B2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E1A2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift */; };
+		A2CBE1472C89575000C677E0 /* wsr in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1462C89575000C677E0 /* wsr */; };
+		A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1492C89592E00C677E0 /* SuperEasyLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
+				A2CBE1472C89575000C677E0 /* wsr in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,10 @@
 			dependencies = (
 			);
 			name = WSRExample;
+			packageProductDependencies = (
+				A2CBE1462C89575000C677E0 /* wsr */,
+				A2CBE1492C89592E00C677E0 /* SuperEasyLayout */,
+			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,10 @@
 				Base,
 			);
 			mainGroup = A2C93DEB2C8829DE0091A1D1;
+			packageReferences = (
+				A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */,
+				A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */,
+			);
 			productRefGroup = A2C93DF52C8829DE0091A1D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -603,6 +615,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wilyamx/wsr.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doil6317/SuperEasyLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2CBE1462C89575000C677E0 /* wsr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = wsr;
+		};
+		A2CBE1492C89592E00C677E0 /* SuperEasyLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */;
+			productName = SuperEasyLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2C93DEC2C8829DE0091A1D1 /* Project object */;
 }
