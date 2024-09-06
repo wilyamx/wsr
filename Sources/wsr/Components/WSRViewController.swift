@@ -32,7 +32,7 @@ open class WSRViewController: UIViewController {
     
     // MARK: - Navigation
     
-    public func wsrNavigationBarDefaultStyle(backgroundColor: UIColor = .black, tintColor: UIColor = .white) {
+    public func wsr_NavigationBarDefaultStyle(backgroundColor: UIColor = .black, tintColor: UIColor = .white) {
         if #available(iOS 15, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
