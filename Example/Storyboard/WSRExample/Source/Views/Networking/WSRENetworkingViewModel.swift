@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import WSRNetworking
 
 final class WSRENetworkingViewModel {
-    
+    let manager = WSRNetworkManager.shared
 }

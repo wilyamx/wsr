@@ -12,6 +12,8 @@
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
 		A2A99BB12C8AAC6B00215A9A /* WSRENetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BB02C8AAC6B00215A9A /* WSRENetworkingViewModel.swift */; };
 		A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */; };
+		A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBA2C8AC80F00215A9A /* WSRComponents */; };
+		A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBC2C8AC80F00215A9A /* WSRNetworking */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
 		A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */; };
@@ -21,7 +23,6 @@
 		A2C93E0F2C8829E00091A1D1 /* WSRExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E0E2C8829E00091A1D1 /* WSRExampleTests.swift */; };
 		A2C93E192C8829E00091A1D1 /* WSRExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E182C8829E00091A1D1 /* WSRExampleUITests.swift */; };
 		A2C93E1B2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E1A2C8829E00091A1D1 /* WSRExampleUITestsLaunchTests.swift */; };
-		A2CBE1472C89575000C677E0 /* wsr in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1462C89575000C677E0 /* wsr */; };
 		A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A2CBE1492C89592E00C677E0 /* SuperEasyLayout */; };
 		A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */; };
 		A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1552C89752B00C677E0 /* WSREHomeViewModel.swift */; };
@@ -75,7 +76,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
-				A2CBE1472C89575000C677E0 /* wsr in Frameworks */,
+				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
+				A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +254,9 @@
 			);
 			name = WSRExample;
 			packageProductDependencies = (
-				A2CBE1462C89575000C677E0 /* wsr */,
 				A2CBE1492C89592E00C677E0 /* SuperEasyLayout */,
+				A2A99BBA2C8AC80F00215A9A /* WSRComponents */,
+				A2A99BBC2C8AC80F00215A9A /* WSRNetworking */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -330,8 +333,8 @@
 			);
 			mainGroup = A2C93DEB2C8829DE0091A1D1;
 			packageReferences = (
-				A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */,
 				A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */,
+				A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */,
 			);
 			productRefGroup = A2C93DF52C8829DE0091A1D1 /* Products */;
 			projectDirPath = "";
@@ -731,7 +734,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */ = {
+		A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wilyamx/wsr.git";
 			requirement = {
@@ -750,10 +753,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A2CBE1462C89575000C677E0 /* wsr */ = {
+		A2A99BBA2C8AC80F00215A9A /* WSRComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A2CBE1452C89575000C677E0 /* XCRemoteSwiftPackageReference "wsr" */;
-			productName = wsr;
+			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRComponents;
+		};
+		A2A99BBC2C8AC80F00215A9A /* WSRNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRNetworking;
 		};
 		A2CBE1492C89592E00C677E0 /* SuperEasyLayout */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import wsr
+import WSRComponents
 import SuperEasyLayout
 
 class WSREHomeViewController: WSREViewController {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import wsr
+import WSRComponents
 
 class WSREViewController: WSRViewController {
 

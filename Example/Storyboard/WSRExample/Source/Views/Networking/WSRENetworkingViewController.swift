@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import wsr
+import WSRComponents
 import SuperEasyLayout
 
 class WSRENetworkingViewController: WSREViewController {
