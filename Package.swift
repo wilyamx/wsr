@@ -27,7 +27,6 @@ let package = Package(
         .target(
             name: "WSRNetworking",
             dependencies: [],
-            path: "Sources/WSRNetworking",
             resources: []),
         .testTarget(
             name: "wsrTests",
