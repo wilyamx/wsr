@@ -14,6 +14,11 @@ class WSREHomeCoordinator: WSRCoordinatorProtocol {
 
     var window: UIWindow?
 
+    lazy var componentsCoordinator: WSREComponentsCoordinator = {
+        let coordinator = WSREComponentsCoordinator(navigationController: navigationController)
+        return coordinator
+    }()
+    
     init(window: UIWindow?, navigationController: UINavigationController?) {
         self.window = window
         self.navigationController = navigationController
@@ -33,14 +38,18 @@ class WSREHomeCoordinator: WSRCoordinatorProtocol {
 
         viewController.wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
         window?.rootViewController = navigationController
+        
+        // add all child coordinators here
+        childCoordinators.append(contentsOf: [
+            componentsCoordinator
+        ])
     }
     
     func showcaseComponents() {
-        let coordinator = WSREComponentsCoordinator(navigationController: navigationController)
-        coordinator.start()
+        componentsCoordinator.start()
         
         let viewController = WSREComponentsViewController()
-        viewController.coordinator = coordinator
+        viewController.coordinator = componentsCoordinator
 
         navigationController?.pushViewController(viewController, animated: true)
     }

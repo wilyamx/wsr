@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WSRUtils
 
 class WSRECreateChatRoomViewController: WSREViewController {
 
@@ -18,4 +19,8 @@ class WSRECreateChatRoomViewController: WSREViewController {
     
     // MARK: - Setups
     
+    override func setupNavigation() {
+        title = "Create Chat Room"
+        wsr_NavigationBarDefaultStyle()
+    }
 }

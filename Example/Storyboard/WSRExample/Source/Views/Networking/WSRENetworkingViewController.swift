@@ -47,7 +47,7 @@ class WSRENetworkingViewController: WSREViewController {
     }
     
     override func setupLayout() {
-        view.backgroundColor = .white
+        super.setupLayout()
         
         addSubviews([
             verticalStackView.addArrangedSubviews([

@@ -16,4 +16,10 @@ class WSREViewController: WSRViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Setups
+    
+    override func setupLayout() {
+        view.backgroundColor = .white
+    }
 }

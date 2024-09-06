@@ -72,7 +72,7 @@ class WSREComponentsViewController: WSREViewController {
     }
     
     override func setupLayout() {
-        view.backgroundColor = .white
+        super.setupLayout()
         
         addSubviews([
             verticalStackView.addArrangedSubviews([
