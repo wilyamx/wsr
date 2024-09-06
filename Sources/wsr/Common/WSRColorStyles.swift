@@ -13,29 +13,29 @@ public enum WSRColorStyle: Hashable {
 
     var backgroundColor: UIColor {
         switch self {
-        case .active: UIColor(named: "main", in: .module, compatibleWith: nil)! //.button(.active)
-        case .inactive: UIColor(named: "accentSecondary", in: .module, compatibleWith: nil)! //.white //.button(.ongoing)
+        case .active: UIColor(named: "main", in: .module, compatibleWith: nil)!
+        case .inactive: UIColor(named: "accentSecondary", in: .module, compatibleWith: nil)!
         }
     }
 
     var textColor: UIColor {
         switch self {
         case .active: .white
-        case .inactive: .white //.subText
+        case .inactive: UIColor(named: "subText", in: .module, compatibleWith: nil)!
         }
     }
 
     var disabledBackgroundColor: UIColor {
         switch self {
-        case .active: .white //.subText
-        case .inactive: .white //.subText
+        case .active: UIColor(named: "subText", in: .module, compatibleWith: nil)!
+        case .inactive: UIColor(named: "subText", in: .module, compatibleWith: nil)!
         }
     }
     
     var disabledTextColor: UIColor {
         switch self {
-        case .active: .white //.textLight
-        case .inactive: .white //.textLight
+        case .active: UIColor(named: "textLight", in: .module, compatibleWith: nil)!
+        case .inactive: UIColor(named: "textLight", in: .module, compatibleWith: nil)!
         }
     }
 }
