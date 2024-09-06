@@ -22,7 +22,7 @@ let package = Package(
             dependencies: ["SuperEasyLayout"],
             path: "Sources/wsr",
             resources: [
-                .process("Resources/WSRColors.xcassets")
+                .process("Sources/wsr/Resources/WSRColors.xcassets")
             ]),
         .target(
             name: "WSRNetworking",
