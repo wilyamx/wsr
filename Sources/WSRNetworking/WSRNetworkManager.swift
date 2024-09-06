@@ -8,5 +8,5 @@
 import Foundation
 
 public final class WSRNetworkManager {
-    static var shared = WSRNetworkManager()
+    public static var shared = WSRNetworkManager()
 }
