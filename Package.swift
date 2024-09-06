@@ -9,6 +9,7 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "wsr", targets: ["wsr"]),
+        .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
     ],
     dependencies: [
         .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
@@ -19,10 +20,15 @@ let package = Package(
         .target(
             name: "wsr",
             dependencies: ["SuperEasyLayout"],
-            path: "Sources",
+            path: "Sources/wsr",
             resources: [
                 .process("Resources/WSRColors.xcassets")
             ]),
+        .target(
+            name: "WSRNetworking",
+            dependencies: [],
+            path: "Sources/WSRNetworking",
+            resources: []),
         .testTarget(
             name: "wsrTests",
             dependencies: ["wsr"]),
