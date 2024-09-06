@@ -13,12 +13,22 @@ import SuperEasyLayout
 
 class WSREComponentsViewController: WSREViewController {
 
+    weak var coordinator: WSREComponentsCoordinator?
+    
     let viewModel = WSREComponentsViewModel()
     
     private lazy var verticalStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.spacing = 10
+        return view
+    }()
+    
+    private lazy var createChatRoomButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "CREATE CHAT ROOM"
+        view.colorStyle = .active
+        view.layer.cornerRadius = 8
         return view
     }()
     
@@ -51,6 +61,7 @@ class WSREComponentsViewController: WSREViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        wsrLogger.info(message: "Coordinator: \(coordinator)")
     }
     
     // MARK: - Setups
@@ -65,6 +76,7 @@ class WSREComponentsViewController: WSREViewController {
         
         addSubviews([
             verticalStackView.addArrangedSubviews([
+                createChatRoomButton,
                 activeButton,
                 inactiveButton,
                 disabledButton
@@ -77,12 +89,16 @@ class WSREComponentsViewController: WSREViewController {
         verticalStackView.right == view.right - 20
         verticalStackView.centerY == view.centerY
         
+        createChatRoomButton.height == 44
         activeButton.height == 44
         inactiveButton.height == 44
         disabledButton.height == 44
     }
     
     override func setupActions() {
+        createChatRoomButton.tapHandlerAsync = { [weak self] _ in
+            self?.coordinator?.showCreateChatRoom()
+        }
         activeButton.tapHandlerAsync = { _ in
             wsrLogger.info(message: "activeButton.tapHandlerAsync")
         }

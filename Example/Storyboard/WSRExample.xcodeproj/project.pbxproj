@@ -15,6 +15,8 @@
 		A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBA2C8AC80F00215A9A /* WSRComponents */; };
 		A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBC2C8AC80F00215A9A /* WSRNetworking */; };
 		A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBE2C8ACEB700215A9A /* WSRUtils */; };
+		A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */; };
+		A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
 		A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
 		A2A99BB02C8AAC6B00215A9A /* WSRENetworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewModel.swift; sourceTree = "<group>"; };
 		A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewModel.swift; sourceTree = "<group>"; };
+		A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRECreateChatRoomViewController.swift; sourceTree = "<group>"; };
+		A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsCoordinator.swift; sourceTree = "<group>"; };
 		A2C93DF42C8829DE0091A1D1 /* WSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			children = (
 				A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */,
 				A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */,
+				A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */,
+				A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -385,9 +391,11 @@
 				A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */,
 				A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */,
 				A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */,
+				A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */,
 				A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */,
 				A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */,
 				A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */,
+				A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */,
 				A2A99BB12C8AAC6B00215A9A /* WSRENetworkingViewModel.swift in Sources */,
 				A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */,
 				A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */,

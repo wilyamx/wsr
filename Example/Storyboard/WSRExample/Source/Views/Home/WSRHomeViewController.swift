@@ -6,10 +6,13 @@
 //
 
 import UIKit
-import WSRComponents
 import SuperEasyLayout
+import WSRComponents
+import WSRUtils
 
 class WSREHomeViewController: WSREViewController {
+    
+    weak var coordinator: WSREHomeCoordinator?
     
     let viewModel = WSREHomeViewModel()
     
@@ -40,6 +43,7 @@ class WSREHomeViewController: WSREViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        wsrLogger.info(message: "Coordinator: \(coordinator)")
     }
     
     // MARK: - Setups

@@ -1,5 +1,5 @@
 //
-//  WSREViewController.swift
+//  WSRECreateChatRoomViewController.swift
 //  WSRExample
 //
 //  Created by William S. Rena on 9/6/24.
@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import WSRComponents
 
-class WSREViewController: WSRViewController {
+class WSRECreateChatRoomViewController: WSREViewController {
 
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Setups
+    
 }

@@ -36,8 +36,11 @@ class WSREHomeCoordinator: WSRCoordinatorProtocol {
     }
     
     func showcaseComponents() {
+        let coordinator = WSREComponentsCoordinator(navigationController: navigationController)
+        coordinator.start()
+        
         let viewController = WSREComponentsViewController()
-        viewController.coordinator = self
+        viewController.coordinator = coordinator
 
         navigationController?.pushViewController(viewController, animated: true)
     }

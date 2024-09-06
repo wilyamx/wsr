@@ -13,6 +13,8 @@ import SuperEasyLayout
 
 class WSRENetworkingViewController: WSREViewController {
 
+    weak var coordinator: WSREHomeCoordinator?
+    
     let viewModel = WSRENetworkingViewModel()
     
     private lazy var verticalStackView: UIStackView = {
@@ -34,6 +36,7 @@ class WSRENetworkingViewController: WSREViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        wsrLogger.info(message: "Coordinator: \(coordinator)")
     }
     
     // MARK: - Setups
