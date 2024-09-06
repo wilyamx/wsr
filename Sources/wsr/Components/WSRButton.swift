@@ -20,7 +20,7 @@ open class WSRButton: UIButton {
         }
     }
 
-    var titleColors: [UIControl.State: UIColor?] = [:] {
+    public var titleColors: [UIControl.State: UIColor?] = [:] {
         didSet {
             titleColors.forEach { state, color in
                 guard let attributedString = attributedTitle(for: state) else { return }
@@ -35,7 +35,7 @@ open class WSRButton: UIButton {
         }
     }
 
-    var backgroundColors: [UIControl.State: UIColor?] = [
+    public var backgroundColors: [UIControl.State: UIColor?] = [
         UIControl.State.normal: .clear,
         UIControl.State.disabled: .clear,
     ] {
@@ -46,7 +46,7 @@ open class WSRButton: UIButton {
         }
     }
 
-    var colorStyle: WSRColorStyle = .active { didSet {
+    public var colorStyle: WSRColorStyle = .active { didSet {
         backgroundColors = [
             .normal: colorStyle.backgroundColor,
             .disabled: colorStyle.disabledBackgroundColor
@@ -57,11 +57,11 @@ open class WSRButton: UIButton {
         ]
     } }
 
-    var font: UIFont = .preferredFont(forTextStyle: .body) { didSet {
+    public var font: UIFont = .preferredFont(forTextStyle: .body) { didSet {
         self.text = text
     } }
 
-    var text: String {
+    public var text: String {
         get { titleLabel?.attributedText?.string ?? "" }
         set {
             titleColors.forEach { state, color in
@@ -71,8 +71,8 @@ open class WSRButton: UIButton {
         }
     }
 
-    var tapHandler: ((WSRButton) -> Void)?
-    var tapHandlerAsync: ((WSRButton) async -> Void)?
+    public var tapHandler: ((WSRButton) -> Void)?
+    public var tapHandlerAsync: ((WSRButton) async -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,7 +94,7 @@ open class WSRButton: UIButton {
 
     }
 
-    func setup() {
+    private func setup() {
         colorStyle = .active
         font = .wsr_body
 
@@ -105,7 +105,7 @@ open class WSRButton: UIButton {
         isExclusiveTouch = true
     }
 
-    func setBackgroundColor(_ color: UIColor?, for state: UIControl.State) {
+    public func setBackgroundColor(_ color: UIColor?, for state: UIControl.State) {
         backgroundColors[state] = color
     }
 }
