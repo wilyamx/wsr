@@ -10,14 +10,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator: WSRHomeCoordinator?
+    var coordinator: WSREHomeCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let navController = UINavigationController()
-        coordinator = WSRHomeCoordinator(window: windowScene.windows.first, navigationController: navController)
+        coordinator = WSREHomeCoordinator(window: windowScene.windows.first, navigationController: navController)
         coordinator?.start()
 
         window?.windowScene = windowScene

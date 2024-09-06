@@ -1,18 +1,18 @@
 //
-//  WSRHomeViewController.swift
+//  WSREComponentsViewController.swift
 //  WSRExample
 //
-//  Created by William S. Rena on 9/5/24.
+//  Created by William S. Rena on 9/6/24.
+//  Copyright © 2024 Personal Use Only. All rights reserved.
 //
 
 import UIKit
 import wsr
 import SuperEasyLayout
 
-class WSREHomeViewController: WSRViewController {
-    weak var coordinator: WSREHomeCoordinator?
-    
-    let viewModel = WSREHomeViewModel()
+class WSREComponentsViewController: WSREViewController {
+
+    let viewModel = WSREComponentsViewModel()
     
     private lazy var verticalStackView: UIStackView = {
         let view = UIStackView()
@@ -21,18 +21,27 @@ class WSREHomeViewController: WSRViewController {
         return view
     }()
     
-    private lazy var componentsButton: WSRButton = {
+    private lazy var activeButton: WSRButton = {
         let view = WSRButton()
-        view.text = "COMPONENTS"
+        view.text = "ACTIVE"
         view.colorStyle = .active
         view.layer.cornerRadius = 8
         return view
     }()
     
-    private lazy var networkingButton: WSRButton = {
+    private lazy var inactiveButton: WSRButton = {
         let view = WSRButton()
-        view.text = "NETWORKING"
+        view.text = "INACTIVE"
         view.colorStyle = .inactive
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
+    private lazy var disabledButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "DISABLED"
+        view.colorStyle = .inactive
+        view.isEnabled = false
         view.layer.cornerRadius = 8
         return view
     }()
@@ -55,8 +64,9 @@ class WSREHomeViewController: WSRViewController {
         
         addSubviews([
             verticalStackView.addArrangedSubviews([
-                componentsButton,
-                networkingButton
+                activeButton,
+                inactiveButton,
+                disabledButton
             ])
         ])
     }
@@ -66,16 +76,21 @@ class WSREHomeViewController: WSRViewController {
         verticalStackView.right == view.right - 20
         verticalStackView.centerY == view.centerY
         
-        componentsButton.height == 44
-        networkingButton.height == 44
+        activeButton.height == 44
+        inactiveButton.height == 44
+        disabledButton.height == 44
     }
     
     override func setupActions() {
-        componentsButton.tapHandlerAsync = { _ in
+        activeButton.tapHandlerAsync = { _ in
             wsrLogger.info(message: "1111")
         }
-        networkingButton.tapHandlerAsync = { _ in
+        inactiveButton.tapHandlerAsync = { _ in
             wsrLogger.info(message: "2222")
         }
+        disabledButton.tapHandlerAsync = { _ in
+            wsrLogger.info(message: "3333")
+        }
     }
+    
 }

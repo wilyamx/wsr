@@ -8,7 +8,7 @@
 import UIKit
 import wsr
 
-class WSRHomeCoordinator: WSRCoordinatorProtocol {
+class WSREHomeCoordinator: WSRCoordinatorProtocol {
     var childCoordinators = [WSRCoordinatorProtocol]()
     var navigationController: UINavigationController?
 
@@ -20,7 +20,7 @@ class WSRHomeCoordinator: WSRCoordinatorProtocol {
     }
 
     func start() {
-        let viewController = WSRHomeViewController()
+        let viewController = WSREHomeViewController()
         viewController.coordinator = self
 
         navigationController?.pushViewController(viewController, animated: false)
