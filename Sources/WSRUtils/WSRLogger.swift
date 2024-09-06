@@ -26,7 +26,6 @@ public enum WSRDebugInfoKey: String {
 }
 
 public struct WSRLogger {
-    
     private let nullString = "(null)"
     private let separatorString = "*******************************"
     
@@ -55,9 +54,7 @@ public struct WSRLogger {
      */
     func log(logKey: WSRDebugInfoKey, any: AnyObject, message: String) {
         guard filteredLogKeys.isEmpty ||
-                (filteredLogKeys.count > 0 && filteredLogKeys.contains(logKey)) else {
-            return
-        }
+                (filteredLogKeys.count > 0 && filteredLogKeys.contains(logKey)) else { return }
 #if DEBUG
         print("\(logKey.rawValue) [\(type(of: any))] :: \(message)")
 #endif
@@ -68,9 +65,7 @@ public struct WSRLogger {
      */
     func log(logKey: WSRDebugInfoKey = .info, category: String, message: String) {
         guard filteredLogKeys.isEmpty ||
-                (filteredLogKeys.count > 0 && filteredLogKeys.contains(logKey)) else {
-            return
-        }
+                (filteredLogKeys.count > 0 && filteredLogKeys.contains(logKey)) else { return }
 #if DEBUG
         print("\(logKey.rawValue) [\(category)] :: \(message)")
 #endif
@@ -90,7 +85,12 @@ public struct WSRLogger {
         
 #if DEBUG
         let filename = URL(fileURLWithPath: file).deletingPathExtension().lastPathComponent
-        print("\(category.rawValue) [\(filename).\(function):\(line)] - \(message)")
+        if message.isEmpty {
+            print("\(category.rawValue) [\(filename).\(function):\(line)]")
+        }
+        else {
+            print("\(category.rawValue) [\(filename).\(function):\(line)] - \(message)")
+        }
 #endif
     }
     
@@ -98,9 +98,7 @@ public struct WSRLogger {
                                _ file: String,
                                _ function: String,
                                _ line: Int) {
-        guard (filteredLogKeys.count > 0 && filteredLogKeys.contains(category)) else {
-            return
-        }
+        guard (filteredLogKeys.count > 0 && filteredLogKeys.contains(category)) else { return }
         
         let filename = URL(fileURLWithPath: file).deletingPathExtension().lastPathComponent
 #if DEBUG
@@ -114,42 +112,42 @@ public struct WSRLogger {
         [INFO]>> [MessagingChatsView.body:27] - selected-item index: 3
      */
     public func log(category: WSRDebugInfoKey,
-             message: String,
+             message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: category, message: message, file, function, line)
     }
     
-    public func realm(message: String,
+    public func realm(message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.realmDb, message: message, file, function, line)
     }
     
-    public func cache(message: String,
+    public func cache(message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.cache, message: message, file, function, line)
     }
     
-    public func info(message: String,
+    public func info(message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.info, message: message, file, function, line)
     }
     
-    public func api(message: String,
+    public func api(message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
         self.messageFormat(category: WSRDebugInfoKey.api, message: message, file, function, line)
     }
     
-    public func error(message: String,
+    public func error(message: String = "",
              _ file: String = #file,
              _ function: String = #function,
              _ line: Int = #line) {
@@ -182,15 +180,13 @@ public struct WSRLogger {
               _ file: String = #file,
               _ function: String = #function,
               _ line: Int = #line) {
-        self.messageFormat(category: WSRDebugInfoKey.map,
-                           message: message, file, function, line)
+        self.messageFormat(category: WSRDebugInfoKey.map, message: message, file, function, line)
     }
     
     public func view(_ file: String = #file,
               _ function: String = #function,
               _ line: Int = #line) {
-        self.messageFormat(category: WSRDebugInfoKey.view,
-                           file, function, line)
+        self.messageFormat(category: WSRDebugInfoKey.view, file, function, line)
     }
     
     // MARK: - Request Details
