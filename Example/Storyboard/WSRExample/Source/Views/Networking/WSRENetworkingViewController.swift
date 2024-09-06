@@ -8,6 +8,7 @@
 
 import UIKit
 import WSRComponents
+import WSRUtils
 import SuperEasyLayout
 
 class WSRENetworkingViewController: WSREViewController {
@@ -62,7 +63,7 @@ class WSRENetworkingViewController: WSREViewController {
     
     override func setupActions() {
         requestButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "1111")
+            wsrLogger.info(message: "requestButton.tapHandlerAsync")
         }
     }
 }

@@ -14,6 +14,7 @@
 		A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */; };
 		A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBA2C8AC80F00215A9A /* WSRComponents */; };
 		A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBC2C8AC80F00215A9A /* WSRNetworking */; };
+		A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBE2C8ACEB700215A9A /* WSRUtils */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
 		A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
+				A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */,
 				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
 				A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */,
 			);
@@ -257,6 +259,7 @@
 				A2CBE1492C89592E00C677E0 /* SuperEasyLayout */,
 				A2A99BBA2C8AC80F00215A9A /* WSRComponents */,
 				A2A99BBC2C8AC80F00215A9A /* WSRNetworking */,
+				A2A99BBE2C8ACEB700215A9A /* WSRUtils */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -762,6 +765,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
 			productName = WSRNetworking;
+		};
+		A2A99BBE2C8ACEB700215A9A /* WSRUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRUtils;
 		};
 		A2CBE1492C89592E00C677E0 /* SuperEasyLayout */ = {
 			isa = XCSwiftPackageProductDependency;

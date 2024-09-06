@@ -8,6 +8,7 @@
 
 import UIKit
 import WSRComponents
+import WSRUtils
 import SuperEasyLayout
 
 class WSREComponentsViewController: WSREViewController {
@@ -83,13 +84,13 @@ class WSREComponentsViewController: WSREViewController {
     
     override func setupActions() {
         activeButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "1111")
+            wsrLogger.info(message: "activeButton.tapHandlerAsync")
         }
         inactiveButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "2222")
+            wsrLogger.info(message: "inactiveButton.tapHandlerAsync")
         }
         disabledButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "3333")
+            wsrLogger.info(message: "disabledButton.tapHandlerAsync")
         }
     }
     
