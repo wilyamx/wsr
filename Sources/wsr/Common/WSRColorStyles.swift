@@ -13,8 +13,8 @@ public enum WSRColorStyle: Hashable {
 
     var backgroundColor: UIColor {
         switch self {
-        case .active: .white //.button(.active)
-        case .inactive: .white //.button(.ongoing)
+        case .active: UIColor(named: "main", in: .module, compatibleWith: nil)! //.button(.active)
+        case .inactive: UIColor(named: "accentSecondary", in: .module, compatibleWith: nil)! //.white //.button(.ongoing)
         }
     }
 
