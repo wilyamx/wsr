@@ -55,7 +55,7 @@ class WSREComponentsViewController: WSREViewController {
     // MARK: - Setups
     
     override func setupNavigation() {
-        title = "WSR Swift Packager"
+        title = "WSR Components"
         wsr_NavigationBarDefaultStyle()
     }
     

@@ -11,6 +11,8 @@ import wsr
 
 class WSREViewController: WSRViewController {
 
+    weak var coordinator: WSREHomeCoordinator?
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {

@@ -9,8 +9,7 @@ import UIKit
 import wsr
 import SuperEasyLayout
 
-class WSREHomeViewController: WSRViewController {
-    weak var coordinator: WSREHomeCoordinator?
+class WSREHomeViewController: WSREViewController {
     
     let viewModel = WSREHomeViewModel()
     
@@ -71,11 +70,11 @@ class WSREHomeViewController: WSRViewController {
     }
     
     override func setupActions() {
-        componentsButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "1111")
+        componentsButton.tapHandlerAsync = { [weak self] _ in
+            self?.coordinator?.showcaseComponents()
         }
-        networkingButton.tapHandlerAsync = { _ in
-            wsrLogger.info(message: "2222")
+        networkingButton.tapHandlerAsync = { [weak self] _ in
+            self?.coordinator?.showcaseNetworking()
         }
     }
 }

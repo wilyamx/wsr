@@ -34,4 +34,18 @@ class WSREHomeCoordinator: WSRCoordinatorProtocol {
         viewController.wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
         window?.rootViewController = navigationController
     }
+    
+    func showcaseComponents() {
+        let viewController = WSREComponentsViewController()
+        viewController.coordinator = self
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func showcaseNetworking() {
+        let viewController = WSRENetworkingViewController()
+        viewController.coordinator = self
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
