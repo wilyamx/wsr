@@ -8,7 +8,7 @@ let package = Package(
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(name: "wsr", targets: ["wsr"]),
+        .library(name: "WSRComponents", targets: ["WSRComponents"]),
         .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
     ],
     dependencies: [
@@ -18,11 +18,10 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "wsr",
+            name: "WSRComponents",
             dependencies: ["SuperEasyLayout"],
-            path: "Sources/wsr",
             resources: [
-                .process("Sources/wsr/Resources/WSRColors.xcassets")
+                .process("WSRComponents/Resources/WSRColors.xcassets")
             ]),
         .target(
             name: "WSRNetworking",
@@ -30,6 +29,6 @@ let package = Package(
             resources: []),
         .testTarget(
             name: "wsrTests",
-            dependencies: ["wsr"]),
+            dependencies: []),
     ]
 )
