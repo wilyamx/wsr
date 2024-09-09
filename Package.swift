@@ -26,6 +26,11 @@ let package = Package(
             ]),
         .target(name: "WSRNetworking"),
         .target(name: "WSRUtils"),
-        .testTarget(name: "wsrTests"),
+        .testTarget(
+            name: "wsrTests",
+            dependencies: ["WSRComponents"],
+            resources: [
+                .process("WSRComponents/Resources/WSRColors.xcassets")
+            ]),
     ]
 )
