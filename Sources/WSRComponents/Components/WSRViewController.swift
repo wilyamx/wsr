@@ -9,8 +9,33 @@
 import UIKit
 import Combine
 
+protocol ViewControllerKeyboardAppear: AnyObject {
+    func willShowKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve)
+    func willHideKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve)
+}
+
 open class WSRViewController: UIViewController {
     public lazy var cancellables = Set<AnyCancellable>()
+    
+    public lazy var observers = [NSKeyValueObservation]()
+    public lazy var objectProtocols = [NSObjectProtocol]()
+    
+    weak var keyboardAppear: ViewControllerKeyboardAppear? { didSet {
+        objectProtocols.append(contentsOf: [
+            NotificationCenter.default.addObserver(
+                forName: UIApplication.keyboardWillShowNotification,
+                object: nil,
+                queue: .main,
+                using: { [weak self] in self?.notificationForWillShowKeyboard($0) }
+            ),
+            NotificationCenter.default.addObserver(
+                forName: UIApplication.keyboardWillHideNotification,
+                object: nil,
+                queue: .main,
+                using: { [weak self] in self?.notificationForWillHideKeyboard($0) }
+            )
+        ])
+    } }
     
     // MARK: - View Lifecycle
     
@@ -57,5 +82,43 @@ open class WSRViewController: UIViewController {
         }
         navigationController?.navigationBar.tintColor = tintColor
         navigationItem.backButtonTitle = ""
+    }
+}
+
+// MARK: - Notifications
+
+extension WSRViewController {
+    private func notificationForWillShowKeyboard(_ notification: Notification) {
+        guard
+            let delegate = keyboardAppear,
+            let userInfo = notification.userInfo,
+            let endFrameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+            let durationNumber = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber,
+            let curveNumber = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
+            let curve = UIView.AnimationCurve(rawValue: curveNumber.intValue)
+        else {
+            return
+        }
+        let endFrame = endFrameValue.cgRectValue
+        let duration = durationNumber.doubleValue
+
+        delegate.willShowKeyboard(frame: endFrame, duration: duration, curve: curve)
+    }
+
+    private func notificationForWillHideKeyboard(_ notification: Notification) {
+        guard
+            let delegate = keyboardAppear,
+            let userInfo = notification.userInfo,
+            let endFrameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+            let durationNumber = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber,
+            let curveNumber = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
+            let curve = UIView.AnimationCurve(rawValue: curveNumber.intValue)
+        else {
+            return
+        }
+        let endFrame = endFrameValue.cgRectValue
+        let duration = durationNumber.doubleValue
+
+        delegate.willHideKeyboard(frame: endFrame, duration: duration, curve: curve)
     }
 }
