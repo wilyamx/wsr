@@ -122,3 +122,17 @@ extension WSRViewController {
         delegate.willHideKeyboard(frame: endFrame, duration: duration, curve: curve)
     }
 }
+
+// MARK: - Animations
+
+public extension UIView.AnimationCurve {
+    var animationOptions: UIView.AnimationOptions {
+        switch self {
+        case .easeIn: return [.curveEaseIn]
+        case .easeOut: return [.curveEaseOut]
+        case .easeInOut: return [.curveEaseInOut]
+        case .linear: return [.curveLinear]
+        @unknown default: return []
+        }
+    }
+}
