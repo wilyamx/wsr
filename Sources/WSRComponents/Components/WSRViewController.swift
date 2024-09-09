@@ -9,7 +9,7 @@
 import UIKit
 import Combine
 
-protocol ViewControllerKeyboardAppear: AnyObject {
+public protocol ViewControllerKeyboardAppear: AnyObject {
     func willShowKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve)
     func willHideKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve)
 }
@@ -20,7 +20,7 @@ open class WSRViewController: UIViewController {
     public lazy var observers = [NSKeyValueObservation]()
     public lazy var objectProtocols = [NSObjectProtocol]()
     
-    weak var keyboardAppear: ViewControllerKeyboardAppear? { didSet {
+    public weak var keyboardAppear: ViewControllerKeyboardAppear? { didSet {
         objectProtocols.append(contentsOf: [
             NotificationCenter.default.addObserver(
                 forName: UIApplication.keyboardWillShowNotification,
