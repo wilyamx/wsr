@@ -8,11 +8,11 @@
 import UIKit
 
 open class WSRCollectionViewCell: UICollectionViewCell {
-    var tapHandler: ((WSRCollectionViewCell) -> Void)?
-    var tapHandlerAsync: ((WSRCollectionViewCell) async -> Void)?
+    public var tapHandler: ((WSRCollectionViewCell) -> Void)?
+    public var tapHandlerAsync: ((WSRCollectionViewCell) async -> Void)?
 
     private var originSelectionBackViewBackgroundColor: UIColor?
-    var selectionBackView: UIView? {
+    public var selectionBackView: UIView? {
         didSet {
             guard let view = selectionBackView else {
                 originSelectionBackViewBackgroundColor = .white
@@ -25,17 +25,19 @@ open class WSRCollectionViewCell: UICollectionViewCell {
     private static var tapControllSemaphore = DispatchSemaphore(value: 0)
     private static var tapQueue = DispatchQueue(label: "CollectionViewCellTapQueue")
 
-    class var identifier: String {
+    // MARK: - Class Methods
+    
+    public class var identifier: String {
         let name = NSStringFromClass(self)
         let components = name.components(separatedBy: ".")
         return components.last ?? "Unknown" + "Identifier"
     }
 
-    class func registerCell(to collectionView: UICollectionView) {
+    public class func registerCell(to collectionView: UICollectionView) {
         collectionView.register(self, forCellWithReuseIdentifier: identifier)
     }
 
-    class func dequeueCell(from collectionView: UICollectionView, for indexPath: IndexPath) -> Self {
+    public class func dequeueCell(from collectionView: UICollectionView, for indexPath: IndexPath) -> Self {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: identifier, for: indexPath
         ) as? Self else {
@@ -44,9 +46,7 @@ open class WSRCollectionViewCell: UICollectionViewCell {
         return cell
     }
 
-    open override var reuseIdentifier: String? {
-        WSRCollectionViewCell.identifier
-    }
+    // MARK: - Instantiation
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,21 +62,29 @@ open class WSRCollectionViewCell: UICollectionViewCell {
 
     }
 
+    // MARK: - Other Methods
+    
+    open override var reuseIdentifier: String? {
+        WSRCollectionViewCell.identifier
+    }
+    
     open override func prepareForReuse() {
 
     }
 
-    func setup() {
+    // MARK: - Setups
+    
+    private func setup() {
         setupLayout()
         setupConstraints()
         setupBindings()
         setupActions()
     }
 
-    func setupLayout() {}
-    func setupConstraints() {}
-    func setupBindings() {}
-    func setupActions() {}
+    open func setupLayout() {}
+    open func setupConstraints() {}
+    open func setupBindings() {}
+    open func setupActions() {}
 }
 
 extension WSRCollectionViewCell {
