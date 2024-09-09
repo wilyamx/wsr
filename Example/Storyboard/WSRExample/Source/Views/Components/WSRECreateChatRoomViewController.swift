@@ -39,7 +39,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .center
         view.font = .wsr_title
-        //view.textColor = .textColor(.title)
+        view.textColor = UIColor.getPackageColor(named: "wsr_text")
         view.lineBreakMode = .byCharWrapping
         view.text = "New Chat Room"
         return view
@@ -49,7 +49,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .left
         view.font = .wsr_body
-        //view.textColor = .textColor(.title)
+        view.textColor = UIColor.getPackageColor(named: "wsr_text")
         view.lineBreakMode = .byCharWrapping
         view.text = "Room Name"
         return view
@@ -65,7 +65,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .left
         view.font = .wsr_body
-        //view.textColor = .textColor(.title)
+        view.textColor = UIColor.getPackageColor(named: "wsr_text")
         view.lineBreakMode = .byCharWrapping
         view.text = "Password (optional)"
         return view
@@ -101,11 +101,17 @@ class WSRECreateChatRoomViewController: WSREViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
+    }
+    
     // MARK: - Setups
     
     override func setupNavigation() {
         title = "Create Chat Room"
-        wsr_NavigationBarDefaultStyle()
     }
     
     override func setupLayout() {
@@ -181,6 +187,8 @@ class WSRECreateChatRoomViewController: WSREViewController {
             wsrLogger.info(message: "createButton.tapHandlerAsync")
         }
         cancelButton.tapHandler = { [weak self] _ in
+            self?.roomTextField.resignFirstResponder()
+            self?.passwordTextField.resignFirstResponder()
             self?.navigationController?.popViewController(animated: true)
         }
     }

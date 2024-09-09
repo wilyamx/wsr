@@ -12,7 +12,6 @@ import WSRUtils
 import SuperEasyLayout
 
 class WSREComponentsViewController: WSREViewController {
-
     weak var coordinator: WSREComponentsCoordinator?
     
     let viewModel = WSREComponentsViewModel()
@@ -64,11 +63,17 @@ class WSREComponentsViewController: WSREViewController {
         wsrLogger.info(message: "Coordinator: \(coordinator)")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
+    }
+    
     // MARK: - Setups
     
     override func setupNavigation() {
         title = "WSR Components"
-        wsr_NavigationBarDefaultStyle()
     }
     
     override func setupLayout() {
