@@ -17,9 +17,15 @@ class WSREViewController: WSRViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
+    }
+    
     // MARK: - Setups
     
     override func setupLayout() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.getPackageColor(named: "wsr_mainBackground")
     }
 }

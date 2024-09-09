@@ -50,7 +50,6 @@ class WSREHomeViewController: WSREViewController {
     
     override func setupNavigation() {
         title = "WSR Swift Packager"
-        wsr_NavigationBarDefaultStyle()
     }
     
     override func setupLayout() {

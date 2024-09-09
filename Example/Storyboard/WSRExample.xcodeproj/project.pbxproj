@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewController.swift; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
@@ -104,12 +106,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A246DA742C8EBA9A000924F1 /* CreateChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */,
+			);
+			path = CreateChatRoom;
+			sourceTree = "<group>";
+		};
+		A246DA752C8EBAB0000924F1 /* ChatRoomList */ = {
+			isa = PBXGroup;
+			children = (
+				A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */,
+			);
+			path = ChatRoomList;
+			sourceTree = "<group>";
+		};
 		A2A99BA82C8AAAD800215A9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */,
 				A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */,
-				A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */,
 				A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */,
 			);
 			path = Components;
@@ -226,6 +243,8 @@
 			children = (
 				A2CBE14F2C8973D300C677E0 /* Home */,
 				A2A99BA82C8AAAD800215A9A /* Components */,
+				A246DA742C8EBA9A000924F1 /* CreateChatRoom */,
+				A246DA752C8EBAB0000924F1 /* ChatRoomList */,
 				A2A99BA92C8AAAF100215A9A /* Networking */,
 			);
 			path = Views;
@@ -400,6 +419,7 @@
 				A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */,
 				A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */,
 				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
+				A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

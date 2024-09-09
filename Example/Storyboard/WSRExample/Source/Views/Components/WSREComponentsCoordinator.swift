@@ -27,4 +27,11 @@ class WSREComponentsCoordinator: WSRCoordinatorProtocol {
 
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func showChatRoomList() {
+        let viewController = WSREChatRoomListViewController()
+        //viewController.coordinator = self
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

@@ -103,9 +103,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(true, animated: false)
-        wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
     }
     
     // MARK: - Setups

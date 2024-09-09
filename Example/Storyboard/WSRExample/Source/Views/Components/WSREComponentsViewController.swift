@@ -31,6 +31,14 @@ class WSREComponentsViewController: WSREViewController {
         return view
     }()
     
+    private lazy var chatRoomListButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "CHAT ROOM LIST"
+        view.colorStyle = .active
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
     private lazy var activeButton: WSRButton = {
         let view = WSRButton()
         view.text = "ACTIVE"
@@ -65,9 +73,7 @@ class WSREComponentsViewController: WSREViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(false, animated: false)
-        wsr_NavigationBarDefaultStyle(backgroundColor: UIColor.accent, tintColor: .white)
     }
     
     // MARK: - Setups
@@ -82,6 +88,7 @@ class WSREComponentsViewController: WSREViewController {
         addSubviews([
             verticalStackView.addArrangedSubviews([
                 createChatRoomButton,
+                chatRoomListButton,
                 activeButton,
                 inactiveButton,
                 disabledButton
@@ -95,6 +102,7 @@ class WSREComponentsViewController: WSREViewController {
         verticalStackView.centerY == view.centerY
         
         createChatRoomButton.height == 44
+        chatRoomListButton.height == 44
         activeButton.height == 44
         inactiveButton.height == 44
         disabledButton.height == 44
@@ -103,6 +111,9 @@ class WSREComponentsViewController: WSREViewController {
     override func setupActions() {
         createChatRoomButton.tapHandlerAsync = { [weak self] _ in
             self?.coordinator?.showCreateChatRoom()
+        }
+        chatRoomListButton.tapHandlerAsync = { [weak self] _ in
+            self?.coordinator?.showChatRoomList()
         }
         activeButton.tapHandlerAsync = { _ in
             wsrLogger.info(message: "activeButton.tapHandlerAsync")
