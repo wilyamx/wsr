@@ -11,6 +11,8 @@ import WSRComponents
 
 class WSREChatRoomListViewController: WSREViewController {
 
+    let viewModel = WSREChatRoomListViewModel()
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {

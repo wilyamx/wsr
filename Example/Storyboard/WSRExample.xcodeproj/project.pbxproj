@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */; };
+		A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewController.swift; sourceTree = "<group>"; };
+		A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewModel.swift; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */,
+				A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */,
 			);
 			path = ChatRoomList;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
 				A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
+				A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

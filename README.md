@@ -6,6 +6,12 @@
 * Add [https://github.com/wilyamx/wsr.git](https://github.com/wilyamx/wsr.git)
 * Select **Up to Next Major**
 
+## Project Specifications
+
+- **IDE:** `XCode 15.2 for iOS 17.2`
+- **Language:** `Swift 5`
+- **Interface:** `Storyboard`
+
 ## Supports
 
 ### WSRComponents
@@ -18,6 +24,12 @@
 ### WSRNetworking
 
 1. Async Requests
+
+## Technical Implementations
+
+1. MVVM + Combine
+1. User Defaults
+1. Custom Wrapper
 
 ### Package Dependencies
 
