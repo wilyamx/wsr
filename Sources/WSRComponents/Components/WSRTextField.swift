@@ -133,6 +133,8 @@ open class WSRTextField: UITextField {
             UIColor(named: "wsr_main", in: .module, compatibleWith: nil)!.cgColor }
     }
 
+    // MARK: - Instantiations
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -143,6 +145,8 @@ open class WSRTextField: UITextField {
         setup()
     }
 
+    // MARK: - Setups
+    
     private func setup() {
         addTarget(self, action: #selector(onChangedText), for: .editingChanged)
         delegate = self
@@ -154,12 +158,14 @@ open class WSRTextField: UITextField {
         setupBindings()
         setupActions()
     }
+    
+    open func setupLayout() {}
+    open func setupConstraints() {}
+    open func setupBindings() {}
+    open func setupActions() {}
 
-    func setupLayout() {}
-    func setupConstraints() {}
-    func setupBindings() {}
-    func setupActions() {}
-
+    // MARK: - Other Methods
+    
     open override func deleteBackward() {
         if text == "" { baseTextFieldDelegate?.tappedBackword?(self) }
         super.deleteBackward()
@@ -186,6 +192,8 @@ open class WSRTextField: UITextField {
         isSecureMode ? [] : super.selectionRects(for: range)
     }
 
+    // MARK: - Handlers
+    
     @objc func onChangedText() {
         guard markedTextRange == nil else { return }
 
