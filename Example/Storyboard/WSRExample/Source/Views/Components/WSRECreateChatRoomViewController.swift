@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import WSRComponents
+import WSRUtils
 import SuperEasyLayout
 
 class WSRECreateChatRoomViewController: WSREViewController {
@@ -32,6 +33,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         view.alignment = .leading
         return view
     }()
+    private weak var containerViewCenterYConstraint: NSLayoutConstraint?
     
     private lazy var titleTextLabel: UILabel = {
         let view = UILabel()
@@ -135,7 +137,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         
         containerView.width == UIScreen.main.bounds.width - 40
         containerView.centerX == view.centerX
-        containerView.centerY == view.centerY
+        containerViewCenterYConstraint = containerView.centerY == view.centerY
         
         verticalStackView.left == containerView.left + 20
         verticalStackView.right == containerView.right - 20
@@ -160,5 +162,44 @@ class WSRECreateChatRoomViewController: WSREViewController {
         cancelButton.left == verticalStackView.left
         cancelButton.right == verticalStackView.right
         cancelButton.height == 44
+    }
+    
+    override func setupBindings() {
+        roomTextField.textPublisher
+            .sink { [weak self] text in
+                guard let text else { return }
+                self?.createButton.isEnabled = !text.isEmpty
+            }
+            .store(in: &cancellables)
+    }
+    
+    override func setupActions() {
+        roomTextField.becomeFirstResponder()
+        keyboardAppear = self
+        
+        createButton.tapHandlerAsync = { _ in
+            wsrLogger.info(message: "createButton.tapHandlerAsync")
+        }
+        cancelButton.tapHandler = { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+}
+
+// MARK: Keyboard Appearance
+
+extension WSRECreateChatRoomViewController: ViewControllerKeyboardAppear {
+    func willShowKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve) {
+        containerViewCenterYConstraint?.constant = -abs((verticalStackView.frame.height) - frame.height) - 40
+        UIView.animate(withDuration: duration, delay: 0, options: curve.animationOptions) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
+    }
+
+    func willHideKeyboard(frame: CGRect, duration: TimeInterval, curve: UIView.AnimationCurve) {
+        containerViewCenterYConstraint?.constant = 0
+        UIView.animate(withDuration: duration, delay: 0, options: curve.animationOptions) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
 }
