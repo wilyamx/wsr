@@ -1,5 +1,7 @@
 import XCTest
-@testable import wsr
+@testable import WSRUtils
+@testable import WSRComponents
+@testable import WSRNetworking
 
 final class wsrTests: XCTestCase {
     func testExample() throws {

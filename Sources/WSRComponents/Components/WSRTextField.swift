@@ -9,7 +9,6 @@ import UIKit
 import Combine
 import SuperEasyLayout
 
-/*
 @objc protocol BaseTextFieldDelegate: NSObjectProtocol {
     @objc optional func tappedBackword(_ textField: WSRTextField)
 }
@@ -25,7 +24,7 @@ open class WSRTextField: UITextField {
         view.setBackgroundColor(.clear, for: .normal)
         view.width == 44
         view.height == 44
-        view.tintColor = .textColor(.title)
+        view.tintColor = UIColor(named: "accent", in: .module, compatibleWith: nil)
         return view
     }()
 
@@ -52,7 +51,7 @@ open class WSRTextField: UITextField {
     /// Placeholder関連
     var placeholderFont: UIFont = .preferredFont(forTextStyle: .caption1)
     var placeholderColor: UIColor? = .tertiaryLabel
-    override var placeholder: String? {
+    open override var placeholder: String? {
         get { attributedPlaceholder?.string }
         set {
             guard let newValue else {
@@ -78,7 +77,7 @@ open class WSRTextField: UITextField {
         isBorderHidden = !newValue
     } }
 
-    override var text: String? {
+    open override var text: String? {
         get { super.text }
         set {
             super.text = newValue
@@ -130,7 +129,8 @@ open class WSRTextField: UITextField {
 
     var isBorderHidden: Bool {
         get { layer.borderColor == UIColor.clear.cgColor }
-        set { layer.borderColor = newValue ? UIColor.clear.cgColor : UIColor.main.cgColor }
+        set { layer.borderColor = newValue ? UIColor.clear.cgColor : 
+            UIColor(named: "wsr_main", in: .module, compatibleWith: nil)!.cgColor }
     }
 
     override init(frame: CGRect) {
@@ -138,7 +138,7 @@ open class WSRTextField: UITextField {
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
@@ -160,18 +160,18 @@ open class WSRTextField: UITextField {
     func setupBindings() {}
     func setupActions() {}
 
-    override func deleteBackward() {
+    open override func deleteBackward() {
         if text == "" { baseTextFieldDelegate?.tappedBackword?(self) }
         super.deleteBackward()
     }
 
-    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+    open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         guard let leftViewWidth else { return super.leftViewRect(forBounds: bounds) }
 
         return CGRect(x: 0.0, y: 0.0, width: leftViewWidth, height: bounds.height)
     }
 
-    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+    open override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
         guard let rightViewWidth else { return super.rightViewRect(forBounds: bounds) }
 
         return CGRect(
@@ -182,7 +182,7 @@ open class WSRTextField: UITextField {
         )
     }
 
-    override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
+    open override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
         isSecureMode ? [] : super.selectionRects(for: range)
     }
 
@@ -197,23 +197,23 @@ open class WSRTextField: UITextField {
     }
 }
 
-public extension WSRTextField: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(_: UITextField) -> Bool {
+extension WSRTextField: UITextFieldDelegate {
+    public func textFieldShouldBeginEditing(_: UITextField) -> Bool {
         onBeginEdit?(self)
         hasFocus = true
         return true
     }
 
-    func textFieldShouldEndEditing(_: UITextField) -> Bool {
+    public func textFieldShouldEndEditing(_: UITextField) -> Bool {
         hasFocus = false
         return true
     }
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         hasFocus = false
     }
 
-    func textFieldShouldReturn(_: UITextField) -> Bool {
+    public func textFieldShouldReturn(_: UITextField) -> Bool {
         if let next = nextField {
             next.becomeFirstResponder()
         } else {
@@ -230,7 +230,7 @@ public extension WSRTextField: UITextFieldDelegate {
         return false
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn nsRange: NSRange,
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn nsRange: NSRange,
                    replacementString string: String) -> Bool {
         guard let text,
               let range = Range(nsRange, in: text)
@@ -243,9 +243,8 @@ public extension WSRTextField: UITextFieldDelegate {
         guard let cursorPosition, let newString else { return true }
 
         textField.text = newString
-        textField.cursorPosition = cursorPosition
+        //textField.cursorPosition = cursorPosition
 
         return false
     }
 }
-*/
