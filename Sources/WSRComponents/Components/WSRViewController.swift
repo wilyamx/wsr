@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Combine
 
 open class WSRViewController: UIViewController {
+    public lazy var cancellables = Set<AnyCancellable>()
     
     // MARK: - View Lifecycle
     

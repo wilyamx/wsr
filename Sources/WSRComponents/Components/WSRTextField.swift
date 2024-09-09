@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import SuperEasyLayout
 
-@objc protocol BaseTextFieldDelegate: NSObjectProtocol {
+@objc protocol WSRTextFieldDelegate: NSObjectProtocol {
     @objc optional func tappedBackword(_ textField: WSRTextField)
 }
 
@@ -39,7 +39,7 @@ open class WSRTextField: UITextField {
         return button
     }()
 
-    weak var baseTextFieldDelegate: BaseTextFieldDelegate?
+    weak var baseTextFieldDelegate: WSRTextFieldDelegate?
     var leftViewWidth: CGFloat?
     var rightViewWidth: CGFloat?
 
@@ -65,13 +65,13 @@ open class WSRTextField: UITextField {
     }
 
     weak var nextField: WSRTextField?
-    var onBeginEdit: ((WSRTextField) -> Void)?
-    var onSubmit: ((WSRTextField) -> Void)?
-    var onSubmitAsync: ((WSRTextField) async -> Void)?
-    var onChanged: ((WSRTextField, String?) -> Void)?
-    var shouldClear: ((WSRTextField) -> Bool)?
-    var shouldChangeHandler: ((WSRTextField, String, String, NSRange, String) -> (Int?, String?))?
-    lazy var textPublisher: AnyPublisher<String?, Never> = _textPublisher.eraseToAnyPublisher()
+    public var onBeginEdit: ((WSRTextField) -> Void)?
+    public var onSubmit: ((WSRTextField) -> Void)?
+    public var onSubmitAsync: ((WSRTextField) async -> Void)?
+    public var onChanged: ((WSRTextField, String?) -> Void)?
+    public var shouldClear: ((WSRTextField) -> Bool)?
+    public var shouldChangeHandler: ((WSRTextField, String, String, NSRange, String) -> (Int?, String?))?
+    public lazy var textPublisher: AnyPublisher<String?, Never> = _textPublisher.eraseToAnyPublisher()
     private let _textPublisher = PassthroughSubject<String?, Never>()
     @Published var hasFocus: Bool = false { willSet {
         isBorderHidden = !newValue
