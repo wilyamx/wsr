@@ -37,4 +37,11 @@ public extension UIColor {
         let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
         return String(format:"#%06x", rgb)
     }
+    
+    static func getPackageColor(named: String) -> UIColor {
+        guard let color = UIColor(named: named, in: .module, compatibleWith: nil)
+        else { fatalError("Color name \(named) not available!") }
+        
+        return color
+    }
 }
