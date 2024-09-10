@@ -24,14 +24,14 @@ open class WSRTextField: UITextField {
         view.setBackgroundColor(.clear, for: .normal)
         view.width == 44
         view.height == 44
-        view.tintColor = UIColor.getPackageColor(named: "accent")
+        view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
         return view
     }()
 
     private lazy var hideButton: UIButton = {
         let button = WSRButton()
         button.setImage(UIImage(systemName: "eye.fill"), for: .normal)
-        button.tintColor = UIColor.getPackageColor(named: "accent")
+        button.tintColor = UIColor.getPackageColor(named: "wsr_accent")
         button.tapHandler = { [weak self] _ in
             guard let self, isSecureMode else { return }
             isHiding.toggle()
