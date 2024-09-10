@@ -9,19 +9,21 @@ import UIKit
 import Combine
 
 open class WSRCollectionReusableView: UICollectionReusableView {
-    class var identifier: String {
+    
+    public lazy var cancellables = Set<AnyCancellable>()
+    
+    // MARK: - Class Methods and Properties
+    
+    public class var isHeader: Bool { fatalError("You must set isHeader.") }
+    public class var viewOfKind: String { identifier }
+    
+    public class var identifier: String {
         let name = NSStringFromClass(self)
         let components = name.components(separatedBy: ".")
         return components.last ?? "Unknown" + "Identifier"
     }
 
-    class var isHeader: Bool {
-        fatalError("You must set isHeader.")
-    }
-
-    class var viewOfKind: String { identifier }
-
-    class func registerView(to collectionView: UICollectionView) {
+    public class func registerView(to collectionView: UICollectionView) {
         collectionView.register(
             self,
             forSupplementaryViewOfKind: viewOfKind,
@@ -29,7 +31,7 @@ open class WSRCollectionReusableView: UICollectionReusableView {
         )
     }
 
-    class func dequeueView(from collectionView: UICollectionView,
+    public class func dequeueView(from collectionView: UICollectionView,
                            for indexPath: IndexPath) -> Self {
         guard let view = collectionView.dequeueReusableSupplementaryView(
             ofKind: viewOfKind,
@@ -40,8 +42,8 @@ open class WSRCollectionReusableView: UICollectionReusableView {
         return view
     }
 
-    lazy var cancellables = Set<AnyCancellable>()
-
+    // MARK: - Instantiation
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -52,6 +54,8 @@ open class WSRCollectionReusableView: UICollectionReusableView {
         setup()
     }
 
+    // MARK: - Setups
+    
     private func setup() {
         setupLayout()
         setupConstraints()
