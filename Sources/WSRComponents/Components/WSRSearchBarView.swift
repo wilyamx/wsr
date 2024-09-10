@@ -87,6 +87,8 @@ open class WSRSearchBarView: WSRView {
     // MARK: - Setups
     
     open override func setupLayout() {
+        backgroundColor = .clear
+        
         addSubviews([
             stackView.addArrangedSubviews([
                 containerView,
