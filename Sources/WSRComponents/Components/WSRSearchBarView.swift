@@ -96,6 +96,10 @@ open class WSRSearchBarView: WSRView {
         searchTextField.clearButton.tintColor = imageTintColor
     } }
     
+    public var borderColor: UIColor = UIColor.getPackageColor(named: "wsr_accentSecondary") { didSet {
+        searchTextField.borderColor = borderColor
+    } }
+    
     // MARK: - Setups
     
     open override func setupLayout() {
