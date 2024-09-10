@@ -35,6 +35,8 @@
 		A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */; };
 		A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1552C89752B00C677E0 /* WSREHomeViewModel.swift */; };
 		A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */; };
+		A2D7EEBB2C90163A00D80808 /* WSRENavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7EEBA2C90163A00D80808 /* WSRENavigationBar.swift */; };
+		A2D7EEBF2C90231D00D80808 /* WSREPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7EEBE2C90231D00D80808 /* WSREPresentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRHomeViewController.swift; sourceTree = "<group>"; };
 		A2CBE1552C89752B00C677E0 /* WSREHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREHomeViewModel.swift; sourceTree = "<group>"; };
 		A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRHomeCoordinator.swift; sourceTree = "<group>"; };
+		A2D7EEBA2C90163A00D80808 /* WSRENavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENavigationBar.swift; sourceTree = "<group>"; };
+		A2D7EEBE2C90231D00D80808 /* WSREPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREPresentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */,
+				A2D7EEBA2C90163A00D80808 /* WSRENavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -251,10 +256,10 @@
 		A2CBE14F2C8973D300C677E0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A2CBE1522C8974B500C677E0 /* Subviews */,
 				A2CBE1532C89750C00C677E0 /* WSRHomeViewController.swift */,
 				A2CBE1552C89752B00C677E0 /* WSREHomeViewModel.swift */,
 				A2CBE1572C8975D600C677E0 /* WSRHomeCoordinator.swift */,
+				A2CBE1522C8974B500C677E0 /* Subviews */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				A2A99BA82C8AAAD800215A9A /* Components */,
 				A246DA742C8EBA9A000924F1 /* CreateChatRoom */,
 				A246DA752C8EBAB0000924F1 /* ChatRoomList */,
+				A2D7EEBC2C90229A00D80808 /* PresentViewController */,
 				A2A99BA92C8AAAF100215A9A /* Networking */,
 			);
 			path = Views;
@@ -283,6 +289,14 @@
 			children = (
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A2D7EEBC2C90229A00D80808 /* PresentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2D7EEBE2C90231D00D80808 /* WSREPresentViewController.swift */,
+			);
+			path = PresentViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,8 +458,10 @@
 				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
 				A268060D2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift in Sources */,
 				A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */,
+				A2D7EEBB2C90163A00D80808 /* WSRENavigationBar.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
 				A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */,
+				A2D7EEBF2C90231D00D80808 /* WSREPresentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

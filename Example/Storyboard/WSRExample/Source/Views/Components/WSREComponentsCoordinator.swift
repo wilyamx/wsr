@@ -34,4 +34,17 @@ class WSREComponentsCoordinator: WSRCoordinatorProtocol {
 
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func showPresentViewController(on parentViewController: UIViewController) {
+        let viewController = WSREPresentViewController()
+        //viewController.coordinator = self
+
+        let navigationController = UINavigationController(navigationBarClass: WSRENavigationBar.self,
+                                                          toolbarClass: nil)
+        navigationController.modalPresentationStyle = .overFullScreen
+        //navigationController.transitioningDelegate = viewController.fadeInAnimator
+        navigationController.viewControllers = [viewController]
+
+        parentViewController.present(navigationController, animated: true)
+    }
 }

@@ -39,6 +39,14 @@ class WSREComponentsViewController: WSREViewController {
         return view
     }()
     
+    private lazy var presentViewControllerButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "PRESENT VIEW CONTROLLER"
+        view.colorStyle = .active
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
     private lazy var activeButton: WSRButton = {
         let view = WSRButton()
         view.text = "ACTIVE"
@@ -89,6 +97,7 @@ class WSREComponentsViewController: WSREViewController {
             verticalStackView.addArrangedSubviews([
                 createChatRoomButton,
                 chatRoomListButton,
+                presentViewControllerButton,
                 disabledButton,
                 inactiveButton,
                 activeButton
@@ -103,6 +112,7 @@ class WSREComponentsViewController: WSREViewController {
         
         createChatRoomButton.height == 44
         chatRoomListButton.height == 44
+        presentViewControllerButton.height == 44
         activeButton.height == 44
         inactiveButton.height == 44
         disabledButton.height == 44
@@ -114,6 +124,10 @@ class WSREComponentsViewController: WSREViewController {
         }
         chatRoomListButton.tapHandlerAsync = { [weak self] _ in
             self?.coordinator?.showChatRoomList()
+        }
+        presentViewControllerButton.tapHandlerAsync = { [weak self] _ in
+            guard let self else { return }
+            coordinator?.showPresentViewController(on: self)
         }
         activeButton.tapHandlerAsync = { _ in
             wsrLogger.info(message: "activeButton.tapHandlerAsync")
