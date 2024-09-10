@@ -9,6 +9,7 @@ A lightweight, pure-Swift library for customizing your components and apply swif
 - [x] Combine Support
 - [x] Custom Wrappers
 - [x] Custom Logger
+- [x] Coordinator Design Pattern for Navigation Workflow
 
 ## Component Libraries
 
