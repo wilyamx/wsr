@@ -1,24 +1,20 @@
 # WSR Swift Packager
 
-## Swift Package Installation
+A lightweight, pure-Swift library for customizing your components and apply swift concurrency.
 
-* File > Swift Packages > **Add Package Dependency**
-* Package URL [https://github.com/wilyamx/wsr.git](https://github.com/wilyamx/wsr.git)
-* Select **Up to Next Major**
+## Features
 
-<img src="Images/package-products.png" alt="package-products" width="500">
+- [x] Follows MVVM Architectural Design Pattern
+- [x] Swift Concurrency Support Back to iOS 17
+- [x] Combine Support
+- [x] Custom Wrappers
+- [x] Custom Logger
 
-## Project Specifications
-
-- **IDE:** `XCode 15.2 for iOS 17.2`
-- **Language:** `Swift 5`
-- **Interface:** `Storyboard`
-
-<img src="Images/embed-libraries.png" alt="embed-libraries" width="500">
-
-## Supports
+## Component Libraries
 
 ### WSRComponents
+
+Library for UI customization and use of swift concurrency.
 
 1. Buttons
 1. Navigation Bar
@@ -29,18 +25,33 @@
 
 ### WSRNetworking
 
+Library for http request using URLSession.
+
 1. Async Requests
 
 ### WSRUtils
 
 1. Custom Logger
 
-## Technical Implementations
+## Installation
 
-1. MVVM + Combine
-1. Swift Concurrency
-1. User Defaults
-1. Custom Wrapper
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+* File > Swift Packages > **Add Package Dependency**
+* Package URL [https://github.com/wilyamx/wsr.git](https://github.com/wilyamx/wsr.git)
+* Select **Up to Next Major**
+
+<img src="Images/package-products.png" alt="package-products" width="500">
+
+## Requirements
+
+- **IDE:** `XCode 15.2 for iOS 17.2`
+- **Language:** `Swift 5`
+- **Interface:** `Storyboard`
+
+<img src="Images/embed-libraries.png" alt="embed-libraries" width="500">
 
 ### Package Dependencies
 
