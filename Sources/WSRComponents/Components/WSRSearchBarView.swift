@@ -84,7 +84,7 @@ open class WSRSearchBarView: WSRView {
         errorLabel.isHidden = !needToShowError
     } }
 
-    public var placeholderColor: UIColor? = UIColor.getPackageColor(named: "wsr_text") { didSet {
+    public var placeholderColor: UIColor = UIColor.getPackageColor(named: "wsr_text") { didSet {
         searchTextField.placeholderColor = placeholderColor
         searchTextField.placeholder = "Search by name"
     } }
