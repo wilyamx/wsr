@@ -21,41 +21,41 @@ class WSRENoDataCollectionViewCell: WSRCollectionViewCell {
 
         let view = UIImageView(image: image)
         view.contentMode = .scaleAspectFill
-        //view.tintColor = .background(.accent)
+        view.tintColor = .accent
         return view
     }()
 
     private lazy var messageLabel: UILabel = {
         let view = UILabel()
-        //view.font = .body
+        view.font = .wsr_body
         view.textAlignment = .center
         view.numberOfLines = 0
         view.lineBreakMode = .byCharWrapping
         view.text = "No Data"
-        //view.textColor = .textColor(.title)
+        view.textColor = .accent
         return view
     }()
 
-//    override func setupLayout() {
-//        addSubviews([
-//            centerView.addSubviews([
-//                imageView,
-//                messageLabel
-//            ])
-//        ])
-//    }
+    override func setupLayout() {
+        addSubviews([
+            centerView.addSubviews([
+                imageView,
+                messageLabel
+            ])
+        ])
+    }
 
-//    override func setupConstraints() {
-//        centerView.centerX == centerX
-//        centerView.centerY == centerY
-//
-//        imageView.centerX == centerView.centerX
-//        imageView.top == centerView.top
-//
-//        messageLabel.left >= centerView.left + 24
-//        messageLabel.right <= centerView.right - 24
-//        messageLabel.centerX == centerView.centerX
-//        messageLabel.top == imageView.bottom + 16
-//        messageLabel.bottom == centerView.bottom
-//    }
+    override func setupConstraints() {
+        centerView.centerX == centerX
+        centerView.centerY == centerY
+
+        imageView.centerX == centerView.centerX
+        imageView.top == centerView.top
+
+        messageLabel.left >= centerView.left + 24
+        messageLabel.right <= centerView.right - 24
+        messageLabel.centerX == centerView.centerX
+        messageLabel.top == imageView.bottom + 16
+        messageLabel.bottom == centerView.bottom
+    }
 }

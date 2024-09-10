@@ -27,6 +27,7 @@ class WSREChatRoomListViewController: WSREViewController {
     
     private lazy var searchBarView = {
         let view = WSRSearchBarView()
+        view.borderColor = .accentSecondary
         view.imageTintColor = .accent
         view.placeholderColor = .text
         return view
@@ -59,10 +60,6 @@ class WSREChatRoomListViewController: WSREViewController {
     let viewModel = WSREChatRoomListViewModel()
     
     // MARK: - View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -115,6 +112,7 @@ class WSREChatRoomListViewController: WSREViewController {
     
     private func load() async {
         await viewModel.load()
+        //await viewModel.loadEmptyRooms()
     }
     
     // MARK: - Actions
