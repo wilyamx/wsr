@@ -39,7 +39,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .center
         view.font = .wsr_title
-        view.textColor = UIColor.getPackageColor(named: "wsr_text")
+        view.textColor = .text
         view.lineBreakMode = .byCharWrapping
         view.text = "New Chat Room"
         return view
@@ -49,7 +49,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .left
         view.font = .wsr_body
-        view.textColor = UIColor.getPackageColor(named: "wsr_text")
+        view.textColor = .text
         view.lineBreakMode = .byCharWrapping
         view.text = "Room Name"
         return view
@@ -65,7 +65,7 @@ class WSRECreateChatRoomViewController: WSREViewController {
         let view = UILabel()
         view.textAlignment = .left
         view.font = .wsr_body
-        view.textColor = UIColor.getPackageColor(named: "wsr_text")
+        view.textColor = .text
         view.lineBreakMode = .byCharWrapping
         view.text = "Password (optional)"
         return view

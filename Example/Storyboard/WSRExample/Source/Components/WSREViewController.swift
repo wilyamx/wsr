@@ -26,6 +26,6 @@ class WSREViewController: WSRViewController {
     // MARK: - Setups
     
     override func setupLayout() {
-        view.backgroundColor = UIColor.getPackageColor(named: "wsr_mainBackground")
+        view.backgroundColor = .mainBackground
     }
 }

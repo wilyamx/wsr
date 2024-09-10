@@ -12,7 +12,6 @@ import WSRUtils
 import SuperEasyLayout
 
 class WSREChatRoomListViewController: WSREViewController {
-
     private typealias Section = WSREChatRoomListViewModel.Section
     private typealias Item = WSREChatRoomListViewModel.Item
     private typealias ItemInfo = WSREChatRoomListViewModel.ItemInfo
@@ -22,7 +21,7 @@ class WSREChatRoomListViewController: WSREViewController {
 
     private let refreshControl = {
         let view = UIRefreshControl()
-        //view.tintColor = .background(.main)
+        view.tintColor = .accent
         return view
     }()
     
@@ -109,7 +108,7 @@ class WSREChatRoomListViewController: WSREViewController {
     
     // MARK: - Private Methods
     
-    func load() async {
+    private func load() async {
         await viewModel.load()
     }
     

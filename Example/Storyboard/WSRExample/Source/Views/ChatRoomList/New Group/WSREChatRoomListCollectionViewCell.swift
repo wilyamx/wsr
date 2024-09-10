@@ -20,10 +20,11 @@ class WSREChatRoomListCollectionViewCell: WSRCollectionViewCell {
     }()
 
     private lazy var imageView: UIImageView = {
-        let view = UIImageView(image: UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate))
+        let image = UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate)
+        let view = UIImageView(image: image)
         view.contentMode = .scaleAspectFit
-        view.tintColor = .red
-        //view.backgroundColor = .background(.profileImage)
+        view.tintColor = .accent
+        view.backgroundColor = .white
         view.layer.cornerRadius = 25
         view.clipsToBounds = true
         view.contentMode = .scaleAspectFill
@@ -51,8 +52,8 @@ class WSREChatRoomListCollectionViewCell: WSRCollectionViewCell {
     private lazy var nameTextLabel: UILabel = {
         let view = UILabel()
         view.textAlignment = .left
-        //view.font = .body
-        //view.textColor = .textColor(.title)
+        view.font = .wsr_body
+        view.textColor = .accent
         view.lineBreakMode = .byCharWrapping
         return view
     }()
@@ -60,8 +61,8 @@ class WSREChatRoomListCollectionViewCell: WSRCollectionViewCell {
     private lazy var previewTextLabel: UILabel = {
         let view = UILabel()
         view.textAlignment = .left
-        //view.font = .caption
-        //view.textColor = .textColor(.caption)
+        view.font = .wsr_caption
+        view.textColor = .text
         view.lineBreakMode = .byTruncatingTail
         return view
     }()
@@ -70,7 +71,7 @@ class WSREChatRoomListCollectionViewCell: WSRCollectionViewCell {
         let image = UIImage(systemName: "chevron.right")?.withRenderingMode(.alwaysTemplate)
         let view = UIImageView(image: image)
         view.contentMode = .center
-        //view.tintColor = .background(.accent)
+        view.tintColor = .accent
         return view
     }()
 
