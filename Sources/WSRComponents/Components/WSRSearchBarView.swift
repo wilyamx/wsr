@@ -22,7 +22,7 @@ open class WSRSearchBarView: WSRView {
     private lazy var searchLeftView: WSRView = {
         let image = UIImage(systemName: "magnifyingglass")?.withRenderingMode(.alwaysTemplate)
         let imageView = UIImageView(image: image)
-        imageView.tintColor = UIColor.getPackageColor(named: "wsr_text")
+        imageView.tintColor = UIColor.getPackageColor(named: "wsr_accent")
 
         let view = WSRView()
         view.addSubviews([imageView])
@@ -84,6 +84,12 @@ open class WSRSearchBarView: WSRView {
         errorLabel.isHidden = !needToShowError
     } }
 
+    public var imageTintColor: UIColor = .red { didSet {
+        if let imageView = searchLeftView.subviews.first as? UIImageView {
+            imageView.tintColor = tintColor
+        }
+    } }
+    
     // MARK: - Setups
     
     open override func setupLayout() {
