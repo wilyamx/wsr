@@ -155,7 +155,7 @@ open class WSRTextField: UITextField {
         addTarget(self, action: #selector(onChangedText), for: .editingChanged)
         delegate = self
         layer.borderWidth = 1
-        layer.borderColor = borderColor.cgColor
+        layer.borderColor = UIColor.clear.cgColor
 
         setupLayout()
         setupConstraints()
