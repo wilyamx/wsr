@@ -86,7 +86,7 @@ open class WSRSearchBarView: WSRView {
 
     // MARK: - Setups
     
-    override func setupLayout() {
+    open override func setupLayout() {
         addSubviews([
             stackView.addArrangedSubviews([
                 containerView,
@@ -95,7 +95,7 @@ open class WSRSearchBarView: WSRView {
         ])
     }
 
-    override func setupConstraints() {
+    open override func setupConstraints() {
         stackView.left == left + 10
         stackView.right == right - 10
         stackView.top == top
@@ -105,7 +105,7 @@ open class WSRSearchBarView: WSRView {
     }
 
     @discardableResult
-    override func resignFirstResponder() -> Bool {
+    open override func resignFirstResponder() -> Bool {
         searchTextField.resignFirstResponder()
     }
 
