@@ -20,14 +20,20 @@
 
 ### WSRComponents
 
-1. Custom Logger
 1. Buttons
+1. Navigation Bar
+1. Search Bar
 1. Async Alert
 1. TextField + Keyboard Handling
+1. Collection View + Compositional Layout + Data Source
 
 ### WSRNetworking
 
 1. Async Requests
+
+### WSRUtils
+
+1. Custom Logger
 
 ## Technical Implementations
 
