@@ -25,11 +25,12 @@ class WSREChatRoomListViewController: WSREViewController {
         return view
     }()
     
-//    private lazy var searchBarView = {
-//        let view = SearchBarView()
-//        view.backgroundColor = .clear
-//        return view
-//    }()
+    private lazy var searchBarView = {
+        let view = WSRSearchBarView()
+        view.imageTintColor = .accent
+        view.placeholderColor = .text
+        return view
+    }()
 
     private lazy var layout: UICollectionViewCompositionalLayout = {
         UICollectionViewCompositionalLayout { [weak self] index, _ in
@@ -78,18 +79,22 @@ class WSREChatRoomListViewController: WSREViewController {
     }
 
     override func setupLayout() {
-        super.setupLayout()
+        view.backgroundColor = .accent
         
         addSubviews([
-            //searchBarView,
+            searchBarView,
             collectionView,
         ])
     }
     
     override func setupConstraints() {
+        searchBarView.left == view.left
+        searchBarView.right == view.right
+        searchBarView.top == view.topMargin + 10
+        
         collectionView.left == view.left
         collectionView.right == view.right
-        collectionView.top == view.topMargin
+        collectionView.top == searchBarView.bottom + 8
         collectionView.bottom == view.bottom
     }
     

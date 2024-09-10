@@ -89,9 +89,9 @@ class WSREComponentsViewController: WSREViewController {
             verticalStackView.addArrangedSubviews([
                 createChatRoomButton,
                 chatRoomListButton,
-                activeButton,
+                disabledButton,
                 inactiveButton,
-                disabledButton
+                activeButton
             ])
         ])
     }

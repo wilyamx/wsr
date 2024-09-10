@@ -130,7 +130,7 @@ open class WSRTextField: UITextField {
     var isBorderHidden: Bool {
         get { layer.borderColor == UIColor.clear.cgColor }
         set { layer.borderColor = newValue ? UIColor.clear.cgColor : 
-            UIColor(named: "wsr_main", in: .module, compatibleWith: nil)!.cgColor }
+            UIColor(named: "wsr_accentSecondary", in: .module, compatibleWith: nil)!.cgColor }
     }
 
     // MARK: - Instantiations
