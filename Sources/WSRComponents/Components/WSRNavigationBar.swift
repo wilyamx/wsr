@@ -9,6 +9,9 @@ import UIKit
 import SuperEasyLayout
 
 open class WSRNavigationBar: UINavigationBar {
+    
+    // MARK: - Instantiations
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -19,7 +22,9 @@ open class WSRNavigationBar: UINavigationBar {
         setup()
     }
 
-    func setup() {
+    // MARK: - Setups
+    
+    private func setup() {
         setupLayout()
         setupConstraints()
         setupBindings()
@@ -31,6 +36,8 @@ open class WSRNavigationBar: UINavigationBar {
     open func setupBindings() {}
     open func setupActions() {}
 
+    // MARK: - Other Methods
+    
     open override func layoutSubviews() {
         super.layoutSubviews()
     }
