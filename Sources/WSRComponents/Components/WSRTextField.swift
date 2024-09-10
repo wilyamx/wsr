@@ -127,10 +127,14 @@ open class WSRTextField: UITextField {
         }
     }
 
+    var borderColor: UIColor = UIColor.clear { didSet {
+        layer.borderColor = borderColor.cgColor
+    } }
+    
     var isBorderHidden: Bool {
         get { layer.borderColor == UIColor.clear.cgColor }
         set { layer.borderColor = newValue ? UIColor.clear.cgColor : 
-            UIColor(named: "wsr_accentSecondary", in: .module, compatibleWith: nil)!.cgColor }
+            borderColor.cgColor }
     }
 
     // MARK: - Instantiations
@@ -151,7 +155,7 @@ open class WSRTextField: UITextField {
         addTarget(self, action: #selector(onChangedText), for: .editingChanged)
         delegate = self
         layer.borderWidth = 1
-        layer.borderColor = UIColor.clear.cgColor
+        layer.borderColor = borderColor.cgColor
 
         setupLayout()
         setupConstraints()
