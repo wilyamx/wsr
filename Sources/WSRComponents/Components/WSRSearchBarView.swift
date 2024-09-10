@@ -10,7 +10,7 @@ import SuperEasyLayout
 import UIKit
 import Combine
 
-class WSRSearchBarView: WSRView {
+open class WSRSearchBarView: WSRView {
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
