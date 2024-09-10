@@ -84,6 +84,11 @@ open class WSRSearchBarView: WSRView {
         errorLabel.isHidden = !needToShowError
     } }
 
+    public var placeholderColor: UIColor? = UIColor.getPackageColor(named: "wsr_text") { didSet {
+        searchTextField.placeholderColor = placeholderColor
+        searchTextField.placeholder = "Search by name"
+    } }
+    
     public var imageTintColor: UIColor = UIColor.getPackageColor(named: "wsr_accent") { didSet {
         if let imageView = searchLeftView.subviews.first as? UIImageView {
             imageView.tintColor = imageTintColor
