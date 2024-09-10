@@ -74,12 +74,14 @@ open class WSRButton: UIButton {
     public var tapHandler: ((WSRButton) -> Void)?
     public var tapHandlerAsync: ((WSRButton) async -> Void)?
 
-    override init(frame: CGRect) {
+    // MARK: - Instantiations
+    
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    convenience init(image: UIImage?) {
+    convenience public init(image: UIImage?) {
         let frame = CGRect(origin: CGPoint.zero, size: image?.size ?? CGSize.zero)
         self.init(frame: frame)
         setImage(image, for: .normal)
@@ -94,6 +96,8 @@ open class WSRButton: UIButton {
 
     }
 
+    // MARK: - Setups
+    
     private func setup() {
         colorStyle = .active
         font = .wsr_body
@@ -105,6 +109,8 @@ open class WSRButton: UIButton {
         isExclusiveTouch = true
     }
 
+    // MARK: - Public Methods
+    
     public func setBackgroundColor(_ color: UIColor?, for state: UIControl.State) {
         backgroundColors[state] = color
     }
