@@ -127,7 +127,7 @@ open class WSRTextField: UITextField {
         }
     }
 
-    var borderColor: UIColor = UIColor.clear { didSet {
+    var borderColor: UIColor = UIColor.getPackageColor(named: "wsr_accentSecondary") { didSet {
         layer.borderColor = borderColor.cgColor
     } }
     
