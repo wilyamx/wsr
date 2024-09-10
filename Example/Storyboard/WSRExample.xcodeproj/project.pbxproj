@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */; };
 		A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */; };
+		A268060D2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A268060C2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift */; };
+		A268060F2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -19,6 +21,7 @@
 		A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBE2C8ACEB700215A9A /* WSRUtils */; };
 		A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */; };
 		A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */; };
+		A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
 		A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */; };
@@ -54,6 +57,8 @@
 /* Begin PBXFileReference section */
 		A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewController.swift; sourceTree = "<group>"; };
 		A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewModel.swift; sourceTree = "<group>"; };
+		A268060C2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENoDataCollectionViewCell.swift; sourceTree = "<group>"; };
+		A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewModel.swift; sourceTree = "<group>"; };
 		A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRECreateChatRoomViewController.swift; sourceTree = "<group>"; };
 		A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsCoordinator.swift; sourceTree = "<group>"; };
+		A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A2C93DF42C8829DE0091A1D1 /* WSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,10 +125,22 @@
 		A246DA752C8EBAB0000924F1 /* ChatRoomList */ = {
 			isa = PBXGroup;
 			children = (
+				A268060B2C8EDCC900F137CD /* Subviews */,
 				A246DA762C8EBAE8000924F1 /* WSREChatRoomListViewController.swift */,
 				A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */,
 			);
 			path = ChatRoomList;
+			sourceTree = "<group>";
+		};
+		A268060B2C8EDCC900F137CD /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A268060C2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift */,
+				A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */,
+				A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */,
+			);
+			name = Subviews;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A2A99BA82C8AAAD800215A9A /* Components */ = {
@@ -410,11 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */,
 				A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */,
 				A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */,
 				A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */,
 				A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */,
 				A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */,
+				A268060F2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift in Sources */,
 				A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */,
 				A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */,
 				A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */,
@@ -422,6 +442,7 @@
 				A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */,
 				A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */,
 				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
+				A268060D2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift in Sources */,
 				A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
 				A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */,
