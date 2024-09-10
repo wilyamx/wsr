@@ -69,7 +69,7 @@ open class WSRSearchBarView: WSRView {
         view.numberOfLines = 0
         view.lineBreakMode = .byCharWrapping
         view.attributedText = "Error"
-            .getAttributedString(with: .wsr_caption, color: .red)
+            .getAttributedString(with: .wsr_caption, color: imageTintColor)
             .setParagraphStyle(NSMutableParagraphStyle().setLineSpacing(5))
             .insertImage(image, origin: CGPoint(x: 0, y: -5))
         view.isHidden = true
@@ -84,10 +84,11 @@ open class WSRSearchBarView: WSRView {
         errorLabel.isHidden = !needToShowError
     } }
 
-    public var imageTintColor: UIColor = .red { didSet {
+    public var imageTintColor: UIColor = UIColor.getPackageColor(named: "wsr_accent") { didSet {
         if let imageView = searchLeftView.subviews.first as? UIImageView {
-            imageView.tintColor = tintColor
+            imageView.tintColor = imageTintColor
         }
+        searchTextField.clearButton.tintColor = imageTintColor
     } }
     
     // MARK: - Setups

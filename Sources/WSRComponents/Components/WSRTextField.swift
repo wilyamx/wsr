@@ -24,14 +24,14 @@ open class WSRTextField: UITextField {
         view.setBackgroundColor(.clear, for: .normal)
         view.width == 44
         view.height == 44
-        view.tintColor = UIColor(named: "accent", in: .module, compatibleWith: nil)
+        view.tintColor = UIColor.getPackageColor(named: "accent")
         return view
     }()
 
     private lazy var hideButton: UIButton = {
         let button = WSRButton()
         button.setImage(UIImage(systemName: "eye.fill"), for: .normal)
-        button.tintColor = .tertiaryLabel
+        button.tintColor = UIColor.getPackageColor(named: "accent")
         button.tapHandler = { [weak self] _ in
             guard let self, isSecureMode else { return }
             isHiding.toggle()
@@ -50,7 +50,7 @@ open class WSRTextField: UITextField {
 
     /// Placeholder関連
     var placeholderFont: UIFont = .preferredFont(forTextStyle: .caption1)
-    var placeholderColor: UIColor? = .tertiaryLabel
+    var placeholderColor: UIColor? = UIColor.getPackageColor(named: "wsr_text")
     open override var placeholder: String? {
         get { attributedPlaceholder?.string }
         set {
