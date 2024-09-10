@@ -6,7 +6,7 @@
 * Package URL [https://github.com/wilyamx/wsr.git](https://github.com/wilyamx/wsr.git)
 * Select **Up to Next Major**
 
-<img src="images/package-products.png" alt="profile" width="500">
+<img src="Images/package-products.png" alt="profile" width="500">
 
 ## Project Specifications
 
@@ -14,7 +14,7 @@
 - **Language:** `Swift 5`
 - **Interface:** `Storyboard`
 
-<img src="images/embed-libraries.png" alt="profile" width="500">
+<img src="Images/embed-libraries.png" alt="profile" width="500">
 
 ## Supports
 
