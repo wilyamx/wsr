@@ -78,7 +78,7 @@ public class AsyncInputAlertController<T> {
             guard let alertController = self?.alertController else { return }
 
             let inputText = alertController.textFields!.first?.text
-            continuation.resume(returning: (inputText))
+            continuation.resume(returning: inputText)
         }
         alertController.addAction(newAlertAction)
         if isPreferred { alertController.preferredAction = newAlertAction }
