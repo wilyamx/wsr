@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "WSRUtils", targets: ["WSRUtils"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
+        .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -22,15 +22,13 @@ let package = Package(
             name: "WSRComponents",
             dependencies: ["SuperEasyLayout"],
             resources: [
-                .process("WSRComponents/Resources/WSRColors.xcassets")
+                .process("Resources/WSRColors.xcassets")
             ]),
         .target(name: "WSRNetworking"),
         .target(name: "WSRUtils"),
         .testTarget(
             name: "wsrTests",
-            dependencies: ["WSRComponents"],
-            resources: [
-                .process("WSRComponents/Resources/WSRColors.xcassets")
-            ]),
+            dependencies: [],
+            resources: []),
     ]
 )
