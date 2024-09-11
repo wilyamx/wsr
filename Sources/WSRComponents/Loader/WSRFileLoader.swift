@@ -7,8 +7,8 @@
 
 import UIKit
 
-struct WSRFileLoader {
-    func loadJSON<T: Decodable>(
+public struct WSRFileLoader {
+    public func loadJSON<T: Decodable>(
         _ filename: String,
         _ type: T.Type) async throws -> Decodable {
             guard let fileUrl = Bundle.main.url(forResource: filename, withExtension: nil)

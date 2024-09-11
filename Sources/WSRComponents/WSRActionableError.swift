@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol WSRErrorActionType {
+public protocol WSRErrorActionType {
     var title: String { get }
     var isPreferred: Bool { get }
     var isCancel: Bool { get }
 }
 
-protocol WSRActionableError: Error, LocalizedError {
+public protocol WSRActionableError: Error, LocalizedError {
     associatedtype WSRCustomErrorActionType: WSRErrorActionType
 
     var alertName: String? { get }
@@ -22,10 +22,11 @@ protocol WSRActionableError: Error, LocalizedError {
     var alertActions: [WSRCustomErrorActionType] { get }
 }
 
-extension WSRActionableError {
+public extension WSRActionableError {
     var alertName: String? { nil }
 
-    @discardableResult @MainActor
+    @MainActor
+    @discardableResult
     func showAlert(in parentViewController: UIViewController) async -> WSRCustomErrorActionType  {
         let alertController = WSRAsyncAlertController<WSRCustomErrorActionType>(
             message: errorDescription, title: title

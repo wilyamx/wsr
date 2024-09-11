@@ -8,8 +8,8 @@
 
 import AVFoundation
 
-class WSRSoundPlayer {
-    struct WSRSound {
+public class WSRSoundPlayer {
+    public struct WSRSound {
         let fileName: String
         let fileExtension: String
 
@@ -27,7 +27,7 @@ class WSRSoundPlayer {
     private var audioPlayer: AVAudioPlayer?
     private var enabled: Bool
 
-    init(sound: WSRSound, enabled: Bool = true, numberOfLoops: Int = 0) {
+    public init(sound: WSRSound, enabled: Bool = true, numberOfLoops: Int = 0) {
         self.sound = sound
         self.enabled = enabled
 
@@ -35,14 +35,14 @@ class WSRSoundPlayer {
         self.audioPlayer?.numberOfLoops = numberOfLoops
     }
 
-    func play() {
+    public func play() {
         guard enabled else { return }
 
         audioPlayer?.currentTime = 0
         audioPlayer?.play()
     }
 
-    func stop() {
+    public func stop() {
         audioPlayer?.stop()
     }
 }
