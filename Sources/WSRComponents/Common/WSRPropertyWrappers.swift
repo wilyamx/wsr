@@ -93,7 +93,7 @@ public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
         return defaultValue
     }
 
-    init(_ key: String, default: Value) {
+    public init(_ key: String, default: Value) {
         self.key = key
         defaultValue = `default`
     }
@@ -134,7 +134,7 @@ public struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
         }
     }
 
-    init(_ key: String, default: Value) {
+    public init(_ key: String, default: Value) {
         self.key = key
         defaultValue = `default`
     }
