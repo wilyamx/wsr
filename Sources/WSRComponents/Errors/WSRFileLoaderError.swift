@@ -7,14 +7,14 @@
 
 import UIKit
 
-enum WSRFileLoaderError: Error, LocalizedError, WSRActionableError {
+public enum WSRFileLoaderError: Error, LocalizedError, WSRActionableError {
     typealias CustomErrorActionType = ActionType
 
     case fileNotFound(String)
     case fileCannotLoad(Error)
     case parsing(Error)
 
-    var title: String? {
+    public var title: String? {
         switch self {
         case .fileNotFound: "File not found!"
         case .fileCannotLoad: "File cannot be load!"
@@ -22,7 +22,7 @@ enum WSRFileLoaderError: Error, LocalizedError, WSRActionableError {
         }
     }
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .fileNotFound(let filePath): "Invalid file path: \(filePath)"
         case .fileCannotLoad: "File is corrupted!"
@@ -30,29 +30,29 @@ enum WSRFileLoaderError: Error, LocalizedError, WSRActionableError {
         }
     }
 
-    enum ActionType: WSRErrorActionType {
+    public enum ActionType: WSRErrorActionType {
         case ok
 
-        var title: String {
+        public var title: String {
             switch self {
             case .ok: "Ok"
             }
         }
 
-        var isPreferred: Bool {
+        public var isPreferred: Bool {
             switch self {
             default: false
             }
         }
 
-        var isCancel: Bool {
+        public var isCancel: Bool {
             switch self {
             default: false
             }
         }
     }
 
-    var alertActions: [ActionType] {
+    public var alertActions: [ActionType] {
         [.ok]
     }
 }

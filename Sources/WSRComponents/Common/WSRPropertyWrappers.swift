@@ -8,84 +8,84 @@
 
 import Foundation
 
-protocol WSRConstantConvertible {
+public protocol WSRConstantConvertible {
     init?(storeValue: Any)
     var storeValue: Any? { get }
 }
 
-protocol WSRConstantKeychainType: WSRConstantConvertible {
+public protocol WSRConstantKeychainType: WSRConstantConvertible {
     static var type: String { get }
 }
 
 extension Optional: WSRConstantConvertible where Wrapped: WSRConstantConvertible {
-    init?(storeValue: Any) {
+    public init?(storeValue: Any) {
         guard let value = Wrapped(storeValue: storeValue) else { return nil }
         self = .some(value)
     }
 
-    var storeValue: Any? {
+    public var storeValue: Any? {
         switch self {
         case .some(let value): value.storeValue
         case .none: nil
         }
     }
 
-    static var defaultValue: Any? { nil }
+    public static var defaultValue: Any? { nil }
 }
 
 extension Optional: WSRConstantKeychainType where Wrapped: WSRConstantKeychainType {
-    static var type: String { Wrapped.type }
+    public static var type: String { Wrapped.type }
 }
 
 extension Int: WSRConstantConvertible {
-    init?(storeValue: Any) {
+    public init?(storeValue: Any) {
         guard let value = storeValue as? Int else { return nil }
         self = value
     }
 
-    var storeValue: Any? { self }
-    static var defaultValue: Any? { 0 }
+    public var storeValue: Any? { self }
+    public static var defaultValue: Any? { 0 }
 }
 
 extension Bool: WSRConstantConvertible {
-    init?(storeValue: Any) {
+    public init?(storeValue: Any) {
         guard let value = storeValue as? Bool else { return nil }
         self = value
     }
 
-    var storeValue: Any? { self }
-    static var defaultValue: Any? { false }
+    public var storeValue: Any? { self }
+    public static var defaultValue: Any? { false }
 }
 
 extension String: WSRConstantKeychainType {
-    init?(storeValue: Any) {
+    public init?(storeValue: Any) {
         guard let value = storeValue as? String else { return nil }
         self = value
     }
 
-    var storeValue: Any? { self }
-    static var type: String { "string" }
-    static var defaultValue: Any? { "" }
+    public var storeValue: Any? { self }
+    public static var type: String { "string" }
+    public static var defaultValue: Any? { "" }
 }
 
 extension Date: WSRConstantConvertible {
-    init?(storeValue: Any) {
+    public init?(storeValue: Any) {
         guard let value = storeValue as? Date else { return nil }
         self = value
     }
 
-    var storeValue: Any? { self }
-    static var type: String { "date" }
-    static var defaultValue: Any? { Date() }
+    public var storeValue: Any? { self }
+    public static var type: String { "date" }
+    public static var defaultValue: Any? { Date() }
 }
 
 @propertyWrapper
-struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
+public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
     private var key: String
     private var defaultValue: Value
     private let container: UserDefaults = UserDefaults.standard
 
-    var wrappedValue: Value {
+    public var wrappedValue: Value {
         if let object = container.object(forKey: key),
            let value = Value(storeValue: object) {
             return value
@@ -100,7 +100,7 @@ struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
 }
 
 @propertyWrapper
-struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
+public struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
     private let key: String
     private let defaultValue: Value
 
@@ -111,7 +111,7 @@ struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
     //            Observable(notificationName: notificationName, default: defaultValue)
     //        }
 
-    var wrappedValue: Value {
+    public var wrappedValue: Value {
         get {
             appInfoQueue.sync(flags: .barrier) {
                 if let object = UserDefaults.standard.object(forKey: key),
@@ -141,7 +141,7 @@ struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
 }
 
 @propertyWrapper
-struct WSRUserDefaultCodable<T: Codable> {
+public struct WSRUserDefaultCodable<T: Codable> {
     let key: String
     let defaultValue: T? = nil
 
@@ -167,6 +167,6 @@ struct WSRUserDefaultCodable<T: Codable> {
     }
 }
 
-class WSRUserDefaults: NSObject {
+public class WSRUserDefaults: NSObject {
     @WSRUserDefaultsReadAndWrite("key", default: false) var hasSound: Bool
 }
