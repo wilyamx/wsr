@@ -83,6 +83,7 @@ extension Date: WSRConstantConvertible {
 public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
     private var key: String
     private var defaultValue: Value
+    
     private let container: UserDefaults = UserDefaults.standard
 
     public var wrappedValue: Value {
@@ -142,10 +143,10 @@ public struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
 
 @propertyWrapper
 public struct WSRUserDefaultCodable<T: Codable> {
-    public let key: String
-    public let defaultValue: T? = nil
+    private let key: String
+    private var defaultValue: T? = nil
 
-    public let container: UserDefaults = UserDefaults.standard
+    private let container: UserDefaults = UserDefaults.standard
 
     public var wrappedValue: T? {
         get {
@@ -164,6 +165,11 @@ public struct WSRUserDefaultCodable<T: Codable> {
                 container.set(newValue, forKey: key)
             }
         }
+    }
+    
+    public init(_ key: String, default: T) {
+        self.key = key
+        defaultValue = `default`
     }
 }
 
