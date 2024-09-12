@@ -142,10 +142,10 @@ public struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
 
 @propertyWrapper
 public struct WSRUserDefaultCodable<T: Codable> {
-    let key: String
-    let defaultValue: T? = nil
+    public let key: String
+    public let defaultValue: T? = nil
 
-    let container: UserDefaults = UserDefaults.standard
+    public let container: UserDefaults = UserDefaults.standard
 
     public var wrappedValue: T? {
         get {
