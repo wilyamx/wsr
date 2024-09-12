@@ -13,6 +13,8 @@
 		A268060F2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */; };
 		A296C2DC2C926A89002D7CE5 /* checkingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */; };
 		A296C2DD2C926A89002D7CE5 /* waitingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */; };
+		A296C3042C92AAB8002D7CE5 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3032C92AAB8002D7CE5 /* WSRCommon */; };
+		A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3052C92AAB8002D7CE5 /* WSRMedia */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -103,10 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A296C3042C92AAB8002D7CE5 /* WSRCommon in Frameworks */,
 				A2BE98C52C91778A00162640 /* Lottie in Frameworks */,
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
 				A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */,
 				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
+				A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */,
 				A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +347,8 @@
 				A2A99BBC2C8AC80F00215A9A /* WSRNetworking */,
 				A2A99BBE2C8ACEB700215A9A /* WSRUtils */,
 				A2BE98C42C91778A00162640 /* Lottie */,
+				A296C3032C92AAB8002D7CE5 /* WSRCommon */,
+				A296C3052C92AAB8002D7CE5 /* WSRMedia */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -861,6 +867,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A296C3032C92AAB8002D7CE5 /* WSRCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WSRCommon;
+		};
+		A296C3052C92AAB8002D7CE5 /* WSRMedia */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WSRMedia;
+		};
 		A2A99BBA2C8AC80F00215A9A /* WSRComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
