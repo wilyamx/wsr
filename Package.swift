@@ -10,6 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "WSRComponents", targets: ["WSRComponents"]),
         .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
+        .library(name: "WSRMedia", targets: ["WSRMedia"]),
         .library(name: "WSRUtils", targets: ["WSRUtils"]),
     ],
     dependencies: [
@@ -25,6 +26,7 @@ let package = Package(
                 .process("Resources/WSRColors.xcassets")
             ]),
         .target(name: "WSRNetworking"),
+        .target(name: "WSRMedia"),
         .target(name: "WSRUtils"),
         .testTarget(
             name: "wsrTests",
