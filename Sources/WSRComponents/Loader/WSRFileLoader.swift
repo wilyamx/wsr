@@ -31,4 +31,6 @@ public struct WSRFileLoader {
                 throw WSRFileLoaderError.parsing(error)
             }
         }
+    
+    public init() {}
 }
