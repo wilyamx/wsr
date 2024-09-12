@@ -13,6 +13,11 @@ A lightweight, pure-Swift library for customizing your components and apply swif
 
 ## Component Libraries
 
+### WSRCommon
+
+1. Async Alert
+1. Custom Errors
+
 ### WSRComponents
 
 Library for UI customization and use of swift concurrency.
@@ -20,9 +25,13 @@ Library for UI customization and use of swift concurrency.
 1. Buttons
 1. Navigation Bar
 1. Search Bar
-1. Async Alert
 1. TextField + Keyboard Handling
 1. Collection View + Compositional Layout + Data Source
+
+### WSRMedia
+
+1. Sounds
+1. FileLoader
 
 ### WSRNetworking
 
