@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WSRCommon
 
 public protocol WSRErrorActionType {
     var title: String { get }
@@ -25,18 +26,18 @@ public protocol WSRActionableError: Error, LocalizedError {
 public extension WSRActionableError {
     var alertName: String? { nil }
 
-//    @MainActor
-//    @discardableResult
-//    func showAlert(in parentViewController: UIViewController) async -> WSRCustomErrorActionType  {
-//        let alertController = WSRAsyncAlertController<WSRCustomErrorActionType>(
-//            message: errorDescription, title: title
-//        )
-//        for action in alertActions {
-//            alertController.addButton(
-//                title: action.title, isPreferred: action.isPreferred,
-//                isCancel: action.isCancel, returnValue: action
-//            )
-//        }
-//        return await alertController.register(in: parentViewController)
-//    }
+    @MainActor
+    @discardableResult
+    func showAlert(in parentViewController: UIViewController) async -> WSRCustomErrorActionType  {
+        let alertController = WSRAsyncAlertController<WSRCustomErrorActionType>(
+            message: errorDescription, title: title
+        )
+        for action in alertActions {
+            alertController.addButton(
+                title: action.title, isPreferred: action.isPreferred,
+                isCancel: action.isCancel, returnValue: action
+            )
+        }
+        return await alertController.register(in: parentViewController)
+    }
 }

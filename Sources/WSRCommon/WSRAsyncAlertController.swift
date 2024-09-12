@@ -20,7 +20,7 @@ public class WSRAsyncAlertController<T> {
         self.title = title
         self.message = message
         self.alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-        self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
+        //self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
     }
 
     @discardableResult
@@ -65,7 +65,7 @@ public class AsyncInputAlertController<T> {
         self.alertController.addTextField { textField in
             textField.text = name
         }
-        self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
+        //self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
     }
 
     @discardableResult
