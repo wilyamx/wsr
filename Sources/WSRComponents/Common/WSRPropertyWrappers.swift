@@ -167,9 +167,8 @@ public struct WSRUserDefaultCodable<T: Codable> {
         }
     }
     
-    public init(_ key: String, default: T) {
+    public init(_ key: String) {
         self.key = key
-        defaultValue = `default`
     }
 }
 
