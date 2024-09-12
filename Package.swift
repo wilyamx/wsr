@@ -13,6 +13,7 @@ let package = Package(
         .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
         .library(name: "WSRMedia", targets: ["WSRMedia"]),
         .library(name: "WSRUtils", targets: ["WSRUtils"]),
+        .library(name: "WSRStorage", targets: ["WSRStorage"]),
     ],
     dependencies: [
         .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0")
@@ -32,6 +33,7 @@ let package = Package(
             name: "WSRMedia",
             dependencies: ["WSRCommon"]),
         .target(name: "WSRUtils"),
+        .target(name: "WSRStorage"),
         .testTarget(
             name: "wsrTests",
             dependencies: [],
