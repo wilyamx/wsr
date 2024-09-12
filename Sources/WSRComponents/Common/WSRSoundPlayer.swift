@@ -13,12 +13,12 @@ public class WSRSoundPlayer {
         let fileName: String
         let fileExtension: String
 
-        init(name: String, withExtension fileExtension: String) {
+        public init(name: String, withExtension fileExtension: String) {
             self.fileName = name
             self.fileExtension = fileExtension
         }
 
-        var url: URL? {
+        public var url: URL? {
             return Bundle.main.url(forResource: fileName, withExtension: fileExtension)
         }
     }
