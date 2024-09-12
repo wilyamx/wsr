@@ -109,6 +109,7 @@ class WSREPresentViewController: WSREViewController {
         )
         .addButton(title: "Yes, I want to delete this chat room", style: .destructive, returnValue: true)
         .addButton(title: "Cancel", returnValue: false)
+        .tintColor(color: UIColor.accent)
         .register(in: viewController)
     }
     
@@ -120,6 +121,7 @@ class WSREPresentViewController: WSREViewController {
             message: "Please enter the password."
         )
         .addButton(title: "Ok")
+        .tintColor(color: UIColor.accent)
         .register(in: viewController)
     }
 }
