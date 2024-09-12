@@ -20,7 +20,7 @@ public class WSRAsyncAlertController<T> {
         self.title = title
         self.message = message
         self.alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-        //self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
+        self.alertController.view.tintColor = .systemBlue
     }
 
     @discardableResult
@@ -37,6 +37,12 @@ public class WSRAsyncAlertController<T> {
         return self
     }
 
+    @discardableResult
+    public func tintColor(color: UIColor) -> Self {
+        alertController.view.tintColor = color
+        return self
+    }
+    
     @discardableResult
     public func register(in parentViewController: UIViewController) async -> T {
         await withCheckedContinuation { continuation in
@@ -65,7 +71,7 @@ public class AsyncInputAlertController<T> {
         self.alertController.addTextField { textField in
             textField.text = name
         }
-        //self.alertController.view.tintColor = UIColor.getPackageColor(named: "wsr_accent")
+        self.alertController.view.tintColor = .systemBlue
     }
 
     @discardableResult
@@ -85,6 +91,12 @@ public class AsyncInputAlertController<T> {
         return self
     }
 
+    @discardableResult
+    public func tintColor(color: UIColor) -> Self {
+        alertController.view.tintColor = color
+        return self
+    }
+    
     @discardableResult
     public func register(in parentViewController: UIViewController) async -> String? {
         await withCheckedContinuation { continuation in
