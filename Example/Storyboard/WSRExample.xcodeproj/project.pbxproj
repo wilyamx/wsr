@@ -11,6 +11,8 @@
 		A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */; };
 		A268060D2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A268060C2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift */; };
 		A268060F2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */; };
+		A296C2DC2C926A89002D7CE5 /* checkingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */; };
+		A296C2DD2C926A89002D7CE5 /* waitingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -21,6 +23,9 @@
 		A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBE2C8ACEB700215A9A /* WSRUtils */; };
 		A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */; };
 		A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */; };
+		A2BE98C02C91761F00162640 /* WSREIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE98BF2C91761F00162640 /* WSREIndicatorController.swift */; };
+		A2BE98C22C9176E100162640 /* WSREPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */; };
+		A2BE98C52C91778A00162640 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A2BE98C42C91778A00162640 /* Lottie */; };
 		A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
@@ -61,6 +66,8 @@
 		A26806092C8ED5A700F137CD /* WSREChatRoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListViewModel.swift; sourceTree = "<group>"; };
 		A268060C2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENoDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListCollectionViewCell.swift; sourceTree = "<group>"; };
+		A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkingAnimation.json; sourceTree = "<group>"; };
+		A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingAnimation.json; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,8 @@
 		A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewModel.swift; sourceTree = "<group>"; };
 		A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRECreateChatRoomViewController.swift; sourceTree = "<group>"; };
 		A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsCoordinator.swift; sourceTree = "<group>"; };
+		A2BE98BF2C91761F00162640 /* WSREIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREIndicatorController.swift; sourceTree = "<group>"; };
+		A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREPaddingLabel.swift; sourceTree = "<group>"; };
 		A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A2C93DF42C8829DE0091A1D1 /* WSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BE98C52C91778A00162640 /* Lottie in Frameworks */,
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
 				A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */,
 				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
@@ -147,6 +157,16 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		A296C2D92C926A4B002D7CE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */,
+				A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */,
+				A2C93E002C8829E00091A1D1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A2A99BA82C8AAAD800215A9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,12 +209,12 @@
 		A2C93DF62C8829DE0091A1D1 /* WSRExample */ = {
 			isa = PBXGroup;
 			children = (
+				A296C2D92C926A4B002D7CE5 /* Resources */,
 				A2CBE14B2C89734500C677E0 /* Source */,
 				A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */,
 				A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */,
 				A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */,
 				A2C93DFD2C8829DE0091A1D1 /* Main.storyboard */,
-				A2C93E002C8829E00091A1D1 /* Assets.xcassets */,
 				A2C93E022C8829E00091A1D1 /* LaunchScreen.storyboard */,
 				A2C93E052C8829E00091A1D1 /* Info.plist */,
 			);
@@ -242,6 +262,8 @@
 			children = (
 				A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */,
 				A2D7EEBA2C90163A00D80808 /* WSRENavigationBar.swift */,
+				A2BE98BF2C91761F00162640 /* WSREIndicatorController.swift */,
+				A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -320,6 +342,7 @@
 				A2A99BBA2C8AC80F00215A9A /* WSRComponents */,
 				A2A99BBC2C8AC80F00215A9A /* WSRNetworking */,
 				A2A99BBE2C8ACEB700215A9A /* WSRUtils */,
+				A2BE98C42C91778A00162640 /* Lottie */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -398,6 +421,7 @@
 			packageReferences = (
 				A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */,
 				A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */,
+				A2BE98C32C91778A00162640 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = A2C93DF52C8829DE0091A1D1 /* Products */;
 			projectDirPath = "";
@@ -417,6 +441,8 @@
 			files = (
 				A2C93E042C8829E00091A1D1 /* LaunchScreen.storyboard in Resources */,
 				A2C93E012C8829E00091A1D1 /* Assets.xcassets in Resources */,
+				A296C2DD2C926A89002D7CE5 /* waitingAnimation.json in Resources */,
+				A296C2DC2C926A89002D7CE5 /* checkingAnimation.json in Resources */,
 				A2C93DFF2C8829DE0091A1D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +483,9 @@
 				A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */,
 				A2CBE1542C89750C00C677E0 /* WSRHomeViewController.swift in Sources */,
 				A268060D2C8EE3A400F137CD /* WSRENoDataCollectionViewCell.swift in Sources */,
+				A2BE98C22C9176E100162640 /* WSREPaddingLabel.swift in Sources */,
 				A246DA772C8EBAE8000924F1 /* WSREChatRoomListViewController.swift in Sources */,
+				A2BE98C02C91761F00162640 /* WSREIndicatorController.swift in Sources */,
 				A2D7EEBB2C90163A00D80808 /* WSRENavigationBar.swift in Sources */,
 				A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */,
 				A268060A2C8ED5A700F137CD /* WSREChatRoomListViewModel.swift in Sources */,
@@ -814,6 +842,14 @@
 				kind = branch;
 			};
 		};
+		A2BE98C32C91778A00162640 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		A2CBE1482C89592E00C677E0 /* XCRemoteSwiftPackageReference "SuperEasyLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/doil6317/SuperEasyLayout.git";
@@ -839,6 +875,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
 			productName = WSRUtils;
+		};
+		A2BE98C42C91778A00162640 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2BE98C32C91778A00162640 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		A2CBE1492C89592E00C677E0 /* SuperEasyLayout */ = {
 			isa = XCSwiftPackageProductDependency;

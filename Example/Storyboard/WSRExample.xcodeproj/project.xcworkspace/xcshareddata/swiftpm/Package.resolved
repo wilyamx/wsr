@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "revision" : "fe4c6fe3a0aa66cdeb51d549623c82ca9704b9a5",
+        "version" : "4.5.0"
+      }
+    },
+    {
       "identity" : "supereasylayout",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/doil6317/SuperEasyLayout.git",
@@ -15,7 +24,7 @@
       "location" : "https://github.com/wilyamx/wsr.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "7b7f8d421ae36634d8a7bce496ad2367e64639ab"
+        "revision" : "4878313ab2246d7865964669ff5d6d401e1e85e0"
       }
     }
   ],

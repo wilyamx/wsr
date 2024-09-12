@@ -28,6 +28,14 @@ class WSREPresentViewController: WSREViewController {
         return view
     }()
     
+    private lazy var activityButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "ACTIVITY INDICATOR"
+        view.colorStyle = .active
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
     private var navigationBar: WSRENavigationBar? {
         navigationController?.navigationBar as? WSRENavigationBar
     }
@@ -43,7 +51,8 @@ class WSREPresentViewController: WSREViewController {
         
         addSubviews([
             verticalStackView.addArrangedSubviews([
-                alertButton
+                alertButton,
+                activityButton,
             ])
         ])
         
@@ -62,6 +71,7 @@ class WSREPresentViewController: WSREViewController {
         verticalStackView.centerY == view.centerY
         
         alertButton.height == 44
+        activityButton.height == 44
     }
     
     override func setupActions() {
@@ -78,6 +88,12 @@ class WSREPresentViewController: WSREViewController {
             let isDelete = await showChatRoomDeleteAlert(in: self, chatName: "Lorem Ipsum")
             let password = await showChatRoomPasswordAlert(in: self, chatName: "Lorem Ipsum")
             debugPrint("Alert selection: isDelete? \(isDelete), password? \(password ?? "??")")
+        }
+        
+        activityButton.tapHandlerAsync = { _ in
+            await WSREIndicatorController.shared.show(message: "Fetching")
+            await Task.sleep(seconds: 3.0)
+            await WSREIndicatorController.shared.dismiss(message: "Fetching Done", type: .check(3))
         }
     }
     
