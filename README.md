@@ -39,6 +39,10 @@ Library for http request using URLSession.
 
 1. Async Requests
 
+### WSRStorage
+
+1. User Defaults + Property Wrapper
+
 ### WSRUtils
 
 1. Custom Logger
