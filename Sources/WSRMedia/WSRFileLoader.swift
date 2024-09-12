@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WSRCommon
 
 public struct WSRFileLoader {
     public func loadJSON<T: Decodable>(
