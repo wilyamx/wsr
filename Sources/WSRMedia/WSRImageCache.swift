@@ -1,6 +1,6 @@
 //
 //  WSRImageCache.swift
-//
+//  WSR
 //
 //  Created by William S. Rena on 9/16/24.
 //

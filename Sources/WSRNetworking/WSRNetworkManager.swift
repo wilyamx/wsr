@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  WSRNetworkManager.swift
+//  WSR
 //
 //  Created by William S. Rena on 9/6/24.
 //

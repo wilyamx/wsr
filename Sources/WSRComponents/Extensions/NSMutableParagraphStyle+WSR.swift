@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  NSMutableParagraphStyle+WSR.swift
+//  WSR
 //
 //  Created by William S. Rena on 9/10/24.
 //

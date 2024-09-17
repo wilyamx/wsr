@@ -1,6 +1,6 @@
 //
 //  WSRFileLoader.swift
-//  UISnakeGame
+//  WSR
 //
 //  Created by William Rena on 5/11/23.
 //
