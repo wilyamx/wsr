@@ -7,10 +7,14 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 @propertyWrapper
-public struct WSRUserDefaultCodable<T: Codable> {
+public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
+    // SwiftUI
     @State private var value: T?
+    // Combine
+    private let publisher: CurrentValueSubject<T?, Never>
     
     private let key: String
     private var defaultValue: T? = nil
@@ -38,15 +42,20 @@ public struct WSRUserDefaultCodable<T: Codable> {
         }
     }
     
-    public var projectecValue: Binding<T?> {
-        Binding(
-            get: { wrappedValue },
-            set: { wrappedValue = $0 }
+    public var projectecValue: WSRProjectedValue<T> {
+        WSRProjectedValue(
+            binding: Binding(
+                get: { wrappedValue },
+                set: { wrappedValue = $0 }
+            ),
+            publisher: publisher
         )
     }
     
     public init(_ key: String) {
         self.key = key
-        _value = State(wrappedValue: wrappedValue)
+        
+        _value = State(wrappedValue: nil)
+        publisher = CurrentValueSubject(nil)
     }
 }
