@@ -10,6 +10,8 @@ import SwiftUI
 
 @propertyWrapper
 public struct WSRUserDefaultCodable<T: Codable> {
+    @State private var value: T?
+    
     private let key: String
     private var defaultValue: T? = nil
 
@@ -27,9 +29,11 @@ public struct WSRUserDefaultCodable<T: Codable> {
             if let newValue = newValue {
                 let data = try! JSONEncoder().encode(newValue)
                 container.set(data, forKey: key)
+                value = data as? T
             }
             else {
                 container.set(newValue, forKey: key)
+                value = newValue
             }
         }
     }
@@ -43,5 +47,6 @@ public struct WSRUserDefaultCodable<T: Codable> {
     
     public init(_ key: String) {
         self.key = key
+        _value = State(wrappedValue: wrappedValue)
     }
 }
