@@ -73,6 +73,10 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 
 1. [SuperEasyLayout](https://github.com/doil6317/SuperEasyLayout) - apply UI constraints programmatically
 
+## Code Usage
+
+[Github Wiki](https://github.com/wilyamx/wsr/wiki)
+
 ## Author
 
 William Saberon Reña, [wilyamx@gmail.com](wilyamx@gmail.com)
