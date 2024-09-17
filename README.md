@@ -7,9 +7,9 @@ A lightweight, pure-Swift library for customizing your components and apply swif
 - [x] Follows MVVM Architectural Design Pattern
 - [x] Swift Concurrency Support Back to iOS 17
 - [x] Combine Support
-- [x] Custom Wrappers
-- [x] Custom Logger
+- [x] Property Wrappers
 - [x] Coordinator Design Pattern for Navigation Workflow
+- [x] Custom Logger
 
 ## Component Libraries
 
@@ -17,6 +17,7 @@ A lightweight, pure-Swift library for customizing your components and apply swif
 
 1. Async Alert
 1. Custom Errors
+1. Observable Object
 
 ### WSRComponents
 
@@ -30,6 +31,7 @@ Library for UI customization and use of swift concurrency.
 
 ### WSRMedia
 
+1. Image Cache
 1. Sounds
 1. FileLoader
 
