@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @propertyWrapper
 public struct WSRUserDefaultCodable<T: Codable> {
@@ -22,7 +23,7 @@ public struct WSRUserDefaultCodable<T: Codable> {
             }
             else { return defaultValue}
         }
-        set {
+        nonmutating set {
             if let newValue = newValue {
                 let data = try! JSONEncoder().encode(newValue)
                 container.set(data, forKey: key)
@@ -31,6 +32,13 @@ public struct WSRUserDefaultCodable<T: Codable> {
                 container.set(newValue, forKey: key)
             }
         }
+    }
+    
+    public var projectecValue: Binding<T?> {
+        Binding(
+            get: { wrappedValue },
+            set: { wrappedValue = $0 }
+        )
     }
     
     public init(_ key: String) {
