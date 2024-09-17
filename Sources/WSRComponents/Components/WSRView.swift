@@ -12,7 +12,7 @@ open class WSRView: UIView {
     lazy var observers = [NSKeyValueObservation]()
     lazy var cancellables = Set<AnyCancellable>()
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
