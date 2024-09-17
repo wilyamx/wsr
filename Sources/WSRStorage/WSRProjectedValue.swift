@@ -16,4 +16,9 @@ public struct WSRProjectedValue<T: Codable> {
     var stream: AsyncPublisher<CurrentValueSubject<T?, Never>> {
         publisher.values
     }
+    
+    public init(binding: Binding<T?>, publisher: CurrentValueSubject<T?, Never>) {
+        self.binding = binding
+        self.publisher = publisher
+    }
 }
