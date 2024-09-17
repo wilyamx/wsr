@@ -31,6 +31,14 @@ class WSREHomeViewController: WSREViewController {
         return view
     }()
     
+    private lazy var storageButton: WSRButton = {
+        let view = WSRButton()
+        view.text = "STORAGES"
+        view.colorStyle = .active
+        view.layer.cornerRadius = 8
+        return view
+    }()
+    
     private lazy var networkingButton: WSRButton = {
         let view = WSRButton()
         view.text = "NETWORKING"
@@ -58,6 +66,7 @@ class WSREHomeViewController: WSREViewController {
         addSubviews([
             verticalStackView.addArrangedSubviews([
                 componentsButton,
+                storageButton,
                 networkingButton
             ])
         ])
@@ -69,12 +78,16 @@ class WSREHomeViewController: WSREViewController {
         verticalStackView.centerY == view.centerY
         
         componentsButton.height == 44
+        storageButton.height == 44
         networkingButton.height == 44
     }
     
     override func setupActions() {
         componentsButton.tapHandlerAsync = { [weak self] _ in
             self?.coordinator?.showcaseComponents()
+        }
+        storageButton.tapHandlerAsync = { [weak self] _ in
+            self?.coordinator?.showcaseStorage()
         }
         networkingButton.tapHandlerAsync = { [weak self] _ in
             self?.coordinator?.showcaseNetworking()

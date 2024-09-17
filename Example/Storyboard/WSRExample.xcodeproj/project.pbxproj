@@ -15,6 +15,9 @@
 		A296C2DD2C926A89002D7CE5 /* waitingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */; };
 		A296C3042C92AAB8002D7CE5 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3032C92AAB8002D7CE5 /* WSRCommon */; };
 		A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3052C92AAB8002D7CE5 /* WSRMedia */; };
+		A29A5C682C995D4800A2DDD2 /* WSREBindedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */; };
+		A2A70B0C2C9923070001CEF0 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A2A70B0B2C9923070001CEF0 /* WSRStorage */; };
+		A2A70B0F2C9927910001CEF0 /* WSREStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
 		A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */; };
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
@@ -70,6 +73,8 @@
 		A268060E2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkingAnimation.json; sourceTree = "<group>"; };
 		A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingAnimation.json; sourceTree = "<group>"; };
+		A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREBindedView.swift; sourceTree = "<group>"; };
+		A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageViewController.swift; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
 		A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRENetworkingViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 				A296C3042C92AAB8002D7CE5 /* WSRCommon in Frameworks */,
 				A2BE98C52C91778A00162640 /* Lottie in Frameworks */,
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
+				A2A70B0C2C9923070001CEF0 /* WSRStorage in Frameworks */,
 				A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */,
 				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
 				A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */,
@@ -169,6 +175,23 @@
 				A2C93E002C8829E00091A1D1 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A29A5C662C995C6C00A2DDD2 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A2A70B0D2C99273D0001CEF0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */,
+				A29A5C662C995C6C00A2DDD2 /* Subviews */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		A2A99BA82C8AAAD800215A9A /* Components */ = {
@@ -298,6 +321,7 @@
 				A246DA742C8EBA9A000924F1 /* CreateChatRoom */,
 				A246DA752C8EBAB0000924F1 /* ChatRoomList */,
 				A2D7EEBC2C90229A00D80808 /* PresentViewController */,
+				A2A70B0D2C99273D0001CEF0 /* Storage */,
 				A2A99BA92C8AAAF100215A9A /* Networking */,
 			);
 			path = Views;
@@ -349,6 +373,7 @@
 				A2BE98C42C91778A00162640 /* Lottie */,
 				A296C3032C92AAB8002D7CE5 /* WSRCommon */,
 				A296C3052C92AAB8002D7CE5 /* WSRMedia */,
+				A2A70B0B2C9923070001CEF0 /* WSRStorage */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -475,12 +500,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */,
+				A29A5C682C995D4800A2DDD2 /* WSREBindedView.swift in Sources */,
 				A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */,
 				A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */,
 				A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */,
 				A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */,
 				A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */,
 				A268060F2C8EF14F00F137CD /* WSREChatRoomListCollectionViewCell.swift in Sources */,
+				A2A70B0F2C9927910001CEF0 /* WSREStorageViewController.swift in Sources */,
 				A2A99BAD2C8AABD200215A9A /* WSREViewController.swift in Sources */,
 				A2CBE1582C8975D600C677E0 /* WSRHomeCoordinator.swift in Sources */,
 				A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */,
@@ -874,6 +901,10 @@
 		A296C3052C92AAB8002D7CE5 /* WSRMedia */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WSRMedia;
+		};
+		A2A70B0B2C9923070001CEF0 /* WSRStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WSRStorage;
 		};
 		A2A99BBA2C8AC80F00215A9A /* WSRComponents */ = {
 			isa = XCSwiftPackageProductDependency;

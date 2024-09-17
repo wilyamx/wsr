@@ -54,6 +54,11 @@ class WSREHomeCoordinator: WSRCoordinatorProtocol {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func showcaseStorage() {
+        let viewController = WSREStorageViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func showcaseNetworking() {
         let viewController = WSRENetworkingViewController()
         viewController.coordinator = self
