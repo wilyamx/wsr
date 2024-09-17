@@ -33,11 +33,15 @@ public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
             if let newValue = newValue {
                 let data = try! JSONEncoder().encode(newValue)
                 container.set(data, forKey: key)
+                
                 value = data as? T
+                publisher.send(newValue)
             }
             else {
                 container.set(newValue, forKey: key)
+                
                 value = newValue
+                publisher.send(newValue)
             }
         }
     }
