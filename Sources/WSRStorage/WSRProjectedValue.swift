@@ -10,10 +10,10 @@ import Combine
 import SwiftUI
 
 public struct WSRProjectedValue<T: Codable> {
-    let binding: Binding<T?>
-    let publisher: CurrentValueSubject<T?, Never>
+    public let binding: Binding<T?>
+    public let publisher: CurrentValueSubject<T?, Never>
     
-    var stream: AsyncPublisher<CurrentValueSubject<T?, Never>> {
+    public var stream: AsyncPublisher<CurrentValueSubject<T?, Never>> {
         publisher.values
     }
     

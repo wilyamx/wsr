@@ -7,17 +7,17 @@
 
 import Foundation
 
-class WSRObservable<Value>: NSObject {
+public class WSRObservable<Value>: NSObject {
     private let notificationName: Notification.Name
     private let defaultValue: Value
 
-    init(notificationName: Notification.Name, default: Value) {
+    public init(notificationName: Notification.Name, default: Value) {
         self.notificationName = notificationName
         defaultValue = `default`
         super.init()
     }
 
-    func subscribe(onChange: @escaping (Value, Value?) -> Void) -> NSObjectProtocol {
+    public func subscribe(onChange: @escaping (Value, Value?) -> Void) -> NSObjectProtocol {
         NotificationCenter.default.addObserver(
             forName: notificationName,
             object: nil,
