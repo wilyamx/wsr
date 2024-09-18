@@ -1,65 +1,76 @@
 //
-//  WSRUserDefaultCodableSwiftUI.swift
+//  WSRUserDefaultCodable.swift
 //
 //
 //  Created by William S. Rena on 9/18/24.
 //
 
-import Foundation
 import SwiftUI
 import Combine
+import WSRUtils
 
 @propertyWrapper
-public struct WSRUserDefaultCodableSwiftUI<T: Codable>: DynamicProperty {
-    // SwiftUI
+public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
+    // SwiftUI (Tested)
     @State private var value: T?
     // Combine
     private let publisher: CurrentValueSubject<T?, Never>
-    
+
     private let key: String
-    private var defaultValue: T? = nil
 
     private let container: UserDefaults = UserDefaults.standard
 
     public var wrappedValue: T? {
-        get {
-            if let data = container.object(forKey: key) as? Data,
-               let object = try? JSONDecoder().decode(T.self, from: data) {
-                return object
-            }
-            else { return defaultValue}
-        }
+        get { value }
         nonmutating set {
-            if let newValue = newValue {
-                let data = try! JSONEncoder().encode(newValue)
+            do {
+                let data = try JSONEncoder().encode(newValue)
                 container.set(data, forKey: key)
-                
-                value = data as? T
-                publisher.send(newValue)
-            }
-            else {
-                container.set(newValue, forKey: key)
-                
+
                 value = newValue
                 publisher.send(newValue)
+
+                if let value = value {
+                    wsrLogger.info(message: "Saved New Value: \(value)")
+                }
+            } catch {
+                wsrLogger.error(message: "Encoding error!")
             }
         }
     }
-    
-    public var projectecValue: WSRProjectedValue<T> {
-        WSRProjectedValue(
-            binding: Binding(
-                get: { wrappedValue },
-                set: { wrappedValue = $0 }
-            ),
-            publisher: publisher
+
+    public var projectedValue: Binding<T?> {
+        Binding(
+            get: { wrappedValue },
+            set: { wrappedValue = $0 }
         )
     }
-    
+
     public init(_ key: String) {
         self.key = key
-        
-        _value = State(wrappedValue: nil)
-        publisher = CurrentValueSubject(nil)
+
+        guard let data = UserDefaults.standard.object(forKey: key) as? Data
+        else {
+            _value = State(wrappedValue: nil)
+            publisher = CurrentValueSubject(nil)
+
+            wsrLogger.info(message: "No data!")
+            return
+        }
+
+        do {
+            let object = try JSONDecoder().decode(T.self, from: data)
+
+            _value = State(wrappedValue: object)
+            publisher = CurrentValueSubject(object)
+
+            wsrLogger.error(message: "Initialized!")
+
+        } catch {
+            _value = State(wrappedValue: nil)
+            publisher = CurrentValueSubject(nil)
+
+            wsrLogger.error(message: "Decoding Error!")
+        }
     }
 }
