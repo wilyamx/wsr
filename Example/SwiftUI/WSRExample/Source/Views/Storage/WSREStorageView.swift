@@ -13,7 +13,8 @@ struct User: Codable {
 }
 
 struct WSREStorageView: View {
-    @FileManagerCodableProperty("user_profile") private var userProfile: User?
+    //@FileManagerCodableProperty("user_profile") private var userProfile: User?
+    @WSRUserDefaultCodable("user_profile2") private var userProfile: User?
     
     let viewModel = WSREStorageViewModel()
     
@@ -24,6 +25,9 @@ struct WSREStorageView: View {
             }
             SomeBindingView(userProfile: $userProfile)
         }
+        .onAppear {
+            userProfile = User(name: "NO-NAME-1", age: 0)
+        }
     }
 }
 
@@ -32,7 +36,7 @@ struct SomeBindingView: View {
     
     var body: some View {
         VStack {
-            Text("Binding View")
+            Text("Binding View (Nick)")
             Button(userProfile?.name ?? "no value") {
                 userProfile = User(name: "NICK", age: 1013451324513450)
             }

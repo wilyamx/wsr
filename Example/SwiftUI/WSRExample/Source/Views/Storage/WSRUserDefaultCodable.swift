@@ -1,0 +1,68 @@
+//
+//  WSRUserDefaultCodable2.swift
+//  WSRExample
+//
+//  Created by William S. Rena on 9/17/24.
+//  Copyright © 2024 Personal Use Only. All rights reserved.
+//
+
+import Foundation
+import SwiftUI
+import Combine
+import WSRStorage
+import WSRUtils
+
+@propertyWrapper
+public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
+    // SwiftUI
+    @State private var value: T?
+    // Combine
+    private let publisher: CurrentValueSubject<T?, Never>
+    
+    private let key: String
+    
+    private let container: UserDefaults = UserDefaults.standard
+
+    public var wrappedValue: T? {
+        get { value }
+        nonmutating set {
+            do {
+                let data = try JSONEncoder().encode(newValue)
+                container.set(data, forKey: key)
+                
+                value = newValue
+                publisher.send(newValue)
+                
+                if let value = value {
+                    wsrLogger.info(message: "Saved New Value: \(value)")
+                }
+            } catch {
+                wsrLogger.error(message: "Encoding error!")
+            }
+        }
+    }
+    
+//    public var projectectedValue: WSRProjectedValue<T> {
+//        WSRProjectedValue(
+//            binding: Binding(
+//                get: { wrappedValue },
+//                set: { wrappedValue = $0 }
+//            ),
+//            publisher: publisher
+//        )
+//    }
+    
+    public var projectedValue: Binding<T?> {
+        Binding(
+            get: { wrappedValue },
+            set: { wrappedValue = $0 }
+        )
+    }
+    
+    public init(_ key: String) {
+        self.key = key
+        
+        _value = State(wrappedValue: nil)
+        publisher = CurrentValueSubject(nil)
+    }
+}

@@ -11,7 +11,7 @@
 		A27093FF2C9A5D0500CA42A6 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A27093FE2C9A5D0500CA42A6 /* WSRStorage */; };
 		A27094012C9A5D0500CA42A6 /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A27094002C9A5D0500CA42A6 /* WSRUtils */; };
 		A270940D2C9A60F700CA42A6 /* FileManagerProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094082C9A60F700CA42A6 /* FileManagerProperty.swift */; };
-		A270940F2C9A60F700CA42A6 /* WSRUserDefaultCodable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable2.swift */; };
+		A270940F2C9A60F700CA42A6 /* WSRUserDefaultCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable.swift */; };
 		A27094102C9A60F700CA42A6 /* FileManagerCodableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */; };
 		A27094122C9A615B00CA42A6 /* WSREStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094112C9A615B00CA42A6 /* WSREStorageView.swift */; };
 		A27094142C9A621900CA42A6 /* WSREStorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		A27094082C9A60F700CA42A6 /* FileManagerProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerProperty.swift; sourceTree = "<group>"; };
-		A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRUserDefaultCodable2.swift; sourceTree = "<group>"; };
+		A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRUserDefaultCodable.swift; sourceTree = "<group>"; };
 		A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerCodableProperty.swift; sourceTree = "<group>"; };
 		A27094112C9A615B00CA42A6 /* WSREStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageView.swift; sourceTree = "<group>"; };
 		A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageViewModel.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */,
 				A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */,
 				A27094082C9A60F700CA42A6 /* FileManagerProperty.swift */,
-				A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable2.swift */,
+				A270940B2C9A60F700CA42A6 /* WSRUserDefaultCodable.swift */,
 				A27094092C9A60F700CA42A6 /* Subviews */,
 			);
 			path = Storage;
@@ -348,7 +348,7 @@
 				A2C93E342C882A260091A1D1 /* WSRExampleApp.swift in Sources */,
 				A27094122C9A615B00CA42A6 /* WSREStorageView.swift in Sources */,
 				A27094102C9A60F700CA42A6 /* FileManagerCodableProperty.swift in Sources */,
-				A270940F2C9A60F700CA42A6 /* WSRUserDefaultCodable2.swift in Sources */,
+				A270940F2C9A60F700CA42A6 /* WSRUserDefaultCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

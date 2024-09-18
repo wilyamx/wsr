@@ -1,19 +1,16 @@
 //
-//  WSRUserDefaultCodable2.swift
-//  WSRExample
+//  WSRUserDefaultCodableSwiftUI.swift
 //
-//  Created by William S. Rena on 9/17/24.
-//  Copyright © 2024 Personal Use Only. All rights reserved.
+//
+//  Created by William S. Rena on 9/18/24.
 //
 
 import Foundation
 import SwiftUI
 import Combine
-import WSRStorage
-import WSRUtils
 
 @propertyWrapper
-public struct WSRUserDefaultCodable2<T: Codable>: DynamicProperty {
+public struct WSRUserDefaultCodableSwiftUI<T: Codable>: DynamicProperty {
     // SwiftUI
     @State private var value: T?
     // Combine

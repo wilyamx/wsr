@@ -82,3 +82,14 @@ extension Date: WSRConstantConvertible {
     public static var type: String { "date" }
     public static var defaultValue: Any? { Date() }
 }
+
+//extension Codable: WSRConstantConvertible {
+//    public init?(storeValue: Any) {
+//        guard let value = storeValue as? Codable else { return nil }
+//        self = value as! Self
+//    }
+//
+//    public var storeValue: Any? { self }
+//    public static var type: Codable { "date" }
+//    public static var defaultValue: Any? { nil }
+//}
