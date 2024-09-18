@@ -15,6 +15,7 @@
 		A27094102C9A60F700CA42A6 /* FileManagerCodableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */; };
 		A27094122C9A615B00CA42A6 /* WSREStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094112C9A615B00CA42A6 /* WSREStorageView.swift */; };
 		A27094142C9A621900CA42A6 /* WSREStorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */; };
+		A27094182C9A93E100CA42A6 /* WSRECodableBindedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094172C9A93E100CA42A6 /* WSRECodableBindedView.swift */; };
 		A2C93E342C882A260091A1D1 /* WSRExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E332C882A260091A1D1 /* WSRExampleApp.swift */; };
 		A2C93E362C882A260091A1D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E352C882A260091A1D1 /* ContentView.swift */; };
 		A2C93E382C882A280091A1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C93E372C882A280091A1D1 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerCodableProperty.swift; sourceTree = "<group>"; };
 		A27094112C9A615B00CA42A6 /* WSREStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageView.swift; sourceTree = "<group>"; };
 		A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageViewModel.swift; sourceTree = "<group>"; };
+		A27094172C9A93E100CA42A6 /* WSRECodableBindedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRECodableBindedView.swift; sourceTree = "<group>"; };
 		A2C93E302C882A260091A1D1 /* WSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93E332C882A260091A1D1 /* WSRExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRExampleApp.swift; sourceTree = "<group>"; };
 		A2C93E352C882A260091A1D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		A27094092C9A60F700CA42A6 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				A27094172C9A93E100CA42A6 /* WSRECodableBindedView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				A270940D2C9A60F700CA42A6 /* FileManagerProperty.swift in Sources */,
 				A2C93E362C882A260091A1D1 /* ContentView.swift in Sources */,
+				A27094182C9A93E100CA42A6 /* WSRECodableBindedView.swift in Sources */,
 				A27094142C9A621900CA42A6 /* WSREStorageViewModel.swift in Sources */,
 				A2C93E342C882A260091A1D1 /* WSRExampleApp.swift in Sources */,
 				A27094122C9A615B00CA42A6 /* WSREStorageView.swift in Sources */,

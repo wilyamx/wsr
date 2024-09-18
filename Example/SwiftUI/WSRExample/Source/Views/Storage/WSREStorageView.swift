@@ -10,6 +10,10 @@ import SwiftUI
 struct User: Codable {
     let name: String
     let age: Int
+    
+    var description: String {
+        return "\(name) at \(age)"
+    }
 }
 
 struct WSREStorageView: View {
@@ -20,26 +24,13 @@ struct WSREStorageView: View {
     
     var body: some View {
         VStack(spacing: 40) {
-            Button(userProfile?.name ?? "no value") {
-                userProfile = User(name: "RICKY", age: 11111)
+            Button(userProfile?.description ?? "NO-DATA-1") {
+                userProfile = User(name: "RICKY", age: 100)
             }
-            SomeBindingView(userProfile: $userProfile)
+            WSRECodableBindedView(userProfile: $userProfile)
         }
         .onAppear {
-            userProfile = User(name: "NO-NAME-1", age: 0)
-        }
-    }
-}
-
-struct SomeBindingView: View {
-    @Binding var userProfile: User?
-    
-    var body: some View {
-        VStack {
-            Text("Binding View (Nick)")
-            Button(userProfile?.name ?? "no value") {
-                userProfile = User(name: "NICK", age: 1013451324513450)
-            }
+            userProfile = User(name: "NO-NAME-1", age: 200)
         }
     }
 }
