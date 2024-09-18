@@ -9,10 +9,8 @@ import Foundation
 import WSRUtils
 
 final class PropertyViewModel: ObservableObject {
-    @UppercaseProperty var message: String = "INITIAL MESSAGE" {
-        willSet {
-            wsrLogger.info(message: "willSet: \(message)")
-            objectWillChange.send()
-        }
-    }
+    @Published var count: Int = 0
+    @Published var shout: String = "quiet"
+    
+    @UppercaseProperty var message: String = "INITIAL MESSAGE"
 }

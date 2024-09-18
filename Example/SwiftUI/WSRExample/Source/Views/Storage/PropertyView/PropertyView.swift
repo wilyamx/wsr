@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PropertyView: View {
-    //@State private var message: String = "Hellow"
     @UppercaseProperty private var message: String = "anime"
     
     var body: some View {

@@ -6,21 +6,44 @@
 //
 
 import SwiftUI
+import Combine
+import WSRUtils
 
 struct PropertyView2: View {
-    let viewModel = PropertyViewModel()
+    @ObservedObject var viewModel = PropertyViewModel()
     
     var body: some View {
         VStack(spacing: 20) {
             Text(viewModel.message)
             WSREBindedView(message: viewModel.$message)
+            //WSREBindedView(message: viewModel.$)
             Button {
                 viewModel.message = "Samurai"
+                viewModel.count = 1
             } label: {
                 Text("Try Me")
             }
-
         }
+        .onReceive(viewModel.$count, perform: { newValue in
+            wsrLogger.info(message: "New Value: \(newValue)")
+        })
+        //example.objectWillChange.sink { () in print("objectWillChange") }.store(in: &cancellables)
+        
+        /*
+        CatApiService().getCatBreedsUsingCombineMocked(urlString: urlString)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    logger.error(message: error.localizedDescription)
+                    break
+                }
+            } receiveValue: { cats in
+                logger.api(message: "cats: \(cats.count)")
+            }
+            .store(in: &cancellables)
+        */
     }
 }
 
