@@ -31,7 +31,7 @@ public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
                 publisher.send(newValue)
 
                 if let value = value {
-                    wsrLogger.info(message: "Saved New Value: \(value)")
+                    wsrLogger.info(message: "Saved: \(value)")
                 }
             } catch {
                 wsrLogger.error(message: "Encoding error!")
@@ -64,7 +64,7 @@ public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {
             _value = State(wrappedValue: object)
             publisher = CurrentValueSubject(object)
 
-            wsrLogger.error(message: "Initialized!")
+            wsrLogger.info(message: "Initialized! \(object)")
 
         } catch {
             _value = State(wrappedValue: nil)
