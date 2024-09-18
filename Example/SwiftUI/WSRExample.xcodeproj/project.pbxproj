@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A27093FD2C9A5D0500CA42A6 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A27093FC2C9A5D0500CA42A6 /* WSRCommon */; };
+		A27093FF2C9A5D0500CA42A6 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A27093FE2C9A5D0500CA42A6 /* WSRStorage */; };
+		A27094012C9A5D0500CA42A6 /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A27094002C9A5D0500CA42A6 /* WSRUtils */; };
 		A2C93E342C882A260091A1D1 /* WSRExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E332C882A260091A1D1 /* WSRExampleApp.swift */; };
 		A2C93E362C882A260091A1D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93E352C882A260091A1D1 /* ContentView.swift */; };
 		A2C93E382C882A280091A1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C93E372C882A280091A1D1 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27094012C9A5D0500CA42A6 /* WSRUtils in Frameworks */,
+				A27093FD2C9A5D0500CA42A6 /* WSRCommon in Frameworks */,
+				A27093FF2C9A5D0500CA42A6 /* WSRStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A27094022C9A5DC300CA42A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2C93E372C882A280091A1D1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A27094032C9A5E0000CA42A6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A27094042C9A5E1100CA42A6 /* Common */,
+				A27094052C9A5E1C00CA42A6 /* Components */,
+				A27094062C9A5E2A00CA42A6 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A27094042C9A5E1100CA42A6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A27094052C9A5E1C00CA42A6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A27094062C9A5E2A00CA42A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A27094072C9A5E6800CA42A6 /* Storage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A27094072C9A5E6800CA42A6 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		A2C93E272C882A250091A1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +147,10 @@
 		A2C93E322C882A260091A1D1 /* WSRExample */ = {
 			isa = PBXGroup;
 			children = (
+				A27094022C9A5DC300CA42A6 /* Resources */,
+				A27094032C9A5E0000CA42A6 /* Source */,
 				A2C93E332C882A260091A1D1 /* WSRExampleApp.swift */,
 				A2C93E352C882A260091A1D1 /* ContentView.swift */,
-				A2C93E372C882A280091A1D1 /* Assets.xcassets */,
 				A2C93E392C882A280091A1D1 /* Preview Content */,
 			);
 			path = WSRExample;
@@ -143,6 +197,11 @@
 			dependencies = (
 			);
 			name = WSRExample;
+			packageProductDependencies = (
+				A27093FC2C9A5D0500CA42A6 /* WSRCommon */,
+				A27093FE2C9A5D0500CA42A6 /* WSRStorage */,
+				A27094002C9A5D0500CA42A6 /* WSRUtils */,
+			);
 			productName = WSRExample;
 			productReference = A2C93E302C882A260091A1D1 /* WSRExample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +274,9 @@
 				Base,
 			);
 			mainGroup = A2C93E272C882A250091A1D1;
+			packageReferences = (
+				A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */,
+			);
 			productRefGroup = A2C93E312C882A260091A1D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -582,6 +644,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wilyamx/wsr";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A27093FC2C9A5D0500CA42A6 /* WSRCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRCommon;
+		};
+		A27093FE2C9A5D0500CA42A6 /* WSRStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRStorage;
+		};
+		A27094002C9A5D0500CA42A6 /* WSRUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
+			productName = WSRUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2C93E282C882A250091A1D1 /* Project object */;
 }
