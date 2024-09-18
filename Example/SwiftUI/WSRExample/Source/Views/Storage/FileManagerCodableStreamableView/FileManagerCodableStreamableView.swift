@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WSRUtils
 
 struct FileManagerCodableStreamableView: View {
     //@FileManagerCodableStreamableProperty("codable_stream") private var user
@@ -17,6 +18,14 @@ struct FileManagerCodableStreamableView: View {
                 user = WSREUserModel(name: "Lorem", age: 3)
             }
             WSRECodableBindedView(user: $user.binding)
+        }
+        .onReceive($user.publisher) { newValue in
+            wsrLogger.info(message: "onReceive: \(newValue)")
+        }
+        .task {
+            for await newValue in $user.stream {
+                wsrLogger.info(message: "task: \(newValue)")
+            }
         }
     }
 }

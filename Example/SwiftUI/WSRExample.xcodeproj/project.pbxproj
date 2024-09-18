@@ -163,9 +163,7 @@
 				A270941D2C9ABA0D00CA42A6 /* WSREUserDefaultView.swift */,
 				A270940B2C9A60F700CA42A6 /* WSRUserDefault.swift */,
 				A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */,
-				A27094212C9AD70100CA42A6 /* FileManagerCodableStreamableProperty.swift */,
 				A27094082C9A60F700CA42A6 /* FileManagerProperty.swift */,
-				A2C5AD2C2C9B6EAA00BC8707 /* UppercaseProperty.swift */,
 				A27094092C9A60F700CA42A6 /* Subviews */,
 			);
 			path = Storage;
@@ -185,6 +183,7 @@
 			children = (
 				A27094232C9AD8FF00CA42A6 /* FileManagerCodableStreamableView.swift */,
 				A27094252C9AE15200CA42A6 /* FileManagerCodableStreamableView2.swift */,
+				A27094212C9AD70100CA42A6 /* FileManagerCodableStreamableProperty.swift */,
 				A27094292C9AE24B00CA42A6 /* FileManagerCodableStreamableViewModel.swift */,
 			);
 			path = FileManagerCodableStreamableView;
@@ -206,6 +205,7 @@
 				A2C5AD2E2C9B6FB200BC8707 /* PropertyView.swift */,
 				A2C5AD332C9B7C7200BC8707 /* PropertyView2.swift */,
 				A2C5AD312C9B7C3E00BC8707 /* PropertyViewModel.swift */,
+				A2C5AD2C2C9B6EAA00BC8707 /* UppercaseProperty.swift */,
 			);
 			path = PropertyView;
 			sourceTree = "<group>";
