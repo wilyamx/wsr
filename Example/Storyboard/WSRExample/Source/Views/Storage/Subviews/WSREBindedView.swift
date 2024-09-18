@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import WSRComponents
 import SuperEasyLayout
 
@@ -17,9 +18,20 @@ class WSREBindedView: WSRView {
         view.font = .wsr_title
         view.textColor = .text
         view.lineBreakMode = .byCharWrapping
-        view.text = "???"
+        view.text = userInfo?.name
         return view
     }()
+    
+    @Binding var userInfo: UserInfo?
+    
+    init(userInfo: Binding<UserInfo?>) {
+        _userInfo = userInfo
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Setups
     

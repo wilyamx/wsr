@@ -38,7 +38,7 @@ class WSREStorageViewController: WSREViewController {
     }()
     
     private lazy var bindedView: WSREBindedView = {
-        let view = WSREBindedView(frame: .zero)
+        let view = WSREBindedView(userInfo: $infoWrapper2.projectedValue)
         view.layer.cornerRadius = 12
         return view
     }()
@@ -51,11 +51,7 @@ class WSREStorageViewController: WSREViewController {
         return view
     }()
     
-    
-    @WSRUserDefaultCodable("userInfo") var userInfo: UserInfo?
-    
-    //@Binding var userInfo: UserInfo? = nil
-    private var name: String? = nil
+    @FileManagerCodableProperty("userInfo2") private var infoWrapper2: UserInfo?
     
     override init() {
         super.init()
@@ -103,7 +99,10 @@ class WSREStorageViewController: WSREViewController {
     
     override func setupActions() {
         propertyWrapperButton.tapHandlerAsync = { [weak self] _ in
-            //self?.userInfo = UserInfo(name: "\(Date())")
+            DispatchQueue.main.async {
+                //self?.infoWrapper2 = UserInfo(name: "\(Date())")
+                self?.bindedView.userInfo = UserInfo(name: "\(Date())")
+            }
         }
     }
 }
