@@ -11,7 +11,8 @@ import SwiftUI
 struct WSRExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            WSREStorageView()
         }
     }
 }

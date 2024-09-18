@@ -6,31 +6,19 @@
 //
 
 import SwiftUI
-
-struct User: Codable {
-    let name: String
-    let age: Int
-    
-    var description: String {
-        return "\(name) at \(age)"
-    }
-}
+import WSRStorage
 
 struct WSREStorageView: View {
-    //@FileManagerCodableProperty("user_profile") private var userProfile: User?
-    @WSRUserDefaultCodable("user_profile2") private var user: User?
+    @WSRUserDefaultCodable("user") private var user: WSREUserModel?
     
     let viewModel = WSREStorageViewModel()
     
     var body: some View {
         VStack(spacing: 40) {
-            Button(user?.description ?? "NO-DATA-1") {
-                user = User(name: "RICKY", age: 100)
+            Button(user?.description ?? "NO-DEFAULT-DESCRIPTION") {
+                user = WSREUserModel(name: "RICKY", age: 100)
             }
             WSRECodableBindedView(user: $user)
-        }
-        .onAppear {
-            user = User(name: "DEFAULT-USER", age: 200)
         }
     }
 }
