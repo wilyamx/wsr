@@ -18,19 +18,19 @@ struct User: Codable {
 
 struct WSREStorageView: View {
     //@FileManagerCodableProperty("user_profile") private var userProfile: User?
-    @WSRUserDefaultCodable("user_profile2") private var userProfile: User?
+    @WSRUserDefaultCodable("user_profile2") private var user: User?
     
     let viewModel = WSREStorageViewModel()
     
     var body: some View {
         VStack(spacing: 40) {
-            Button(userProfile?.description ?? "NO-DATA-1") {
-                userProfile = User(name: "RICKY", age: 100)
+            Button(user?.description ?? "NO-DATA-1") {
+                user = User(name: "RICKY", age: 100)
             }
-            WSRECodableBindedView(userProfile: $userProfile)
+            WSRECodableBindedView(user: $user)
         }
         .onAppear {
-            userProfile = User(name: "NO-NAME-1", age: 200)
+            user = User(name: "DEFAULT-USER", age: 200)
         }
     }
 }

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct WSRECodableBindedView: View {
-    @Binding var userProfile: User?
+    @Binding var user: User?
     
     var body: some View {
         VStack {
             Text("Binded View (Nick)")
-            Button(userProfile?.description ?? "NO DATA BINDED VIEW") {
-                userProfile = User(name: "NICK", age: 123)
+            Button(user?.description ?? "NO DATA BINDED VIEW") {
+                user = User(name: "NICK", age: 123)
             }
         }
     }
 }
 
 #Preview {
-    WSRECodableBindedView(userProfile: .constant(User(name: "Lorem", age: 1)))
+    WSRECodableBindedView(user: .constant(User(name: "Lorem", age: 1)))
 }
