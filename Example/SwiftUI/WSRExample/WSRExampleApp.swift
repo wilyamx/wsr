@@ -12,7 +12,9 @@ struct WSRExampleApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            WSREStorageView()
+            //WSREUserDefaultView()
+            WSREUserDefaultCodableView()
+            //WSREUserDefaultCodableView2()
         }
     }
 }
