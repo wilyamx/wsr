@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WSREBindedView: View {
-    @Binding var message: String
+    @Binding var message: String?
     
     var body: some View {
         VStack {
@@ -16,7 +16,7 @@ struct WSREBindedView: View {
             Button {
                 message = "another message!"
             } label: {
-                Text(message)
+                Text(message ?? "")
             }
         }
     }

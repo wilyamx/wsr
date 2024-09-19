@@ -13,7 +13,7 @@ struct PropertyView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text(message)
-            WSREBindedView(message: $message)
+            WSREBindedView(message: $message.binding)
             Button {
                 message = "Samurai"
             } label: {

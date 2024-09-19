@@ -22,24 +22,24 @@ struct UppercaseProperty: DynamicProperty {
         }
     }
     
-    var projectedValue: Binding<String> {
-        Binding(
-            get: { wrappedValue },
-            set: { wrappedValue = $0 }
-        )
-    }
-    
-//    var projectedValue: WSRProjectedValue<String> {
-//        WSRProjectedValue(
-//            binding: Binding(
-//                get: { wrappedValue },
-//                set: { wrappedValue = $0 ?? "default" }
-//            ),
-//            publisher: publisher)
+//    var projectedValue: Binding<String> {
+//        Binding(
+//            get: { wrappedValue },
+//            set: { wrappedValue = $0 }
+//        )
 //    }
     
+    var projectedValue: WSRProjectedValue<String> {
+        WSRProjectedValue(
+            binding: Binding(
+                get: { wrappedValue },
+                set: { wrappedValue = $0 ?? "" }
+            ),
+            publisher: publisher)
+    }
+    
     init(wrappedValue: String) {
-        value = wrappedValue.uppercased()
+        _value = State(wrappedValue: wrappedValue.uppercased())
         publisher = CurrentValueSubject(wrappedValue.uppercased())
     }
 }
