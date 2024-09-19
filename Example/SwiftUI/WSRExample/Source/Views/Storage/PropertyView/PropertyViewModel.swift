@@ -12,5 +12,9 @@ final class PropertyViewModel: ObservableObject {
     @Published var count: Int = 0
     @Published var shout: String = "quiet"
     
-    @UppercaseProperty var message: String = "INITIAL MESSAGE"
+    @UppercaseProperty var message: String = "INITIAL MESSAGE" {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 }

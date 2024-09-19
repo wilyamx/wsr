@@ -16,7 +16,6 @@ struct PropertyView2: View {
         VStack(spacing: 20) {
             Text(viewModel.message)
             WSREBindedView(message: viewModel.$message)
-            //WSREBindedView(message: viewModel.$)
             Button {
                 viewModel.message = "Samurai"
                 viewModel.count = 1
@@ -25,8 +24,11 @@ struct PropertyView2: View {
             }
         }
         .onReceive(viewModel.$count, perform: { newValue in
-            wsrLogger.info(message: "New Value: \(newValue)")
+            wsrLogger.info(message: "Count Value: \(newValue)")
         })
+//        .onReceive(viewModel.$message, perform: { newValue in
+//            wsrLogger.info(message: "Message Value: \(newValue)")
+//        })
         //example.objectWillChange.sink { () in print("objectWillChange") }.store(in: &cancellables)
         
         /*

@@ -11,12 +11,15 @@ import WSRStorage
 
 @propertyWrapper
 struct UppercaseProperty: DynamicProperty {
-    @State private var title: String
+    @State private var value: String
     private let publisher: CurrentValueSubject<String?, Never>
     
     var wrappedValue: String {
-        get { title }
-        nonmutating set { title = newValue.uppercased() }
+        get { value }
+        nonmutating set {
+            value = newValue.uppercased()
+            publisher.send(newValue)
+        }
     }
     
     var projectedValue: Binding<String> {
@@ -36,7 +39,7 @@ struct UppercaseProperty: DynamicProperty {
 //    }
     
     init(wrappedValue: String) {
-        title = wrappedValue.uppercased()
+        value = wrappedValue.uppercased()
         publisher = CurrentValueSubject(wrappedValue.uppercased())
     }
 }
