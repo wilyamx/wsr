@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
       "identity" : "supereasylayout",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/doil6317/SuperEasyLayout.git",
@@ -15,7 +24,7 @@
       "location" : "https://github.com/wilyamx/wsr",
       "state" : {
         "branch" : "develop",
-        "revision" : "069e70dd90e25726c292b3fc98079f55e17f3f9a"
+        "revision" : "76bd857e9916498100e3effba6630d736b8b5108"
       }
     }
   ],
