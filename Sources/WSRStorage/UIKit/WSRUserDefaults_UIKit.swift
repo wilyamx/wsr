@@ -6,22 +6,23 @@
 //
 
 import Foundation
+import WSRCommon
 
 @propertyWrapper
-public struct WSRUserDefaultsReadAndWrite_UIKit<Value: WSRConstantConvertible> {
+public struct WSRUserDefaults_UIKit<Value: WSRConstantConvertible> {
     private let key: String
     private let defaultValue: Value
+    private let notificationName: Notification.Name
 
     private let container: UserDefaults = UserDefaults.standard
-    private var appInfoQueue = DispatchQueue(label: "WSRAppInfoQueue", qos: .userInteractive)
 
-//    public var projectedValue: Observable<Value> {
-//        Observable(notificationName: notificationName, default: defaultValue)
-//    }
+    public var projectedValue: WSRObservable<Value> {
+        WSRObservable(notificationName: notificationName, default: defaultValue)
+    }
 
     public var wrappedValue: Value {
         get {
-            appInfoQueue.sync(flags: .barrier) {
+            WSRCommon.appInfoQueue.sync(flags: .barrier) {
                 if let object = UserDefaults.standard.object(forKey: key),
                    let value = Value(storeValue: object) {
                     return value
@@ -30,7 +31,7 @@ public struct WSRUserDefaultsReadAndWrite_UIKit<Value: WSRConstantConvertible> {
             }
         }
         set {
-            appInfoQueue.sync(flags: .barrier) {
+            WSRCommon.appInfoQueue.sync(flags: .barrier) {
                 let _ = container.object(forKey: key)
                 if let userDefaultValue = newValue.storeValue {
                     container.set(userDefaultValue, forKey: key)
@@ -45,5 +46,6 @@ public struct WSRUserDefaultsReadAndWrite_UIKit<Value: WSRConstantConvertible> {
     public init(_ key: String, default: Value) {
         self.key = key
         defaultValue = `default`
+        notificationName = Notification.Name("com.wsr.notificationForAppInfo.\(key)")
     }
 }
