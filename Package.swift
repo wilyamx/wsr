@@ -33,7 +33,9 @@ let package = Package(
             name: "WSRMedia",
             dependencies: ["WSRCommon"]),
         .target(name: "WSRUtils"),
-        .target(name: "WSRStorage"),
+        .target(
+            name: "WSRStorage",
+            dependencies: ["WSRCommon"]),
         .testTarget(
             name: "wsrTests",
             dependencies: [],
