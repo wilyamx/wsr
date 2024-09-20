@@ -10,10 +10,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "WSRCommon", targets: ["WSRCommon"]),
         .library(name: "WSRComponents", targets: ["WSRComponents"]),
-        .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
         .library(name: "WSRMedia", targets: ["WSRMedia"]),
-        .library(name: "WSRUtils", targets: ["WSRUtils"]),
+        .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
         .library(name: "WSRStorage", targets: ["WSRStorage"]),
+        .library(name: "WSRUtils", targets: ["WSRUtils"]),
     ],
     dependencies: [
         .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
@@ -30,14 +30,14 @@ let package = Package(
             resources: [
                 .process("Resources/WSRColors.xcassets")
             ]),
-        .target(name: "WSRNetworking"),
         .target(
             name: "WSRMedia",
             dependencies: ["WSRCommon"]),
-        .target(name: "WSRUtils"),
+        .target(name: "WSRNetworking"),
         .target(
             name: "WSRStorage",
             dependencies: ["WSRCommon", "KeychainAccess"]),
+        .target(name: "WSRUtils"),
         .testTarget(
             name: "wsrTests",
             dependencies: [],
