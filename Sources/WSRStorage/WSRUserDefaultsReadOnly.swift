@@ -9,7 +9,7 @@ import Foundation
 
 @propertyWrapper
 public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
-    private var value: Value
+    private var defaultValue: Value
     private var key: String
     
     private let container: UserDefaults = UserDefaults.standard
@@ -19,13 +19,11 @@ public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
            let value = Value(storeValue: object) {
             return value
         }
-        return value
+        return defaultValue
     }
 
-    public init(_ key: String, wrappedValue: Value) {
+    public init(_ key: String, defaultValue: Value) {
         self.key = key
-        self.value = wrappedValue
-        
-        container.set(wrappedValue, forKey: key)
+        self.defaultValue = defaultValue
     }
 }
