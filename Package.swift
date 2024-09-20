@@ -16,7 +16,9 @@ let package = Package(
         .library(name: "WSRStorage", targets: ["WSRStorage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0")
+        .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
+        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2"),
+        
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -35,7 +37,7 @@ let package = Package(
         .target(name: "WSRUtils"),
         .target(
             name: "WSRStorage",
-            dependencies: ["WSRCommon"]),
+            dependencies: ["WSRCommon", "KeychainAccess"]),
         .testTarget(
             name: "wsrTests",
             dependencies: [],

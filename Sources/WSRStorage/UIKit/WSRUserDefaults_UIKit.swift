@@ -22,7 +22,7 @@ public struct WSRUserDefaults_UIKit<Value: WSRConstantConvertible> {
 
     public var wrappedValue: Value {
         get {
-            WSRCommon.appInfoQueue.sync(flags: .barrier) {
+            WSRCommonConstants.appInfoQueue.sync(flags: .barrier) {
                 if let object = UserDefaults.standard.object(forKey: key),
                    let value = Value(storeValue: object) {
                     return value
@@ -31,7 +31,7 @@ public struct WSRUserDefaults_UIKit<Value: WSRConstantConvertible> {
             }
         }
         set {
-            WSRCommon.appInfoQueue.sync(flags: .barrier) {
+            WSRCommonConstants.appInfoQueue.sync(flags: .barrier) {
                 let _ = container.object(forKey: key)
                 if let userDefaultValue = newValue.storeValue {
                     container.set(userDefaultValue, forKey: key)

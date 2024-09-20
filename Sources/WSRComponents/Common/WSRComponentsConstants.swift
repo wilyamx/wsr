@@ -1,5 +1,5 @@
 //
-//  WSRConstants.swift
+//  WSRComponentsConstants.swift
 //  WSR
 //
 //  Created by William Rena on 7/27/24.
@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - App specification infos
 
-public class WSRConstants {
+final public class WSRComponentsConstants {
     public static var appVersion: String = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
 
     public static var appName: String = (Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String) ?? ""
@@ -37,5 +37,5 @@ public class WSRConstants {
         keyWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
     }
 
-    public static var hasSafeAreaBottomMargin: Bool { WSRConstants.safeAreaInsets.bottom > 0 }
+    public static var hasSafeAreaBottomMargin: Bool { WSRComponentsConstants.safeAreaInsets.bottom > 0 }
 }
