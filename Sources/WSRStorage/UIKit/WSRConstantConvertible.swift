@@ -15,10 +15,6 @@ public protocol WSRConstantConvertible {
     var storeValue: Any? { get }
 }
 
-public protocol WSRConstantKeychainType: WSRConstantConvertible {
-    static var type: String { get }
-}
-
 // MARK: - Extensions
 
 extension Optional: WSRConstantConvertible where Wrapped: WSRConstantConvertible {
@@ -35,10 +31,6 @@ extension Optional: WSRConstantConvertible where Wrapped: WSRConstantConvertible
     }
 
     public static var defaultValue: Any? { nil }
-}
-
-extension Optional: WSRConstantKeychainType where Wrapped: WSRConstantKeychainType {
-    public static var type: String { Wrapped.type }
 }
 
 extension Int: WSRConstantConvertible {
@@ -61,17 +53,6 @@ extension Bool: WSRConstantConvertible {
     public static var defaultValue: Any? { false }
 }
 
-extension String: WSRConstantKeychainType {
-    public init?(storeValue: Any) {
-        guard let value = storeValue as? String else { return nil }
-        self = value
-    }
-
-    public var storeValue: Any? { self }
-    public static var type: String { "string" }
-    public static var defaultValue: Any? { "" }
-}
-
 extension Date: WSRConstantConvertible {
     public init?(storeValue: Any) {
         guard let value = storeValue as? Date else { return nil }
@@ -82,14 +63,3 @@ extension Date: WSRConstantConvertible {
     public static var type: String { "date" }
     public static var defaultValue: Any? { Date() }
 }
-
-//extension Codable: WSRConstantConvertible {
-//    public init?(storeValue: Any) {
-//        guard let value = storeValue as? Codable else { return nil }
-//        self = value as! Self
-//    }
-//
-//    public var storeValue: Any? { self }
-//    public static var type: Codable { "date" }
-//    public static var defaultValue: Any? { nil }
-//}
