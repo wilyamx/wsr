@@ -8,7 +8,7 @@
 import Foundation
 
 @propertyWrapper
-public struct WSRUserDefaultsReadAndWrite<Value: WSRConstantConvertible> {
+public struct WSRUserDefaultsReadAndWrite_UIKit<Value: WSRConstantConvertible> {
     private let key: String
     private let defaultValue: Value
 
