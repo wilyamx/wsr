@@ -8,6 +8,7 @@ A lightweight, pure-Swift library for customizing your components and apply swif
 - [x] Swift Concurrency Support Back to iOS 17
 - [x] Combine Support
 - [x] Property Wrappers
+- [x] Data Persistency (User Defaults, Keychain)
 - [x] Coordinator Design Pattern for Navigation Workflow
 - [x] Custom Logger
 
@@ -72,6 +73,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 ### Package Dependencies
 
 1. [SuperEasyLayout](https://github.com/doil6317/SuperEasyLayout) - apply UI constraints programmatically
+1. [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess.git) - makes using Keychain APIs extremely easy
 
 ## Code Usage
 
