@@ -22,8 +22,10 @@ public struct WSRUserDefaultsReadOnly<Value: WSRConstantConvertible> {
         return defaultValue
     }
 
-    public init(_ key: String, default: Value) {
+    public init(_ key: String, wrappedValue: Value) {
         self.key = key
-        defaultValue = `default`
+        self.defaultValue = wrappedValue
+        
+        container.set(wrappedValue, forKey: key)
     }
 }
