@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios",
@@ -24,7 +33,7 @@
       "location" : "https://github.com/wilyamx/wsr.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "312fc740950fd41c34efbed89bddbf8a680038fe"
+        "revision" : "4ff806015b6de8e716fad5c879a42756af57b0e6"
       }
     }
   ],

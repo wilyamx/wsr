@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import WSRComponents
 import WSRStorage
+import WSRUtils
 import SuperEasyLayout
 
 struct UserInfo: Codable {
@@ -43,6 +44,12 @@ class WSREStorageViewController: WSREViewController {
         return view
     }()
     
+    private lazy var bindedView2: WSREBindedView2 = {
+        let view = WSREBindedView2(info: $info.binding.projectedValue)
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    
     private lazy var propertyWrapperButton: WSRButton = {
         let view = WSRButton()
         view.text = "PROPERTY WRAPPER"
@@ -52,6 +59,10 @@ class WSREStorageViewController: WSREViewController {
     }()
     
     @FileManagerCodableProperty("userInfo2") private var infoWrapper2: UserInfo?
+    @UppercaseProperty private var info: String = "default"
+    
+    //@WSRUserDefaults_UIKit("name3", default: "Default Name1") private var name: String
+    @WSRUserDefaultsReadOnly("name3", defaultValue: "Default Name2") private var nameGetter: String
     
     override init() {
         super.init()
@@ -65,12 +76,15 @@ class WSREStorageViewController: WSREViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //wsrLogger.info(message: "@WSRUserDefaults_UIKit: \(name)")
+        wsrLogger.info(message: "@WSRUserDefaultsReadOnly: \(nameGetter)")
     }
     
     // MARK: - Setups
     
     override func setupNavigation() {
-        title = "Storage and Wrappers"
+        title = "Property Wrappers"
     }
     
     override func setupLayout() {
@@ -78,6 +92,7 @@ class WSREStorageViewController: WSREViewController {
         
         addSubviews([
             bindedView,
+            bindedView2,
             verticalStackView.addArrangedSubviews([
                 propertyWrapperButton
             ])
@@ -90,6 +105,11 @@ class WSREStorageViewController: WSREViewController {
         bindedView.top == view.topMargin + 20
         bindedView.height == 100
         
+        bindedView2.left == view.left + 20
+        bindedView2.right == view.right - 20
+        bindedView2.top == bindedView.bottom + 20
+        bindedView2.height == 100
+        
         verticalStackView.left == view.left + 20
         verticalStackView.right == view.right - 20
         verticalStackView.centerY == view.centerY
@@ -101,7 +121,10 @@ class WSREStorageViewController: WSREViewController {
         propertyWrapperButton.tapHandlerAsync = { [weak self] _ in
             DispatchQueue.main.async {
                 //self?.infoWrapper2 = UserInfo(name: "\(Date())")
-                self?.bindedView.userInfo = UserInfo(name: "\(Date())")
+                //self?.bindedView.userInfo = UserInfo(name: "\(Date())")
+                //self?.info = "information"
+                
+                //self?.name = "Amazing Race!"
             }
         }
     }

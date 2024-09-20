@@ -18,7 +18,6 @@
 		A296C3042C92AAB8002D7CE5 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3032C92AAB8002D7CE5 /* WSRCommon */; };
 		A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */ = {isa = PBXBuildFile; productRef = A296C3052C92AAB8002D7CE5 /* WSRMedia */; };
 		A29A5C682C995D4800A2DDD2 /* WSREBindedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */; };
-		A29A5C6A2C9975DA00A2DDD2 /* WSRUserDefaultCodable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29A5C692C9975DA00A2DDD2 /* WSRUserDefaultCodable2.swift */; };
 		A2A70B0C2C9923070001CEF0 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A2A70B0B2C9923070001CEF0 /* WSRStorage */; };
 		A2A70B0F2C9927910001CEF0 /* WSREStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */; };
 		A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */; };
@@ -35,6 +34,8 @@
 		A2BE98C22C9176E100162640 /* WSREPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */; };
 		A2BE98C52C91778A00162640 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A2BE98C42C91778A00162640 /* Lottie */; };
 		A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */; };
+		A2C5AD3D2C9BA84C00BC8707 /* UppercaseProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5AD392C9BA84C00BC8707 /* UppercaseProperty.swift */; };
+		A2C5AD3F2C9BA9E800BC8707 /* WSREBindedView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5AD3E2C9BA9E800BC8707 /* WSREBindedView2.swift */; };
 		A2C93DF82C8829DE0091A1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */; };
 		A2C93DFA2C8829DE0091A1D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */; };
 		A2C93DFC2C8829DE0091A1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C93DFB2C8829DE0091A1D1 /* ViewController.swift */; };
@@ -79,7 +80,6 @@
 		A296C2DA2C926A89002D7CE5 /* checkingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkingAnimation.json; sourceTree = "<group>"; };
 		A296C2DB2C926A89002D7CE5 /* waitingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingAnimation.json; sourceTree = "<group>"; };
 		A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREBindedView.swift; sourceTree = "<group>"; };
-		A29A5C692C9975DA00A2DDD2 /* WSRUserDefaultCodable2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRUserDefaultCodable2.swift; sourceTree = "<group>"; };
 		A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREStorageViewController.swift; sourceTree = "<group>"; };
 		A2A99BAA2C8AAB8500215A9A /* WSREComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREComponentsViewController.swift; sourceTree = "<group>"; };
 		A2A99BAC2C8AABD200215A9A /* WSREViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		A2BE98BF2C91761F00162640 /* WSREIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREIndicatorController.swift; sourceTree = "<group>"; };
 		A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREPaddingLabel.swift; sourceTree = "<group>"; };
 		A2C4FCC82C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREChatRoomListHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A2C5AD392C9BA84C00BC8707 /* UppercaseProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UppercaseProperty.swift; sourceTree = "<group>"; };
+		A2C5AD3E2C9BA9E800BC8707 /* WSREBindedView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSREBindedView2.swift; sourceTree = "<group>"; };
 		A2C93DF42C8829DE0091A1D1 /* WSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C93DF72C8829DE0091A1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C93DF92C8829DE0091A1D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A29A5C672C995D4800A2DDD2 /* WSREBindedView.swift */,
+				A2C5AD3E2C9BA9E800BC8707 /* WSREBindedView2.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				A2A70B0E2C9927910001CEF0 /* WSREStorageViewController.swift */,
-				A29A5C692C9975DA00A2DDD2 /* WSRUserDefaultCodable2.swift */,
+				A2C5AD392C9BA84C00BC8707 /* UppercaseProperty.swift */,
 				A27093F72C9A562E00CA42A6 /* FileManagerCodableProperty.swift */,
 				A27093F92C9A569000CA42A6 /* FileManagerProperty.swift */,
 				A29A5C662C995C6C00A2DDD2 /* Subviews */,
@@ -508,9 +511,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A29A5C6A2C9975DA00A2DDD2 /* WSRUserDefaultCodable2.swift in Sources */,
 				A2C4FCC92C8FCC95004A7F6F /* WSREChatRoomListHeaderCollectionReusableView.swift in Sources */,
 				A29A5C682C995D4800A2DDD2 /* WSREBindedView.swift in Sources */,
+				A2C5AD3D2C9BA84C00BC8707 /* UppercaseProperty.swift in Sources */,
+				A2C5AD3F2C9BA9E800BC8707 /* WSREBindedView2.swift in Sources */,
 				A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */,
 				A2A99BAB2C8AAB8500215A9A /* WSREComponentsViewController.swift in Sources */,
 				A2CBE1562C89752B00C677E0 /* WSREHomeViewModel.swift in Sources */,
