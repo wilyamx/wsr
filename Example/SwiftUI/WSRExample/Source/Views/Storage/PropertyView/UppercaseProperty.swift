@@ -8,9 +8,16 @@
 import SwiftUI
 import Combine
 import WSRStorage
+import WSRUtils
+
+protocol PublishedWrapper: DynamicProperty {
+    var objectWillChange: ObservableObjectPublisher? { get set }
+}
 
 @propertyWrapper
-struct UppercaseProperty: DynamicProperty {
+struct UppercaseProperty: PublishedWrapper {
+    var objectWillChange: ObservableObjectPublisher?
+    
     @State private var value: String
     private let publisher: CurrentValueSubject<String?, Never>
     
@@ -18,7 +25,10 @@ struct UppercaseProperty: DynamicProperty {
         get { value }
         nonmutating set {
             value = newValue.uppercased()
-            publisher.send(newValue)
+            publisher.send(newValue.uppercased())
+            
+            objectWillChange?.send()
+            wsrLogger.info(message: "Set wrappedValue: \(newValue.uppercased())")
         }
     }
     

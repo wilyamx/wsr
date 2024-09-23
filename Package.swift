@@ -33,7 +33,9 @@ let package = Package(
         .target(
             name: "WSRMedia",
             dependencies: ["WSRCommon"]),
-        .target(name: "WSRNetworking"),
+        .target(
+            name: "WSRNetworking",
+            dependencies: ["WSRCommon"]),
         .target(
             name: "WSRStorage",
             dependencies: ["WSRCommon", "KeychainAccess"]),

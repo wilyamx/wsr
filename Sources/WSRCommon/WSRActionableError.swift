@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WSRCommon
 
 public protocol WSRErrorActionType {
     var title: String { get }
