@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-import WSRUtils
+import WSRCommon
 
 @propertyWrapper
 public struct WSRUserDefaultCodable<T: Codable>: DynamicProperty {

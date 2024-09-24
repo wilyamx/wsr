@@ -7,7 +7,6 @@
 
 import Foundation
 import WSRCommon
-import WSRUtils
 
 public struct WSRApiService: WSRApiServiceProtocol {
     

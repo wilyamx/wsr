@@ -44,7 +44,7 @@ public struct WSRLogger {
         //return commonAndPersistentLogKeys + databaseLogKeys + apiLogKeys + cacheLogKeys
         //return errorLogKeys
         //return customLogKeys
-        return commonLogKeys
+        return commonLogKeys + apiLogKeys
     }
     
     // MARK: - Deprecated
