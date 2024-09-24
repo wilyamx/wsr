@@ -9,19 +9,19 @@ import SwiftUI
 import WSRNetworking
 
 public struct WSRLoadingViewModifier: ViewModifier {
-    @ObservedObject var viewModel: WSRDataFetcher
+//    @ObservedObject var viewModel: WSRDataFetcher
     
     public func body(content: Content) -> some View {
         ZStack {
             content
             
-            if viewModel.viewState == .loading {
-                Color.black
-                    .opacity(0.25)
-                    .ignoresSafeArea()
-                
-                WSRProcessingView(loadingMessage: viewModel.loadingMessage)
-            }
+//            if viewModel.viewState == .loading {
+//                Color.black
+//                    .opacity(0.25)
+//                    .ignoresSafeArea()
+//                
+//                WSRProcessingView(loadingMessage: viewModel.loadingMessage)
+//            }
         }
         
     }

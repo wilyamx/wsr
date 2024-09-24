@@ -13,11 +13,7 @@ import WSRNetworking
 public extension View {
     func wsr_ButtonLabel(bgColor: Color, fgColor: Color, font: Font? = nil) -> some View {
         modifier(
-            WSRButtonLabelModifier(
-                bgColor: bgColor,
-                fgColor: fgColor,
-                font: font
-            )
+            WSRButtonLabelModifier(bgColor: bgColor, fgColor: fgColor, font: font)
         )
     }
 }
@@ -25,15 +21,15 @@ public extension View {
 // MARK: - WSRDataFetcher Modifiers
 
 public extension View {
-    func wsr_ErrorAlertView(viewModel: WSRDataFetcher) -> some View {
-        modifier(
-            WSRErrorAlertViewModifier(viewModel: viewModel)
-        )
-    }
-    
-    func wsr_LoadingView(viewModel: WSRDataFetcher) -> some View {
-        modifier(
-            WSRLoadingViewModifier(viewModel: viewModel)
-        )
-    }
+//    func wsr_ErrorAlertView(viewModel: WSRDataFetcher) -> some View {
+//        modifier(
+//            WSRErrorAlertViewModifier(viewModel: viewModel)
+//        )
+//    }
+//    
+//    func wsr_LoadingView(viewModel: WSRDataFetcher) -> some View {
+//        modifier(
+//            WSRLoadingViewModifier(viewModel: viewModel)
+//        )
+//    }
 }

@@ -38,7 +38,7 @@ struct WSRButtonLabelModifierView: View {
         },
                label: {
             Text("Lorem ipsum dolor".uppercased())
-                .wsr_ButtonLabel(bgColor: .black, fgColor: .red, font: .footnote.bold())
+                .wsr_ButtonLabel(bgColor: .black, fgColor: .white, font: .footnote.bold())
         })
         .padding(.bottom)
     }

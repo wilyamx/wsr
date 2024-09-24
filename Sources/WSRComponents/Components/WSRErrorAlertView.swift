@@ -8,13 +8,13 @@
 import SwiftUI
 import WSRCommon
 
-struct WSRErrorAlertView: View {
+public struct WSRErrorAlertView: View {
     @Binding var showErrorAlert: Bool
     
-    var errorAlertType: WSRErrorAlertType
-    var closeErrorAlert: () -> Void
+    public var errorAlertType: WSRErrorAlertType
+    public var closeErrorAlert: () -> Void
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             VStack {
                 VStack(spacing:20) {
