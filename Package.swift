@@ -18,7 +18,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/doil6317/SuperEasyLayout.git", from: "0.3.0"),
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2"),
-        
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
