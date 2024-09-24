@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 import WSRStorage
-import WSRUtils
+import WSRCommon
 
 protocol PublishedWrapper: DynamicProperty {
     var objectWillChange: ObservableObjectPublisher? { get set }

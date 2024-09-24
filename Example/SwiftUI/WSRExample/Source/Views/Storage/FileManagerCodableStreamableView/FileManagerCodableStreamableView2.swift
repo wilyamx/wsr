@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import WSRUtils
+import WSRCommon
 
 struct FileManagerCodableStreamableView2: View {
     let viewModel = FileManagerCodableStreamableViewModel()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-import WSRUtils
+import WSRCommon
 
 struct PropertyView2: View {
     @ObservedObject var viewModel = PropertyViewModel()

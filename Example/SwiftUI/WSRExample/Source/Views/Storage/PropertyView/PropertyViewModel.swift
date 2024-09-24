@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import WSRUtils
+import WSRCommon
 import Combine
 
 final class PropertyViewModel: ObservableObject {

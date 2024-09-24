@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Combine
-import WSRUtils
+import WSRCommon
 
 @propertyWrapper
 public struct WSRUserDefault<T>: DynamicProperty {

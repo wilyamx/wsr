@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import WSRUtils
+import WSRCommon
 
 struct FileManagerCodableStreamableView: View {
     //@FileManagerCodableStreamableProperty("codable_stream") private var user

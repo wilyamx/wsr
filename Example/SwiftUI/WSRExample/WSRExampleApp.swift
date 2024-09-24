@@ -13,8 +13,9 @@ struct WSRExampleApp: App {
         WindowGroup {
             //ContentView()
             //WSREUserDefaultView()
-            WSREUserDefaultCodableView()
+            //WSREUserDefaultCodableView()
             //WSREUserDefaultCodableView2()
+            WSREFeedsView()
         }
     }
 }
