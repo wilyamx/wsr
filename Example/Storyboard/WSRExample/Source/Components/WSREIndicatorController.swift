@@ -8,7 +8,7 @@
 
 import UIKit
 import SuperEasyLayout
-import WSRComponents
+import WSRComponents_UIKit
 import Lottie
 
 @MainActor

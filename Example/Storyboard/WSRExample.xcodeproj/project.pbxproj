@@ -25,11 +25,11 @@
 		A2A99BAF2C8AAC3200215A9A /* WSRENetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BAE2C8AAC3200215A9A /* WSRENetworkingViewController.swift */; };
 		A2A99BB12C8AAC6B00215A9A /* WSRENetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BB02C8AAC6B00215A9A /* WSRENetworkingViewModel.swift */; };
 		A2A99BB32C8AACAC00215A9A /* WSREComponentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BB22C8AACAC00215A9A /* WSREComponentsViewModel.swift */; };
-		A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBA2C8AC80F00215A9A /* WSRComponents */; };
 		A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBC2C8AC80F00215A9A /* WSRNetworking */; };
 		A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A2A99BBE2C8ACEB700215A9A /* WSRUtils */; };
 		A2A99BC22C8AD43600215A9A /* WSRECreateChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC12C8AD43600215A9A /* WSRECreateChatRoomViewController.swift */; };
 		A2A99BC42C8AD4C600215A9A /* WSREComponentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A99BC32C8AD4C600215A9A /* WSREComponentsCoordinator.swift */; };
+		A2AEC9232CA2AAE900196DB7 /* WSRComponents_UIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A2AEC9222CA2AAE900196DB7 /* WSRComponents_UIKit */; };
 		A2BE98C02C91761F00162640 /* WSREIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE98BF2C91761F00162640 /* WSREIndicatorController.swift */; };
 		A2BE98C22C9176E100162640 /* WSREPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE98C12C9176E100162640 /* WSREPaddingLabel.swift */; };
 		A2BE98C52C91778A00162640 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A2BE98C42C91778A00162640 /* Lottie */; };
@@ -123,8 +123,8 @@
 				A2CBE14A2C89592E00C677E0 /* SuperEasyLayout in Frameworks */,
 				A2A70B0C2C9923070001CEF0 /* WSRStorage in Frameworks */,
 				A2A99BBF2C8ACEB700215A9A /* WSRUtils in Frameworks */,
-				A2A99BBB2C8AC80F00215A9A /* WSRComponents in Frameworks */,
 				A296C3062C92AAB8002D7CE5 /* WSRMedia in Frameworks */,
+				A2AEC9232CA2AAE900196DB7 /* WSRComponents_UIKit in Frameworks */,
 				A2A99BBD2C8AC80F00215A9A /* WSRNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,13 +379,13 @@
 			name = WSRExample;
 			packageProductDependencies = (
 				A2CBE1492C89592E00C677E0 /* SuperEasyLayout */,
-				A2A99BBA2C8AC80F00215A9A /* WSRComponents */,
 				A2A99BBC2C8AC80F00215A9A /* WSRNetworking */,
 				A2A99BBE2C8ACEB700215A9A /* WSRUtils */,
 				A2BE98C42C91778A00162640 /* Lottie */,
 				A296C3032C92AAB8002D7CE5 /* WSRCommon */,
 				A296C3052C92AAB8002D7CE5 /* WSRMedia */,
 				A2A70B0B2C9923070001CEF0 /* WSRStorage */,
+				A2AEC9222CA2AAE900196DB7 /* WSRComponents_UIKit */,
 			);
 			productName = WSRExample;
 			productReference = A2C93DF42C8829DE0091A1D1 /* WSRExample.app */;
@@ -922,11 +922,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WSRStorage;
 		};
-		A2A99BBA2C8AC80F00215A9A /* WSRComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
-			productName = WSRComponents;
-		};
 		A2A99BBC2C8AC80F00215A9A /* WSRNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
@@ -936,6 +931,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2A99BB92C8AC80F00215A9A /* XCRemoteSwiftPackageReference "wsr" */;
 			productName = WSRUtils;
+		};
+		A2AEC9222CA2AAE900196DB7 /* WSRComponents_UIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WSRComponents_UIKit;
 		};
 		A2BE98C42C91778A00162640 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

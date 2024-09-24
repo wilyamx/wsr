@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import WSRComponents
+import WSRComponents_UIKit
 import WSRUtils
 import SuperEasyLayout
 

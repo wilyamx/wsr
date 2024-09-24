@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SuperEasyLayout
-import WSRComponents
+import WSRComponents_UIKit
 
 class WSREChatRoomListCollectionViewCell: WSRCollectionViewCell {
     private lazy var backView: WSRView = {

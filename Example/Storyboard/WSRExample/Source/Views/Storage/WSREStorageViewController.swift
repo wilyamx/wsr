@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-import WSRComponents
+import WSRComponents_UIKit
 import WSRStorage
 import WSRUtils
 import SuperEasyLayout

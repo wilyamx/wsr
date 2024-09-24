@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import WSRComponents
+import WSRComponents_UIKit
 
 class WSREHomeCoordinator: WSRCoordinatorProtocol {
     var childCoordinators = [WSRCoordinatorProtocol]()
