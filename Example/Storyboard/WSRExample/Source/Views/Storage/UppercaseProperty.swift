@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 import WSRStorage
-import WSRUtils
+import WSRCommon
 
 @propertyWrapper
 struct UppercaseProperty: DynamicProperty {

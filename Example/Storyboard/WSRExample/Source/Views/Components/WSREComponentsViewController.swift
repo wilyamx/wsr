@@ -8,7 +8,7 @@
 
 import UIKit
 import WSRComponents_UIKit
-import WSRUtils
+import WSRCommon
 import SuperEasyLayout
 
 class WSREComponentsViewController: WSREViewController {

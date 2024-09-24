@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 import WSRStorage
-import WSRUtils
+import WSRCommon
 
 @propertyWrapper
 struct FileManagerCodableProperty<T: Codable>: DynamicProperty {

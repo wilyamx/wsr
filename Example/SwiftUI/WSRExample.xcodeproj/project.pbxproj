@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A27093FD2C9A5D0500CA42A6 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A27093FC2C9A5D0500CA42A6 /* WSRCommon */; };
-		A27093FF2C9A5D0500CA42A6 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A27093FE2C9A5D0500CA42A6 /* WSRStorage */; };
-		A27094012C9A5D0500CA42A6 /* WSRUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A27094002C9A5D0500CA42A6 /* WSRUtils */; };
 		A270940D2C9A60F700CA42A6 /* FileManagerProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094082C9A60F700CA42A6 /* FileManagerProperty.swift */; };
 		A270940F2C9A60F700CA42A6 /* WSRUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940B2C9A60F700CA42A6 /* WSRUserDefault.swift */; };
 		A27094102C9A60F700CA42A6 /* FileManagerCodableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270940C2C9A60F700CA42A6 /* FileManagerCodableProperty.swift */; };
@@ -25,6 +22,8 @@
 		A27094262C9AE15200CA42A6 /* FileManagerCodableStreamableView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094252C9AE15200CA42A6 /* FileManagerCodableStreamableView2.swift */; };
 		A270942A2C9AE24B00CA42A6 /* FileManagerCodableStreamableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27094292C9AE24B00CA42A6 /* FileManagerCodableStreamableViewModel.swift */; };
 		A28FEB6B2CA3407A00844B87 /* WSREFeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28FEB6A2CA3407A00844B87 /* WSREFeedsView.swift */; };
+		A28FEB6D2CA3432B00844B87 /* WSRCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A28FEB6C2CA3432B00844B87 /* WSRCommon */; };
+		A28FEB6F2CA3433B00844B87 /* WSRStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A28FEB6E2CA3433B00844B87 /* WSRStorage */; };
 		A2C5AD2D2C9B6EAA00BC8707 /* UppercaseProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5AD2C2C9B6EAA00BC8707 /* UppercaseProperty.swift */; };
 		A2C5AD2F2C9B6FB200BC8707 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5AD2E2C9B6FB200BC8707 /* PropertyView.swift */; };
 		A2C5AD322C9B7C3E00BC8707 /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5AD312C9B7C3E00BC8707 /* PropertyViewModel.swift */; };
@@ -92,9 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A27094012C9A5D0500CA42A6 /* WSRUtils in Frameworks */,
-				A27093FD2C9A5D0500CA42A6 /* WSRCommon in Frameworks */,
-				A27093FF2C9A5D0500CA42A6 /* WSRStorage in Frameworks */,
+				A28FEB6D2CA3432B00844B87 /* WSRCommon in Frameworks */,
+				A28FEB6F2CA3433B00844B87 /* WSRStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +293,8 @@
 			);
 			name = WSRExample;
 			packageProductDependencies = (
-				A27093FC2C9A5D0500CA42A6 /* WSRCommon */,
-				A27093FE2C9A5D0500CA42A6 /* WSRStorage */,
-				A27094002C9A5D0500CA42A6 /* WSRUtils */,
+				A28FEB6C2CA3432B00844B87 /* WSRCommon */,
+				A28FEB6E2CA3433B00844B87 /* WSRStorage */,
 			);
 			productName = WSRExample;
 			productReference = A2C93E302C882A260091A1D1 /* WSRExample.app */;
@@ -775,20 +772,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A27093FC2C9A5D0500CA42A6 /* WSRCommon */ = {
+		A28FEB6C2CA3432B00844B87 /* WSRCommon */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
 			productName = WSRCommon;
 		};
-		A27093FE2C9A5D0500CA42A6 /* WSRStorage */ = {
+		A28FEB6E2CA3433B00844B87 /* WSRStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
 			productName = WSRStorage;
-		};
-		A27094002C9A5D0500CA42A6 /* WSRUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A27093FB2C9A5D0500CA42A6 /* XCRemoteSwiftPackageReference "wsr" */;
-			productName = WSRUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

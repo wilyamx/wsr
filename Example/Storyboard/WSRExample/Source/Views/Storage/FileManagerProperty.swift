@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 import WSRStorage
-import WSRUtils
+import WSRCommon
 
 extension FileManager {
     static func documentsPath(key: String) -> URL {

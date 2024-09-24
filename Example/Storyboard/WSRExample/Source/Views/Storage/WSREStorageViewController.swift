@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 import WSRComponents_UIKit
 import WSRStorage
-import WSRUtils
+import WSRCommon
 import SuperEasyLayout
 
 struct UserInfo: Codable {

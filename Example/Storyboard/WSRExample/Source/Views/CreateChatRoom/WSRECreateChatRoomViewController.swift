@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 import WSRComponents_UIKit
-import WSRUtils
+import WSRCommon
 import SuperEasyLayout
 
 class WSRECreateChatRoomViewController: WSREViewController {

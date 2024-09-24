@@ -9,7 +9,6 @@
 import UIKit
 import WSRCommon
 import WSRComponents_UIKit
-import WSRUtils
 import SuperEasyLayout
 
 class WSREPresentViewController: WSREViewController {
