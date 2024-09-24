@@ -41,7 +41,7 @@ public enum WSRErrorAlertType: Equatable {
         }
     }
     
-    func getMessage() -> String {
+    public func getMessage() -> String {
         switch self {
         case .somethingWentWrong: return "Sorry, an error occured while trying to sign in.\nPlease try again later."
         case .connectionTimedOut: return "Sorry, connection timeout.\nPlease try again later."

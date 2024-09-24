@@ -9,6 +9,7 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "WSRCommon", targets: ["WSRCommon"]),
+        .library(name: "WSRComponents", targets: ["WSRComponents"]),
         .library(name: "WSRComponents_UIKit", targets: ["WSRComponents_UIKit"]),
         .library(name: "WSRMedia", targets: ["WSRMedia"]),
         .library(name: "WSRNetworking", targets: ["WSRNetworking"]),
@@ -24,10 +25,16 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(name: "WSRCommon"),
         .target(
+            name: "WSRComponents",
+            dependencies: ["WSRCommon", "WSRNetworking"],
+            resources: [
+                .process("Resources/WSRColors.xcassets")
+            ]),
+        .target(
             name: "WSRComponents_UIKit",
             dependencies: ["SuperEasyLayout"],
             resources: [
-                .process("Resources/WSRColors.xcassets")
+                .process("Resources/WSRColors_UIKit.xcassets")
             ]),
         .target(
             name: "WSRMedia",
