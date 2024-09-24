@@ -149,6 +149,7 @@
 		A27094062C9A5E2A00CA42A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2A41CEF2CA157C100725DFB /* Networking */,
 				A27094072C9A5E6800CA42A6 /* Storage */,
 			);
 			path = Views;
@@ -197,6 +198,13 @@
 				A27094132C9A621900CA42A6 /* WSREStorageViewModel.swift */,
 			);
 			path = WSREUserDefaultCodableView;
+			sourceTree = "<group>";
+		};
+		A2A41CEF2CA157C100725DFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		A2C5AD302C9B7C1900BC8707 /* PropertyView */ = {
