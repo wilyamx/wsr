@@ -26,7 +26,7 @@ open class WSRDataFetcher: ObservableObject,
     
     public var mockData: Bool = false
     
-    // MARK: -
+    // MARK: - API Service Protocol
     
     public var service: WSRApiServiceProtocol
     
@@ -34,7 +34,7 @@ open class WSRDataFetcher: ObservableObject,
         self.service = service
     }
     
-    // MARK: - WSRPersitableProtocol
+    // MARK: - WSRPersitable Protocol
     
     open func persist() async {
         fatalError("Override this method and define your own implementation.")
