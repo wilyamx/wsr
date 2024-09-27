@@ -40,3 +40,47 @@ open class WSRDataFetcher: ObservableObject,
         fatalError("Override this method and define your own implementation.")
     }
 }
+
+// MARK: - WSRViewState Protocol
+
+public extension WSRDataFetcher {
+    func requestStarted(message: String? = nil) {
+        DispatchQueue.main.async {
+            self.errorMessage = ""
+            self.viewState = .loading
+            
+            if let message = message {
+                self.loadingMessage = message
+            }
+        }
+    }
+    
+    func requestFailed(reason: String, errorAlertType: WSRErrorAlertType = .none) {
+        DispatchQueue.main.async {
+            self.errorMessage = reason
+            self.viewState = .error
+            
+            self.errorAlertType = errorAlertType
+            if errorAlertType != .none {
+                self.showErrorAlert = true
+            }
+        }
+    }
+    
+    func requestSuccess() {
+        DispatchQueue.main.async {
+            self.errorMessage = ""
+            self.viewState = .populated
+            self.showErrorAlert = false
+        }
+    }
+    
+    func resetErrorStatuses() {
+        viewState = .empty
+        showErrorAlert = false
+        
+        loadingMessage = ""
+        errorMessage = ""
+        errorAlertType = .none
+    }
+}
