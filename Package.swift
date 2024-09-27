@@ -26,7 +26,7 @@ let package = Package(
         .target(name: "WSRCommon"),
         .target(
             name: "WSRComponents",
-            dependencies: ["WSRCommon", "WSRNetworking"],
+            dependencies: ["WSRCommon"],
             resources: [
                 .process("Resources/WSRColors.xcassets")
             ]),

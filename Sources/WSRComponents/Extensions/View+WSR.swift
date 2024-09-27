@@ -8,7 +8,7 @@
 import SwiftUI
 import WSRNetworking
 
-// MARK: - WSRButtonLabelModifier
+// MARK: - WSRButtonLabel Modifier
 
 public extension View {
     func wsr_ButtonLabel(bgColor: Color, fgColor: Color, font: Font? = nil) -> some View {
@@ -21,15 +21,15 @@ public extension View {
 // MARK: - WSRDataFetcher Modifiers
 
 public extension View {
-//    func wsr_ErrorAlertView(viewModel: WSRDataFetcher) -> some View {
-//        modifier(
-//            WSRErrorAlertViewModifier(viewModel: viewModel)
-//        )
-//    }
-//    
-//    func wsr_LoadingView(viewModel: WSRDataFetcher) -> some View {
-//        modifier(
-//            WSRLoadingViewModifier(viewModel: viewModel)
-//        )
-//    }
+    func wsr_ErrorAlertView(viewModel: WSRDataFetcher) -> some View {
+        modifier(
+            WSRErrorAlertViewModifier(viewModel: viewModel)
+        )
+    }
+    
+    func wsr_LoadingView(viewModel: WSRDataFetcher) -> some View {
+        modifier(
+            WSRLoadingViewModifier(viewModel: viewModel)
+        )
+    }
 }
