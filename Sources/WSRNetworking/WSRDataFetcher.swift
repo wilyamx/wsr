@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  WSRDataFetcher.swift
+//  WSR
 //
 //  Created by William S. Rena on 9/23/24.
 //
