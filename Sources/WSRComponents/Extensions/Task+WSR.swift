@@ -1,8 +1,8 @@
 //
-//  Task+WSR.swift
-//  WSR
+//  File.swift
+//  
 //
-//  Created by William S. Rena on 9/12/24.
+//  Created by William S. Rena on 9/27/24.
 //
 
 import Foundation
